@@ -1,13 +1,19 @@
 import cv2
 import numpy as np
 
+# mouse callback function
+def draw_circle(event,x,y,flags,param):
+    if event == cv2.EVENT_LBUTTONDBLCLK:
+        cv2.circle(img,(x,y),100,(255,0,0),-1)
+
 def nothing(x):
     pass
 
-cap = cv2.VideoCapture(1);
-
+cap = cv2.VideoCapture(1)
+# Create a black image, a window
+cv2.namedWindow('image')
 # create trackbars for color change
-cv2.createTrackbar('Value1','image',11,12,nothing)
+cv2.createTrackbar('Value1','image',11,11,nothing)
 cv2.createTrackbar('Value2','image',2,2,nothing)
 cv2.createTrackbar('Value3','image',255,255,nothing)
 cv2.createTrackbar('Value4','image',0,255,nothing)
@@ -16,10 +22,9 @@ cv2.createTrackbar('Value5','image',255,255,nothing)
 # create switch for ON/OFF functionality
 switch = '0 : OFF \n1 : ON'
 cv2.createTrackbar(switch, 'image',0,1,nothing) 
+cv2.setMouseCallback('image',draw_circle)
 
 while(1):
-    # Create a black image, a window
-    cv2.namedWindow('image')
 
     # Capture frame-by-frame
     ret, image = cap.read()
