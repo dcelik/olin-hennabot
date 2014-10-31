@@ -9,7 +9,7 @@ def draw_circle(event,x,y,flags,param):
 def nothing(x):
     pass
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 # Create a black image, a window
 cv2.namedWindow('image')
 # create trackbars for color change
