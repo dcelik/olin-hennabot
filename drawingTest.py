@@ -10,7 +10,8 @@ def saveImage(image):
 # mouse callback function
 def draw_circle(event,x,y,flags,param):
     global ix,iy,drawing
-
+    print img[x,y]
+    print img.size
     if event == cv2.EVENT_LBUTTONDOWN:
         if img[x,y][0] == 255:
             drawing = True
@@ -28,6 +29,7 @@ def draw_circle(event,x,y,flags,param):
 
 img = cv2.imread('denizhand.png')
 cv2.namedWindow('image')
+cv2.imshow('image',img)
 cv2.setMouseCallback('image',draw_circle)
 
 while(1):
