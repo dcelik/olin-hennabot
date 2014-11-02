@@ -4,6 +4,9 @@ import numpy as np
 drawing = False # true if mouse is pressed
 ix,iy = -1,-1
 
+def saveImage(image):
+    cv2.imwrite('handimage.png',image)
+
 # mouse callback function
 def draw_circle(event,x,y,flags,param):
     global ix,iy,drawing
@@ -29,6 +32,8 @@ while(1):
     k = cv2.waitKey(1) & 0xFF
     if k == ord('q'):
         break
+    if k == ord('s'):
+        saveImage(img)
     elif k == 27:
         break
 
