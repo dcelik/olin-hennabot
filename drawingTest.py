@@ -13,21 +13,21 @@ def draw_circle(event,x,y,flags,param):
     print img[x,y]
     print img.size
     if event == cv2.EVENT_LBUTTONDOWN:
-        if img[x,y][0] == 255:
+        if img[y,x][0] == 255:
             drawing = True
             ix,iy = x,y
 
     elif event == cv2.EVENT_MOUSEMOVE:
         if drawing == True:
-            if img[x,y][0] == 255:
+            if img[y,x][0] == 255:
                 cv2.circle(img,(x,y),2,(0,0,255),-1)
 
     elif event == cv2.EVENT_LBUTTONUP:
         drawing = False
-        if img[x,y][0] == 255:
+        if img[y,x][0] == 255:
             cv2.circle(img,(x,y),2,(0,0,255),-1)
 
-img = cv2.imread('denizhand.png')
+img = cv2.imread('subhashhand2.png')
 cv2.namedWindow('image')
 cv2.imshow('image',img)
 cv2.setMouseCallback('image',draw_circle)
