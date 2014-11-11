@@ -19,6 +19,8 @@ def draw_circle(event,x,y,flags,param):
         if img[y,x][0] == 255:
             drawing = True
             ix,iy = x,y
+            store_draw = []
+            store_draw.append((x,y))
     elif event == cv2.EVENT_MOUSEMOVE:
         if drawing == True:
             if img[y,x][0] == 255:
@@ -28,10 +30,12 @@ def draw_circle(event,x,y,flags,param):
         drawing = False
         if img[y,x][0] == 255:
             cv2.circle(img,(x,y),2,(0,0,255),-1)
-            store_draw.append((x,y))
-            print store_draw
+            #store_draw.append((x,y))
+            #print store_draw
             final_store.append(store_draw)
-            store_draw = []
+        #store_draw.append((x,y))
+        print 'New:' 
+        print store_draw
 img = cv2.imread('denizhand.png')
 cv2.namedWindow('image')
 cv2.imshow('image',img)
