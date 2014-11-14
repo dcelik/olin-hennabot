@@ -52,3 +52,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#Intermediary Picture Files
+thresholdedimage.png
+handimage.png
