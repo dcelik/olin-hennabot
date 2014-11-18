@@ -12,7 +12,7 @@ final_store = [];
 
 def makeDrawingWindow():
 
-    # mouse callback function
+    # mouse callback functio
     def draw_circle(event,x,y,flags,param):
         global ix,iy,drawing,store_draw,final_store
         #print img[x,y]
