@@ -10,7 +10,7 @@ void loop()
 {
   digitalWrite(6, HIGH);
   digitalWrite(7, LOW);
-  delay(75);
+  delay(25);
   digitalWrite(6, LOW);
-  delay(75);
+  delay(25);
 } 

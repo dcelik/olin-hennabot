@@ -2,7 +2,7 @@ import serial
 import cv2
 import numpy as np
 
-PORT = '/dev/ttyACM1'
+PORT = '/dev/ttyACM0'
 SPEED = 9600
 def send_command(val):
     connection = serial.Serial( PORT, 
@@ -15,9 +15,9 @@ def send_command(val):
 def button(x):
     s = cv2.getTrackbarPos(switch,'video')
     if(s==0):
-        send_command('0')
+        send_command('2')
     if(s==1):
-        send_command('1')
+        send_command('1131111111111131111111111111113')
 
 
 cv2.namedWindow('video')

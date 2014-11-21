@@ -8,14 +8,19 @@ void setup() {
 void loop()
 {
   incbyte = Serial.read();
-  Serial.print(incbyte);
+  
+  if(incbyte==49)
+  {
+    Serial.print(incbyte);
+    digitalWrite(ledPin, HIGH);
+    delay(50);
+  }
   if(incbyte==48)
   {
-    digitalWrite(ledPin, HIGH);
-    delay(100);
     digitalWrite(ledPin, LOW);
-    delay(100);
+    Serial.print(incbyte);
+    delay(50);
   }
-  delay(10);
+  delay(3);
 }
 
