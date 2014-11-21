@@ -9,11 +9,8 @@ void setup()
 void loop()
 {
   digitalWrite(6, HIGH);
-  digitalWrite(8, HIGH);
-  digitalWrite(9, HIGH);
-  delayMicroseconds(100); // Approximately 10% duty cycle @ 1KHz
+  digitalWrite(7, LOW);
+  delay(75);
   digitalWrite(6, LOW);
-  digitalWrite(8, LOW);
-  delayMicroseconds(1000 - 100);
-  delay(10);
-}
+  delay(75);
+} 
