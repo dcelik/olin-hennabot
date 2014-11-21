@@ -30,9 +30,13 @@ void loop()
     digitalWrite(yStep, LOW);
 //    delay(25);
   }
+  
 //  if(incbyte==65) //a
     if(incbyte==50)
   {
+    
+    
+    
     Serial.println('a');
     digitalWrite(xDir, HIGH);
     digitalWrite(xStep, HIGH);
