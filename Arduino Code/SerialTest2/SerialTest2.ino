@@ -8,10 +8,10 @@ int incbyte = 0;
 void setup() {
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
-  pinMode(xStep, OUT)
-  pinMode(xDir, OUT)
-  pinMode(yStep, OUT)
-  pinMode(yDir, OUT)
+  pinMode(xStep, OUTPUT);
+  pinMode(xDir, OUTPUT);
+  pinMode(yStep, OUTPUT);
+  pinMode(yDir, OUTPUT);
   
 }
 
@@ -19,21 +19,51 @@ void setup() {
 void loop()
 {
   incbyte = Serial.read();
-  if(incbyte==87) //w
+//  if(incbyte==87) //w
+  if(incbyte==49)
   {
-    digitalWrite(6, HIGH);
-    delay(75);
-    digitalWrite(6, LOW);
-    delay(75);
-  }
-  if(incbyte==65) //a
-  {
+    Serial.println('w');
     
+    digitalWrite(yDir, LOW);
+    digitalWrite(yStep, HIGH);
+    delay(25);
+    digitalWrite(yStep, LOW);
+//    delay(25);
   }
-  if(incbyte==83) //s
-  {}
-  if(incbyte==68) //d
-  {}
+//  if(incbyte==65) //a
+    if(incbyte==50)
+  {
+    Serial.println('a');
+    digitalWrite(xDir, HIGH);
+    digitalWrite(xStep, HIGH);
+    delay(25);
+    
+    digitalWrite(xStep, LOW);
+//    delay(25);     
+  }
+//  if(incbyte==83) //s
+    if(incbyte==51)
+  {
+    Serial.println('s');
+    digitalWrite(yDir, HIGH);
+    digitalWrite(yStep, HIGH);
+    delay(25);
+    digitalWrite(yStep, LOW);
+//    delay(25);
+  }
+//  if(incbyte==68) //d
+    if(incbyte==52)
+  {
+    Serial.println('d');
+    digitalWrite(xDir, LOW);
+    digitalWrite(xStep, HIGH);
+    delay(25);
+    digitalWrite(xStep, LOW);
+//    delay(25);
+  }
   delay(3);
 }
+
+
+
 
