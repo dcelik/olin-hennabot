@@ -5,7 +5,7 @@ def nothing(x):
     pass
 
 def makeThresholdingWindow():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
     # Create a black image, a window
     cv2.namedWindow('video')
     # create trackbars for color change
