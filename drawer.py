@@ -40,7 +40,7 @@ def makeDrawingWindow():
             print 'New:' 
             print store_draw
             final_store.append(store_draw)
-        elif final_store(end) != store_draw:
+        elif final_store[end] != store_draw:
             final_store.append(store_draw)
     img = cv2.imread('thresholdedimage.png')
     cv2.namedWindow('image')
