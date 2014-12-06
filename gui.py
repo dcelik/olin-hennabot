@@ -8,4 +8,4 @@ th.makeThresholdingWindow()
 coords = dw.makeDrawingWindow()
 print 'Coords:'
 print coords
-#ars.startComms()
+ars.startComms(coords)

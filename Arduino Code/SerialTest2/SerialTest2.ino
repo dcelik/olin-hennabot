@@ -9,6 +9,7 @@ boolean state = HIGH;
 
 int incbyte = 0;
 void setup() {
+  
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
   pinMode(xStep, OUTPUT);
@@ -18,9 +19,6 @@ void setup() {
   pinMode(yDir, OUTPUT);
   
 }
-
-
-
 
 void loop()
 {
@@ -39,10 +37,7 @@ void loop()
   
 //  if(incbyte==65) //a
     if(incbyte==50)
-  {
-    
-    
-    
+  {   
     
     Serial.println('a');
     digitalWrite(xDir, HIGH);
@@ -75,22 +70,18 @@ void loop()
     if(incbyte==53)
   {
     Serial.println('t');
-    if(state==HIGH){
-      digitalWrite(xen, LOW);
-      digitalWrite(yen, LOW);
-      state = LOW;
-    }
-    else{
     if(state==LOW){
       digitalWrite(xen, HIGH);
       digitalWrite(yen, HIGH);
       state = HIGH;
+    }
+    else{
+    if(state==HIGH){
+      digitalWrite(xen, LOW);
+      digitalWrite(yen, LOW);
+      state = LOW;
     }}
     delay(200);
   }
   delay(3);
 }
-
-
-
-
