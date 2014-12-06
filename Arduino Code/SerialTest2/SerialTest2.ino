@@ -3,17 +3,22 @@ const int xStep = 6;
 const int xDir = 7;
 const int yStep = 8;
 const int yDir = 9;
+const int xen = 10;
+const int yen = 11;
+boolean state = HIGH;
 
 int incbyte = 0;
 void setup() {
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
   pinMode(xStep, OUTPUT);
+  
   pinMode(xDir, OUTPUT);
   pinMode(yStep, OUTPUT);
   pinMode(yDir, OUTPUT);
   
 }
+
 
 
 
@@ -35,6 +40,7 @@ void loop()
 //  if(incbyte==65) //a
     if(incbyte==50)
   {
+    
     
     
     
@@ -65,6 +71,22 @@ void loop()
     delay(25);
     digitalWrite(xStep, LOW);
 //    delay(25);
+  }
+    if(incbyte==53)
+  {
+    Serial.println('t');
+    if(state==HIGH){
+      digitalWrite(xen, LOW);
+      digitalWrite(yen, LOW);
+      state = LOW;
+    }
+    else{
+    if(state==LOW){
+      digitalWrite(xen, HIGH);
+      digitalWrite(yen, HIGH);
+      state = HIGH;
+    }}
+    delay(200);
   }
   delay(3);
 }

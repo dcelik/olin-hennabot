@@ -62,6 +62,8 @@ def startComms(coord_list):
             send_command('3')
         elif k == ord('d'):
             send_command('4')
+        elif k == ord('t'):
+            send_command('5')
     # When everything done, release the capture
     cap.release()
     cv2.destroyAllWindows()

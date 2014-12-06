@@ -19,7 +19,6 @@ def button(x):
     if(s==1):
         send_command('1131111111111131111111111111113')
 
-
 cv2.namedWindow('video')
 #switch = '0 : OFF \n1 : ON'
 #cv2.createTrackbar(switch, 'video',0,1,button)
@@ -43,6 +42,8 @@ while(True):
         send_command('3')
     elif k == ord('d'):
         send_command('4')
+    elif k == ord('t'):
+        send_command('5')
 # When everything done, release the capture
 cap.release()
 cv2.destroyAllWindows()
