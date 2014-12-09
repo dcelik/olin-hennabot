@@ -29,37 +29,46 @@ def startComms(coord_list):
     img = cv2.imread('handimage.png')
     cv2.imshow('video',img)
     coord_list[0] = [(1,1)]
+    printgo = False;
     while(True):
         # Capture frame-by-frame
         if cv2.waitKey(1) & 0xFF == ord('g'):
             for i in range(1, len(coord_list)):
                 for j in range(1, len(coord_list[i])):
+                    if i == 0 and j == 0:
+                        move_x = coord_list[i][j][0]
+                        move_y = coord_list[i][j][1]
+                        #send_command
                     if len(coord_list[i][j]) > 1:
+                        printgo = True
                         move_x = coord_list[i][j][0] - coord_list[i][j-1][0]
                         move_y = coord_list[i][j][1] - coord_list[i][j-1][1]
-                        for u in range(1, abs(move_x)):
-                            if move_x >= 0:
-                                send_command('4')
-                            if move_x < 0:
-                                send_command('2')
-                        for v in range(1, abs(move_y)):
-                            if move_y >= 0:
-                                send_command('1')
-                            if move_y < 0:
-                                send_command('3')
+                        
+                        # for u in range(1, abs(move_x)):
+                        #     if move_x >= 0:
+                        #         send_command('4')
+                        #     if move_x < 0:
+                        #         send_command('2')
+                        # for v in range(1, abs(move_y)):
+                        #     if move_y >= 0:
+                        #         send_command('1')
+                        #     if move_y < 0:
+                        #         send_command('3')
+                        
                     if len(coord_list[i][j]) == 1:
                         move_x = coord_list[i][j][0] - coord_list[i-1][end][0]
                         move_y = coord_list[i][j][1] - coord_list[i-1][end][1]
-                        for u in range(1, abs(move_x)):
-                            if move_x >= 0:
-                                send_command('4')
-                            if move_x < 0:
-                                send_command('2')
-                        for v in range(1, abs(move_y)):
-                            if move_y >= 0:
-                                send_command('1')
-                            if move_y < 0:
-                                send_command('3')
+                        
+                        # for u in range(1, abs(move_x)):
+                        #     if move_x >= 0:
+                        #         send_command('4')
+                        #     if move_x < 0:
+                        #         send_command('2')
+                        # for v in range(1, abs(move_y)):
+                        #     if move_y >= 0:
+                        #         send_command('1')
+                        #     if move_y < 0:
+                        #         send_command('3')
 
         # Our operations on the frame come here
         # Display the resulting frame
