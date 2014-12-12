@@ -22,8 +22,10 @@ def startComms(coord_list):
                                     timeout=0,
                                     stopbits=serial.STOPBITS_TWO
                                     )
-        connection.read(val)
+        command = connection.read(3)
+        connection.flushOutput()
         connection.close()
+        return command
 
     def button(x):
         s = cv2.getTrackbarPos(switch,'video')
@@ -45,9 +47,13 @@ def startComms(coord_list):
         relative_val = val - input_interval_end
         return (float(output_range)/input_range)*relative_val+output_interval_start
 
-    def transmit_instruction(instruction_list):
-        for i in instruction_list:
-
+    def transmit_instructions(instruction_list):
+            for i in instruction_list:
+                if receive_command() == '111':
+                    send_command(i)
+                else:
+                    while(receive_command() != '111'):
+                        print(waiting)
 
     def compute_instruction(coord_list):
         instruction_list = []
@@ -101,10 +107,9 @@ def startComms(coord_list):
                         delay_x = '0' + delay_x
                     if len(delay_y) == 2:
                         delay_y = '0' + delay_y
-        return instruction_list
                     ##########################
                     command = str(printgo) + str(direc) + delay_x + delay_y + delay_x + delay_y 
-                    send_command(command)
+                    instruction_list.append(command)
                     # for u in range(1, abs(move_x)):
                     #     if move_x >= 0:
                     #         send_command('4')
