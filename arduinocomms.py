@@ -2,7 +2,7 @@ import serial
 import cv2
 import numpy as np
 
-PORT = '/dev/ttyACM1'
+PORT = '/dev/ttyACM0'
 SPEED = 9600
 def send_command(val):
     connection = serial.Serial( PORT, 

@@ -6,7 +6,7 @@ import time
 
 def startComms(coord_list):
 
-    PORT = '/dev/ttyACM0'
+    PORT = '/dev/ttyACM1'
     SPEED = 9600
     def send_command(val):
         connection = serial.Serial( PORT, 
@@ -15,18 +15,30 @@ def startComms(coord_list):
                                     stopbits=serial.STOPBITS_TWO
                                     )
         connection.write(val)
+        #time.sleep(.1)
+        #connection.flushInput()
+        #connection.flushOutput()
         connection.close()
 
     def receive_command():
         connection = serial.Serial( PORT, 
                                     SPEED,
-                                    timeout=0,
+                                    timeout=5,
                                     stopbits=serial.STOPBITS_TWO
                                     )
-        command = connection.read(1)
-        connection.flushOutput()
+        go = True
+        tdata = ''
+        while(go):
+            tdata = connection.read(1)
+            print(tdata)
+            time.sleep(2)
+            #data_left = connection.inWaiting()
+            #print(data_left)
+            #tdata += connection.read(data_left)
+            if tdata == '!':
+                go = False
         connection.close()
-        return command
+        return tdata
 
     def button(x):
         s = cv2.getTrackbarPos(switch,'video')
@@ -58,12 +70,9 @@ def startComms(coord_list):
 
     def transmit_instructions(instruction_list):
         for i in instruction_list:
-            if receive_command() == '!':
+            if i == '080000000000200020' or receive_command() == '!':
                 send_command(i)
-            else:
-                while(receive_command() != '!'):
-                    time.sleep(1)
-                    print(waiting)
+                time.sleep(2)
 
     def sign_extend(unextended):
         if len(unextended) == 1:
@@ -135,6 +144,7 @@ def startComms(coord_list):
                     instruction_list.append(command1)
                     instruction_list.append(command2)
                     instruction_list.append(command3)
+        print(instruction_list)
         return instruction_list
     cv2.namedWindow('video')
     #switch = '0 : OFF \n1 : ON'
