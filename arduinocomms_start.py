@@ -86,8 +86,18 @@ def startComms(coord_list):
                     printgo = 1
                     move_x = coord_list[i][j][0] - coord_list[i][j-1][0]
                     move_y = coord_list[i][j][1] - coord_list[i][j-1][1]
-                    R_x = abs(move_x/move_y) + 10
-                    R_y = abs(move_x/move_y) + 10
+                    if move_x > 0 or move_x < 0:
+                        R_x = abs(move_y/move_x)
+                    else:
+                        R_x = move_y
+                    if move_y > 0 or move_y < 0:
+                        R_y = abs(move_x/move_y)
+                    else:
+                        R_y = move_x
+                    if R_x > 1:
+                        R_y = 10
+                    elif R_y > 1:
+                        R_x = 10
                     #########################
                     delta_x = str(abs(move_x))
                     delta_y = str(abs(move_y))
