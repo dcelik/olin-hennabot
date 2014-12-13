@@ -67,10 +67,12 @@ def startComms(coord_list):
 
     def sign_extend(unextended):
         if len(unextended) == 1:
-            return '00' + unextended
+            return '000' + unextended
         elif len(unextended) == 2:
-            return '0' + unextended
+            return '00' + unextended
         elif len(unextended) == 3:
+            return '0' + unextended
+        elif len(unextended) == 4:
             return unextended
 
     def compute_instruction(coord_list):
@@ -81,7 +83,7 @@ def startComms(coord_list):
                     printgo = 0
                     move_x = coord_list[i][j][0]
                     move_y = coord_list[i][j][1]
-                    instruction_list.append('08000000000000')
+                    instruction_list.append('080000000000200020')
                 if len(coord_list[i][j]) > 1:
                     printgo = 1
                     move_x = coord_list[i][j][0] - coord_list[i][j-1][0]
@@ -95,9 +97,9 @@ def startComms(coord_list):
                     else:
                         R_y = move_x
                     if R_x > 1:
-                        R_y = 10
+                        R_y = 20
                     elif R_y > 1:
-                        R_x = 10
+                        R_x = 20
                     #########################
                     delta_x = str(abs(move_x))
                     delta_y = str(abs(move_y))
@@ -121,15 +123,15 @@ def startComms(coord_list):
                     delta_y = str(abs(move_y))
                     delta_x = sign_extend(delta_x)
                     delta_y = sign_extend(delta_y)
-                    delay_x = '025'
-                    delay_y = '025'
+                    delay_x = '0020'
+                    delay_y = '0020'
                     direc_x = classify_direc(move_x,0)
                     direc_y = classify_direc(0,move_y)
                     printgo = 0
-                    command1 = str(printgo) + str(direc_x) + delta_x + '000' + delay_x + '000'
-                    command2 = str(printgo) + str(direc_y) + '000' + delta_y + '000' + delta_x
+                    command1 = str(printgo) + str(direc_x) + delta_x + '0000' + delay_x + '0000'
+                    command2 = str(printgo) + str(direc_y) + '0000' + delta_y + '0000' + delta_x
                     printgo = 1
-                    command3 = str(printgo) + '0' + '000' + '000' + '000' + '000'
+                    command3 = str(printgo) + '0' + '0000' + '0000' + '0000' + '0000'
                     instruction_list.append(command1)
                     instruction_list.append(command2)
                     instruction_list.append(command3)
