@@ -2,6 +2,7 @@ import serial
 import cv2
 import numpy as np
 import math
+import time
 
 def startComms(coord_list):
 
@@ -22,7 +23,7 @@ def startComms(coord_list):
                                     timeout=0,
                                     stopbits=serial.STOPBITS_TWO
                                     )
-        command = connection.read(3)
+        command = connection.read(1)
         connection.flushOutput()
         connection.close()
         return command
@@ -34,26 +35,43 @@ def startComms(coord_list):
         if(s==1):
             send_command('1131111111111131111111111111113')
 
-    def remap_interval(val, input_interval_start, input_interval_end, output_interval_start, output_interval_end):
-        """ Maps the input value that is in the interval [input_interval_start, input_interval_end]
-        to the output interval [output_interval_start, output_interval_end].  The mapping
-        is an affine one (i.e. output = input*c + b).
-    
-        TODO: please fill out the rest of this docstring
-        """
-        
-        output_range = output_interval_start - output_interval_end
-        input_range = input_interval_end - input_interval_start
-        relative_val = val - input_interval_end
-        return (float(output_range)/input_range)*relative_val+output_interval_start
+    def classify_direc(move_x,move_y):
+        if move_x == 0 and move_y == 0:
+            direc = 0
+        elif move_x == 0 and move_y > 0:
+            direc = 1
+        elif move_x > 0 and move_y > 0:
+            direc = 2
+        elif move_x > 0 and move_y == 0:
+            direc = 3
+        elif move_x > 0 and move_y < 0:
+            direc = 4
+        elif move_x == 0 and move_y < 0:
+            direc = 5
+        elif move_x < 0 and move_y < 0:
+            direc = 6
+        elif move_x < 0 and move_y == 0:
+            direc = 7
+        elif move_x < 0 and move_y > 0:
+            direc = 8
+        return direc
 
     def transmit_instructions(instruction_list):
-            for i in instruction_list:
-                if receive_command() == '111':
-                    send_command(i)
-                else:
-                    while(receive_command() != '111'):
-                        print(waiting)
+        for i in instruction_list:
+            if receive_command() == '!':
+                send_command(i)
+            else:
+                while(receive_command() != '!'):
+                    time.sleep(1)
+                    print(waiting)
+
+    def sign_extend(unextended):
+        if len(unextended) == 1:
+            return '00' + unextended
+        elif len(unextended) == 2:
+            return '0' + unextended
+        elif len(unextended) == 3:
+            return unextended
 
     def compute_instruction(coord_list):
         instruction_list = []
@@ -68,89 +86,58 @@ def startComms(coord_list):
                     printgo = 1
                     move_x = coord_list[i][j][0] - coord_list[i][j-1][0]
                     move_y = coord_list[i][j][1] - coord_list[i][j-1][1]
-                    R_x = (move_x/move_y) + 24
-                    R_y = (move_x/move_y) + 24
+                    R_x = abs(move_x/move_y) + 10
+                    R_y = abs(move_x/move_y) + 10
                     #########################
-                    delta_x = str(move_x)
-                    delta_y = str(move_y)
+                    delta_x = str(abs(move_x))
+                    delta_y = str(abs(move_y))
                     delay_x = str(R_x)
                     delay_y = str(R_y)
                     #########################
-                    if move_x == 0 and move_y == 0:
-                        direc = 0
-                    elif move_x == 0 and move_y > 0:
-                        direc = 1
-                    elif move_x > 0 and move_y > 0:
-                        direc = 2
-                    elif move_x > 0 and move_y == 0:
-                        direc = 3
-                    elif move_x > 0 and move_y < 0:
-                        direc = 4
-                    elif move_x == 0 and move_y < 0:
-                        direc = 5
-                    elif move_x < 0 and move_y < 0:
-                        direc = 6
-                    elif move_x < 0 and move_y == 0:
-                        direc = 7
-                    elif move_x < 0 and move_y > 0:
-                        direc = 8
+                    direc = classify_direc(move_x,move_y)
                     #########################
-                    if len(delta_x) == 1:
-                        delta_x = '00' + delta_x
-                    elif len(delta_x) == 2:
-                        delta_x = '0' + delta_x
-                    if len(delta_y) == 1:
-                        delta_y = '00' + delta_y
-                    elif len(delta_y) == 2:
-                        delta_y = '0' + delta_y
-                    if len(delay_x) == 2:
-                        delay_x = '0' + delay_x
-                    if len(delay_y) == 2:
-                        delay_y = '0' + delay_y
+                    # if len(delta_x) == 1:
+                    delta_x = sign_extend(delta_x)
+                    delta_y = sign_extend(delta_y)
+                    delay_x = sign_extend(delay_x)
+                    delay_y = sign_extend(delay_y)
                     ##########################
-                    command = str(printgo) + str(direc) + delay_x + delay_y + delay_x + delay_y 
+                    command = str(printgo) + str(direc) + delta_x + delta_y + delay_x + delay_y
                     instruction_list.append(command)
-                    # for u in range(1, abs(move_x)):
-                    #     if move_x >= 0:
-                    #         send_command('4')
-                    #     if move_x < 0:
-                    #         send_command('2')
-                    # for v in range(1, abs(move_y)):
-                    #     if move_y >= 0:
-                    #         send_command('1')
-                    #     if move_y < 0:
-                    #         send_command('3')
-                    
                 if len(coord_list[i][j]) == 1:
                     move_x = coord_list[i][j][0] - coord_list[i-1][end][0]
                     move_y = coord_list[i][j][1] - coord_list[i-1][end][1]
-                    printgo = False
-                    send_command('0123456789')
-                    # for u in range(1, abs(move_x)):
-                    #     if move_x >= 0:
-                    #         send_command('4')
-                    #     if move_x < 0:
-                    #         send_command('2')
-                    # for v in range(1, abs(move_y)):
-                    #     if move_y >= 0:
-                    #         send_command('1')
-                    #     if move_y < 0:
-                    #         send_command('3')
-
-        # Our operations on the frame come here
-        # Display the resulting frame
-
+                    delta_x = str(abs(move_x))
+                    delta_y = str(abs(move_y))
+                    delta_x = sign_extend(delta_x)
+                    delta_y = sign_extend(delta_y)
+                    delay_x = '025'
+                    delay_y = '025'
+                    direc_x = classify_direc(move_x,0)
+                    direc_y = classify_direc(0,move_y)
+                    printgo = 0
+                    command1 = str(printgo) + str(direc_x) + delta_x + '000' + delay_x + '000'
+                    command2 = str(printgo) + str(direc_y) + '000' + delta_y + '000' + delta_x
+                    printgo = 1
+                    command3 = str(printgo) + '0' + '000' + '000' + '000' + '000'
+                    instruction_list.append(command1)
+                    instruction_list.append(command2)
+                    instruction_list.append(command3)
+        return instruction_list
     cv2.namedWindow('video')
     #switch = '0 : OFF \n1 : ON'
     #cv2.createTrackbar(switch, 'video',0,1,button)
     img = cv2.imread('handimage.png')
     cv2.imshow('video',img)
     coord_list[0] = [(1,1)]
-    printgo = 0;
+    printgo = 0
+    print('Computing... Please Wait')
+    final_instructions = compute_instruction(coord_list)
+    print('Finished. Press the "G" key to being printing')
     while(True):
         # Capture frame-by-frame
         if cv2.waitKey(1) & 0xFF == ord('g'):
-            
+            transmit_instructions(final_instructions)   
         
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
