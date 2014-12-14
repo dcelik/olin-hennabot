@@ -73,7 +73,7 @@ def startComms(coord_list):
         for i in instruction_list:
             #if i == '080000000000200020' or receive_command() == '!':
             send_command(i[0:18])
-            wt = ((float(i[18:22])/1000) + .057)
+            wt = ((float(i[18:22])/1000) + .057)/2
             time.sleep(wt)            
             #print(wt)
             
