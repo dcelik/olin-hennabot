@@ -10,9 +10,10 @@
 int inChar = 0;
 String inString = "";
 int inInt = 0;
-boolean done = false;
-
-static struct pt pt1, pt2;
+int xstepcompleted = 0;
+int ystepcompleted = 0;
+long xcounter = 0;
+long ycounter = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -22,80 +23,52 @@ void setup() {
   pinMode(yDir, OUTPUT);
   pinMode(xEn, OUTPUT);
   pinMode(yEn, OUTPUT);
-  PT_INIT(&pt1);  // initialise the two
-  PT_INIT(&pt2);  // protothread variables
 }
 
 
 void decode(String str){
   int prt = str.substring(0,1).toInt();
-  int dir = str.substring(1,1).toInt();
+  int dir = str.substring(1,2).toInt();
   selectDir(dir);
-  int xDist = str.substring(2,3).toInt();
-  int yDist = str.substring(5,3).toInt();
-  int xDelay = str.substring(8,3).toInt();
-  int yDelay = str.substring(11,3).toInt();
-  if(xDelay==10){
-    yDelay = (20*yDelay)-10;
-  }
-  if(yDelay==10){
-    xDelay = (20*xDelay)-1;
-  }
+  int xDist = str.substring(2,6).toInt();
+  int yDist = str.substring(6,10).toInt();
+  int xDelay = str.substring(10,14).toInt();
+  int yDelay = str.substring(14,18).toInt();
+  stepMotors(xDist, yDist, xDelay, yDelay);
 }
 
-void yDelaySteps(int ysteps,int xdel,int ydel){
-  for(int i=0;i<ysteps;i++){
-    digitalWrite(yStep,HIGH);
-    digitalWrite(xStep,HIGH);
-    delay(15);
-    digitalWrite(yStep,LOW);
-    delay(xdel);
-  }
-}
-
-void stepxone(){
+void stepxone(int del){
+  if(millis()-xcounter>del){
+    xcounter = millis();
     digitalWrite(xStep,HIGH);
     delay(10);
     digitalWrite(xStep,LOW);
+    xstepcompleted++;
+  }
 }
 
-void stepyone(){
+void stepyone(int del){
+  if(millis()-ycounter>del){
+    ycounter = millis();
     digitalWrite(yStep,HIGH);
     delay(10);
     digitalWrite(yStep,LOW);
-}
-
-/* This function toggles the LED after 'interval' ms passed */
-static int protothreadx(struct pt *pt, int interval, int steps) {
-  static unsigned long timestamp = 0;
-  int i = steps;
-  PT_BEGIN(pt);
-  while(i>0) { // never stop 
-    /* each time the function is called the second boolean
-    *  argument "millis() - timestamp > interval" is re-evaluated
-    *  and if false the function exits after that. */
-    PT_WAIT_UNTIL(pt, millis() - timestamp > interval );
-    timestamp = millis(); // take a new timestamp
-    stepxone();
-    i--;
+    ystepcompleted++;
   }
-  PT_END(pt);
 }
 
-/* exactly the same as the protothread1 function */
-static int protothready(struct pt *pt, int interval, int steps) {
-  static unsigned long timestamp = 0;
-  int i = steps;
-  PT_BEGIN(pt);
-  while(i>0) {
-    PT_WAIT_UNTIL(pt, millis() - timestamp > interval );
-    timestamp = millis();
-    stepyone();
-    i--;
+void stepMotors(int xsteps, int ysteps, int xdel, int ydel){
+ while(ystepcompleted<ysteps || xstepcompleted<xsteps){
+   if(ystepcompleted<ysteps){
+     stepyone(ydel);
+   }
+   if(xstepcompleted<xsteps){
+     stepxone(xdel);
+   } 
   }
-  PT_END(pt);
+  ystepcompleted = 0;
+  xstepcompleted = 0; 
 }
-
 
 void selectDir(int i){
   if(i==0){
@@ -142,35 +115,24 @@ void selectDir(int i){
 
 void startPrint(boolean b){
   return;
-}  
-
+} 
 
 void loop()
 {
-  selectDir(5); 
-  protothreadx(&pt1,10,100);
-  protothready(&pt2,10,100);
-  delay(1000);
-  
-//  inChar = Serial.read();
-//  if(inChar==80){//Starts printing if you pass it P
-//    startPrint(true);
-//  }
-//  if (isDigit(inChar)){
-//      inString += (char)inChar;
-//      //Serial.print(inString);
-//  }
-//  if(inString.length()==14){
-//    Serial.print(inString);
-//    //DO SHIT
-//    Serial.print("?");
-//    char blanks[15];
-//    Serial.readBytes(blanks,15);
-//    inString = "";
-//  }
-//  delay(15);
+  inChar = Serial.read();
+  if(inChar==80){//Starts printing if you pass it P
+    startPrint(true);
+  }
+  if (isDigit(inChar)){
+      inString += (char)inChar;
+  }
+  if(inString.length()==18){
+    Serial.print(inString);
+    decode(inString);
+    delay(500);
+    Serial.println("!");
+    inString = "";
+  }
+  delay(15);
 }
-
-
-
 
