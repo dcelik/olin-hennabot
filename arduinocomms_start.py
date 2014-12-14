@@ -101,6 +101,28 @@ def startComms(coord_list):
     def compute_instruction(coord_list):
         instruction_list = []
         for i in range(0, len(coord_list)):
+            if i != 0:
+                move_x = coord_list[i][0][0] - coord_list[i-1][len(coord_list[i-1])-1][0]
+                move_y = coord_list[i][0][1] - coord_list[i-1][len(coord_list[i-1])-1][1]
+                delta_x = str(abs(move_x))
+                delta_y = str(abs(move_y))
+                delta_x = sign_extend(delta_x)
+                delta_y = sign_extend(delta_y)
+                delay_x = '0020'
+                delay_y = '0020'
+                direc_x = classify_direc(move_x,0)
+                direc_y = classify_direc(0,move_y)
+                printgo = 0
+                timing = sign_extend(str(abs(20))) #could multiply by move_x
+                command1 = str(printgo) + str(direc_x) + delta_x + '0000' + delay_x + '0000' + timing
+                timing2 = sign_extend(str(abs(20))) #could multiply by move_y
+                command2 = str(printgo) + str(direc_y) + '0000' + delta_y + '0000' + delay_y + timing2
+                printgo = 1
+                #timing3 = sign_extend('2000')
+                #command3 = str(printgo) + '0' + '0000' + '0000' + '0000' + '0000' + '2000'
+                instruction_list.append(command1)
+                instruction_list.append(command2)
+                #instruction_list.append(command3)
             for j in range(0, len(coord_list[i])):
                 if i == 0 and j == 0:
                     printgo = 0

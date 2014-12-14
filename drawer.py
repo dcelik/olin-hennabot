@@ -47,7 +47,6 @@ def makeDrawingWindow():
             if i not in good:
                 good.append(i)
         final_store = good
-        final_store[0] = [(1,1)]
     img = cv2.imread('thresholdedimage.png')
     cv2.namedWindow('image')
     cv2.setMouseCallback('image',draw_image)
@@ -57,11 +56,13 @@ def makeDrawingWindow():
         k = cv2.waitKey(1) & 0xFF
         if k == ord('q'):
             #print final_store
+            final_store[0] = [(1,1)]
             return final_store
             break
         if k == ord('s'):
             cv2.imwrite('handimage.png',img)
             #print final_store
+            final_store[0] = [(1,1)]
             return final_store
             break
         elif k == 27:
