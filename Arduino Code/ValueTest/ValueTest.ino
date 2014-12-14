@@ -7,9 +7,8 @@
 #define xEn 10
 #define yEn 11
 
-int inChar = 0;
 String inString = "";
-int inInt = 0;
+int inChar = 0;
 int xstepcompleted = 0;
 int ystepcompleted = 0;
 long xcounter = 0;
@@ -17,6 +16,7 @@ long ycounter = 0;
 
 void setup() {
   Serial.begin(9600);
+  Serial.setTimeout(10000);
   pinMode(xStep, OUTPUT);
   pinMode(xDir, OUTPUT);
   pinMode(yStep, OUTPUT);
@@ -120,19 +120,16 @@ void startPrint(boolean b){
 void loop()
 {
   inChar = Serial.read();
-  if(inChar==80){//Starts printing if you pass it P
-    startPrint(true);
-  }
   if (isDigit(inChar)){
       inString += (char)inChar;
   }
   if(inString.length()==18){
     //Serial.print(inString);
     decode(inString);
-    delay(500);
     Serial.println("!");
     inString = "";
   }
-  delay(15);
+  selectDir(0);
+  delay(3);
 }
 
