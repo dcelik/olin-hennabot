@@ -1,4 +1,4 @@
-#include <pt.h>   // include protothread library
+//#include <pt.h>   // include protothread library
 
 #define xStep 6
 #define xDir 7
@@ -127,7 +127,7 @@ void loop()
       inString += (char)inChar;
   }
   if(inString.length()==18){
-    Serial.print(inString);
+    //Serial.print(inString);
     decode(inString);
     delay(500);
     Serial.println("!");

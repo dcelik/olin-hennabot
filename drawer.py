@@ -40,12 +40,17 @@ def makeDrawingWindow():
             print 'New:' 
             print store_draw
             final_store.append(store_draw)
-        elif final_store[end] != store_draw:
-            final_store.append(store_draw)
+        #elif final_store[end] != store_draw:
+            #final_store.append(store_draw)
+        good = []
+        for i in final_store:
+            if i not in good:
+                good.append(i)
+        final_store = good
     img = cv2.imread('thresholdedimage.png')
     cv2.namedWindow('image')
     cv2.setMouseCallback('image',draw_image)
-
+    
     while(1):
         cv2.imshow('image',img)
         k = cv2.waitKey(1) & 0xFF

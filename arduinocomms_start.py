@@ -6,7 +6,7 @@ import time
 
 def startComms(coord_list):
 
-    PORT = '/dev/ttyACM1'
+    PORT = '/dev/ttyACM0'
     SPEED = 9600
     def send_command(val):
         connection = serial.Serial( PORT, 
@@ -15,8 +15,8 @@ def startComms(coord_list):
                                     stopbits=serial.STOPBITS_TWO
                                     )
         connection.write(val)
-        #time.sleep(.1)
-        #connection.flushInput()
+        time.sleep(2)
+        connection.flushInput()
         #connection.flushOutput()
         connection.close()
 
@@ -29,13 +29,14 @@ def startComms(coord_list):
         go = True
         tdata = ''
         while(go):
-            tdata = connection.read(1)
+            #time.sleep(2)
+            tdata = connection.readline()
             print(tdata)
-            time.sleep(2)
+            time.sleep(1)
             #data_left = connection.inWaiting()
             #print(data_left)
             #tdata += connection.read(data_left)
-            if tdata == '!':
+            if tdata == '!':    
                 go = False
         connection.close()
         return tdata
@@ -70,9 +71,12 @@ def startComms(coord_list):
 
     def transmit_instructions(instruction_list):
         for i in instruction_list:
-            if i == '080000000000200020' or receive_command() == '!':
-                send_command(i)
-                time.sleep(2)
+            #if i == '080000000000200020' or receive_command() == '!':
+            send_command(i[0:18])
+            wt = ((float(i[18:22])/1000) + .057)
+            time.sleep(wt)            
+            #print(wt)
+            
 
     def sign_extend(unextended):
         if len(unextended) == 1:
@@ -92,19 +96,19 @@ def startComms(coord_list):
                     printgo = 0
                     move_x = coord_list[i][j][0]
                     move_y = coord_list[i][j][1]
-                    instruction_list.append('080000000000200020')
-                if len(coord_list[i][j]) > 1:
+                    instruction_list.append('0800000000002000200000')
+                if len(coord_list[i]) > 1:
                     printgo = 1
                     move_x = coord_list[i][j][0] - coord_list[i][j-1][0]
                     move_y = coord_list[i][j][1] - coord_list[i][j-1][1]
                     if move_x > 0 or move_x < 0:
                         R_x = abs(move_y/move_x)
                     else:
-                        R_x = move_y
+                        R_x = abs(move_y)
                     if move_y > 0 or move_y < 0:
                         R_y = abs(move_x/move_y)
                     else:
-                        R_y = move_x
+                        R_y = abs(move_x)
                     if R_x > 1:
                         R_y = 20
                     elif R_y > 1:
@@ -123,11 +127,17 @@ def startComms(coord_list):
                     delay_x = sign_extend(delay_x)
                     delay_y = sign_extend(delay_y)
                     ##########################
-                    command = str(printgo) + str(direc) + delta_x + delta_y + delay_x + delay_y
+                    timing = '0000'
+                    if R_x == 20:
+                        timing = sign_extend(str(abs((R_x*move_x))))
+                    if R_y == 20:
+                        timing = sign_extend(str(abs((R_y*move_y))))
+
+                    command = str(printgo) + str(direc) + delta_x + delta_y + delay_x + delay_y + timing
                     instruction_list.append(command)
-                if len(coord_list[i][j]) == 1:
-                    move_x = coord_list[i][j][0] - coord_list[i-1][end][0]
-                    move_y = coord_list[i][j][1] - coord_list[i-1][end][1]
+                elif len(coord_list[i]) == 1:
+                    move_x = coord_list[i][j][0] - coord_list[i-1][len(coord_list[i-1])-1][0]
+                    move_y = coord_list[i][j][1] - coord_list[i-1][len(coord_list[i-1])-1][1]
                     delta_x = str(abs(move_x))
                     delta_y = str(abs(move_y))
                     delta_x = sign_extend(delta_x)
@@ -137,10 +147,13 @@ def startComms(coord_list):
                     direc_x = classify_direc(move_x,0)
                     direc_y = classify_direc(0,move_y)
                     printgo = 0
-                    command1 = str(printgo) + str(direc_x) + delta_x + '0000' + delay_x + '0000'
-                    command2 = str(printgo) + str(direc_y) + '0000' + delta_y + '0000' + delta_x
+                    timing = sign_extend(str(abs(20))) #could multiply by move_x
+                    command1 = str(printgo) + str(direc_x) + delta_x + '0000' + delay_x + '0000' + timing
+                    timing2 = sign_extend(str(abs(20))) #could multiply by move_y
+                    command2 = str(printgo) + str(direc_y) + '0000' + delta_y + '0000' + delay_y + timing2
                     printgo = 1
-                    command3 = str(printgo) + '0' + '0000' + '0000' + '0000' + '0000'
+                    #timing3 = sign_extend('2000')
+                    command3 = str(printgo) + '0' + '0000' + '0000' + '0000' + '0000' + '2000'
                     instruction_list.append(command1)
                     instruction_list.append(command2)
                     instruction_list.append(command3)
@@ -163,17 +176,17 @@ def startComms(coord_list):
         
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-        k = cv2.waitKey(1) & 0xFF
-        if k == ord('w'):
-            send_command('1')
-        elif k == ord('a'):
-            send_command('2')
-        elif k == ord('s'):
-            send_command('3')
-        elif k == ord('d'):
-            send_command('4')
-        elif k == ord('t'):
-            send_command('5')
+        # k = cv2.waitKey(1) & 0xFF
+        # if k == ord('w'):
+        #     send_command('1')
+        # elif k == ord('a'):
+        #     send_command('2')
+        # elif k == ord('s'):
+        #     send_command('3')
+        # elif k == ord('d'):
+        #     send_command('4')
+        # elif k == ord('t'):
+        #     send_command('5')
     # When everything done, release the capture
     cap.release()
     cv2.destroyAllWindows()
