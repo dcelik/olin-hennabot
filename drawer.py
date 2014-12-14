@@ -47,6 +47,7 @@ def makeDrawingWindow():
             if i not in good:
                 good.append(i)
         final_store = good
+        final_store[0] = [(1,1)]
     img = cv2.imread('thresholdedimage.png')
     cv2.namedWindow('image')
     cv2.setMouseCallback('image',draw_image)

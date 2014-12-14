@@ -69,14 +69,24 @@ def startComms(coord_list):
             direc = 8
         return direc
 
-    def transmit_instructions(instruction_list):
+    def transmit_instructions(img2,instruction_list):
+        loc = (1,1)
+        direcs = {'0': (0,0), '1': (0,1), '2': (1,1), '3': (1,0), '4': (1,-1), '5': (0,-1), '6': (-1,-1), '7': (-1,0), '8': (-1,1)}
         for i in instruction_list:
             #if i == '080000000000200020' or receive_command() == '!':
-            send_command(i[0:18])
+            #send_command(i[0:18])
             wt = ((float(i[18:22])/1000) + .057)/2
-            time.sleep(wt)            
+            prin = int(i[0])
+            xdel = int(i[2:6])
+            ydel = int(i[6:10])
+            dur = direcs[i[1]]
+            loc = ((loc[0]+(dur[0]*xdel)),((loc[1]+(dur[1]*ydel))))
+            #if prin == 1:
+            cv2.circle(img2,loc,2,(0,0,255),-1)
+            #time.sleep(wt)
             #print(wt)
-            
+            print ('plotted command: ' + i)
+        cv2.imshow('print-preview',img2)
 
     def sign_extend(unextended):
         if len(unextended) == 1:
@@ -97,7 +107,7 @@ def startComms(coord_list):
                     move_x = coord_list[i][j][0]
                     move_y = coord_list[i][j][1]
                     instruction_list.append('0800000000002000200000')
-                if len(coord_list[i]) > 1:
+                elif len(coord_list[i]) > 1:
                     printgo = 1
                     move_x = coord_list[i][j][0] - coord_list[i][j-1][0]
                     move_y = coord_list[i][j][1] - coord_list[i][j-1][1]
@@ -160,9 +170,11 @@ def startComms(coord_list):
         print(instruction_list)
         return instruction_list
     cv2.namedWindow('video')
+    cv2.namedWindow('print-preview')
     #switch = '0 : OFF \n1 : ON'
     #cv2.createTrackbar(switch, 'video',0,1,button)
     img = cv2.imread('handimage.png')
+    img2 = cv2.imread('template.png')
     cv2.imshow('video',img)
     coord_list[0] = [(1,1)]
     printgo = 0
@@ -172,8 +184,8 @@ def startComms(coord_list):
     while(True):
         # Capture frame-by-frame
         if cv2.waitKey(1) & 0xFF == ord('g'):
-            transmit_instructions(final_instructions)   
-        
+            transmit_instructions(img2,final_instructions)   
+            cv2.imshow('print-preview',img2)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
         # k = cv2.waitKey(1) & 0xFF
