@@ -51,21 +51,21 @@ def startComms(coord_list):
     def classify_direc(move_x,move_y):
         if move_x == 0 and move_y == 0:
             direc = 0
-        elif move_x == 0 and move_y > 0:
+        elif move_x == 0 and move_y < 0:
             direc = 1
-        elif move_x > 0 and move_y > 0:
+        elif move_x > 0 and move_y < 0:
             direc = 2
         elif move_x > 0 and move_y == 0:
             direc = 3
-        elif move_x > 0 and move_y < 0:
+        elif move_x > 0 and move_y > 0:
             direc = 4
-        elif move_x == 0 and move_y < 0:
+        elif move_x == 0 and move_y > 0:
             direc = 5
-        elif move_x < 0 and move_y < 0:
+        elif move_x < 0 and move_y > 0:
             direc = 6
         elif move_x < 0 and move_y == 0:
             direc = 7
-        elif move_x < 0 and move_y > 0:
+        elif move_x < 0 and move_y < 0:
             direc = 8
         return direc
 
@@ -74,19 +74,19 @@ def startComms(coord_list):
         direcs = {'0': (0,0), '1': (0,1), '2': (1,1), '3': (1,0), '4': (1,-1), '5': (0,-1), '6': (-1,-1), '7': (-1,0), '8': (-1,1)}
         for i in instruction_list:
             #if i == '080000000000200020' or receive_command() == '!':
-            #send_command(i[0:18])
-            wt = ((float(i[18:22])/1000) + .057)/2
-            prin = int(i[0])
-            xdel = int(i[2:6])
-            ydel = int(i[6:10])
-            dur = direcs[i[1]]
-            loc = ((loc[0]+(dur[0]*xdel)),((loc[1]+(dur[1]*ydel))))
+            send_command(i[0:18])
+            wt = 2*((float(i[18:22])/1000) + .057)
+            #prin = int(i[0])
+            #xdel = int(i[2:6])
+            #ydel = int(i[6:10])
+            #dur = direcs[i[1]]
+            #loc = ((loc[0]+(dur[0]*xdel)),((loc[1]+(dur[1]*ydel))))
             #if prin == 1:
-            cv2.circle(img2,loc,2,(0,0,255),-1)
-            #time.sleep(wt)
-            #print(wt)
-            print ('plotted command: ' + i)
-        cv2.imshow('print-preview',img2)
+            #    cv2.circle(img2,loc,2,(0,0,255),-1)
+            time.sleep(wt)
+            print(wt)
+            #    print ('plotted command: ' + i)
+        #cv2.imshow('print-preview',img2)
 
     def sign_extend(unextended):
         if len(unextended) == 1:
@@ -100,39 +100,41 @@ def startComms(coord_list):
 
     def compute_instruction(coord_list):
         instruction_list = []
+        xscale = 1.3
+        yscale = 2.8
         for i in range(0, len(coord_list)):
-            if i != 0:
-                move_x = coord_list[i][0][0] - coord_list[i-1][len(coord_list[i-1])-1][0]
-                move_y = coord_list[i][0][1] - coord_list[i-1][len(coord_list[i-1])-1][1]
-                delta_x = str(abs(move_x))
-                delta_y = str(abs(move_y))
-                delta_x = sign_extend(delta_x)
-                delta_y = sign_extend(delta_y)
-                delay_x = '0020'
-                delay_y = '0020'
-                direc_x = classify_direc(move_x,0)
-                direc_y = classify_direc(0,move_y)
-                printgo = 0
-                timing = sign_extend(str(abs(20))) #could multiply by move_x
-                command1 = str(printgo) + str(direc_x) + delta_x + '0000' + delay_x + '0000' + timing
-                timing2 = sign_extend(str(abs(20))) #could multiply by move_y
-                command2 = str(printgo) + str(direc_y) + '0000' + delta_y + '0000' + delay_y + timing2
-                printgo = 1
-                #timing3 = sign_extend('2000')
-                #command3 = str(printgo) + '0' + '0000' + '0000' + '0000' + '0000' + '2000'
-                instruction_list.append(command1)
-                instruction_list.append(command2)
-                #instruction_list.append(command3)
             for j in range(0, len(coord_list[i])):
                 if i == 0 and j == 0:
                     printgo = 0
-                    move_x = coord_list[i][j][0]
-                    move_y = coord_list[i][j][1]
-                    instruction_list.append('0800000000002000200000')
+                    move_x = coord_list[i][j][0]*1.66666
+                    move_y = coord_list[i][j][1]*3.2
+                    instruction_list.append('0400000000000000000000')
+                elif i != 0 and j == 0:
+                    move_x = coord_list[i][0][0] - coord_list[i-1][len(coord_list[i-1])-1][0]
+                    move_y = coord_list[i][0][1] - coord_list[i-1][len(coord_list[i-1])-1][1]
+                    delta_x = str(abs(int(move_x*xscale)))
+                    delta_y = str(abs(int(move_y*yscale)))
+                    delta_x = sign_extend(delta_x)
+                    delta_y = sign_extend(delta_y)
+                    delay_x = '0020'
+                    delay_y = '0020'
+                    direc_x = classify_direc(move_x,0)
+                    direc_y = classify_direc(0,move_y)
+                    printgo = 0
+                    timing = sign_extend(str(abs(20))) #could multiply by move_x
+                    command1 = str(printgo) + str(direc_x) + delta_x + '0000' + delay_x + '0000' + timing
+                    timing2 = sign_extend(str(abs(20))) #could multiply by move_y
+                    command2 = str(printgo) + str(direc_y) + '0000' + delta_y + '0000' + delay_y + timing2
+                    #printgo = 1
+                    #timing3 = sign_extend('2000')
+                    #command3 = str(printgo) + '0' + '0000' + '0000' + '0000' + '0000' + '2000'
+                    instruction_list.append(command1)
+                    instruction_list.append(command2)
+                    #instruction_list.append(command3)
                 elif len(coord_list[i]) > 1:
                     printgo = 1
-                    move_x = coord_list[i][j][0] - coord_list[i][j-1][0]
-                    move_y = coord_list[i][j][1] - coord_list[i][j-1][1]
+                    move_x = int((coord_list[i][j][0] - coord_list[i][j-1][0])*xscale)
+                    move_y = int((coord_list[i][j][1] - coord_list[i][j-1][1])*yscale)
                     if move_x > 0 or move_x < 0:
                         R_x = abs(move_y/move_x)
                     else:
@@ -170,8 +172,8 @@ def startComms(coord_list):
                 elif len(coord_list[i]) == 1:
                     move_x = coord_list[i][j][0] - coord_list[i-1][len(coord_list[i-1])-1][0]
                     move_y = coord_list[i][j][1] - coord_list[i-1][len(coord_list[i-1])-1][1]
-                    delta_x = str(abs(move_x))
-                    delta_y = str(abs(move_y))
+                    delta_x = str(int(abs(move_x*xscale)))
+                    delta_y = str(int(abs(move_y*yscale)))
                     delta_x = sign_extend(delta_x)
                     delta_y = sign_extend(delta_y)
                     delay_x = '0020'

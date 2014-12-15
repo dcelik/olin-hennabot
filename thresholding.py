@@ -5,7 +5,7 @@ def nothing(x):
     pass
 
 def makeThresholdingWindow():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
     # Create a black image, a window
     cv2.namedWindow('video')
     # create trackbars for color change
@@ -30,13 +30,14 @@ def makeThresholdingWindow():
         # Our operations on the frame come here
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         ret, thresh = cv2.threshold(gray,v1,255,cv2.THRESH_BINARY)
+        flipped = cv2.flip(thresh,-1)
         # Display the resulting frame
-        cv2.imshow('video',thresh)
+        cv2.imshow('video',flipped)
         k = cv2.waitKey(1) & 0xFF
         if k == ord('q'):
             break
         if k == ord('s'):
-            cv2.imwrite('thresholdedimage.png',thresh)
+            cv2.imwrite('thresholdedimage.png',flipped)
             break
 
     cap.release()

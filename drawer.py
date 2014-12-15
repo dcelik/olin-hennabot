@@ -56,13 +56,13 @@ def makeDrawingWindow():
         k = cv2.waitKey(1) & 0xFF
         if k == ord('q'):
             #print final_store
-            final_store[0] = [(1,1)]
+            final_store[0] = [(127,1)]
             return final_store
             break
         if k == ord('s'):
             cv2.imwrite('handimage.png',img)
             #print final_store
-            final_store[0] = [(1,1)]
+            final_store[0] = [(127,1)]
             return final_store
             break
         elif k == 27:
