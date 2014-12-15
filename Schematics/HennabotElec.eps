@@ -1,0 +1,3412 @@
+%!PS-Adobe-3.0
+%%Title: HennabotElec.asc
+%%Creator: PScript5.dll Version 5.2.2
+%%CreationDate: 12/15/2014 15:21:32
+%%For: dcelik
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%Orientation: Portrait
+%%PageOrder: Special
+%%DocumentNeededResources: (atend)
+%%DocumentSuppliedResources: (atend)
+%%DocumentData: Clean7Bit
+%%TargetDevice: () (52.3) 320
+%%LanguageLevel: 1
+%%EndComments
+
+%%BeginDefaults
+%%PageBoundingBox: 0 0 612 792
+%%ViewingOrientation: 1 0 0 1
+%%EndDefaults
+
+
+%%BeginProlog
+%%BeginResource: file Pscript_WinNT_ErrorHandler 5.0 0
+/currentpacking where{pop/oldpack currentpacking def/setpacking where{pop false
+setpacking}if}if/$brkpage 64 dict def $brkpage begin/prnt{dup type/stringtype
+ne{=string cvs}if dup length 6 mul/tx exch def/ty 10 def currentpoint/toy exch
+def/tox exch def 1 setgray newpath tox toy 2 sub moveto 0 ty rlineto tx 0
+rlineto 0 ty neg rlineto closepath fill tox toy moveto 0 setgray show}bind def
+/nl{currentpoint exch pop lmargin exch moveto 0 -10 rmoveto}def/=={/cp 0 def
+typeprint nl}def/typeprint{dup type exec}readonly def/lmargin 72 def/rmargin 72
+def/tprint{dup length cp add rmargin gt{nl/cp 0 def}if dup length cp add/cp
+exch def prnt}readonly def/cvsprint{=string cvs tprint( )tprint}readonly def
+/integertype{cvsprint}readonly def/realtype{cvsprint}readonly def/booleantype
+{cvsprint}readonly def/operatortype{(--)tprint =string cvs tprint(-- )tprint}
+readonly def/marktype{pop(-mark- )tprint}readonly def/dicttype{pop
+(-dictionary- )tprint}readonly def/nulltype{pop(-null- )tprint}readonly def
+/filetype{pop(-filestream- )tprint}readonly def/savetype{pop(-savelevel- )
+tprint}readonly def/fonttype{pop(-fontid- )tprint}readonly def/nametype{dup
+xcheck not{(/)tprint}if cvsprint}readonly def/stringtype{dup rcheck{(\()tprint
+tprint(\))tprint}{pop(-string- )tprint}ifelse}readonly def/arraytype{dup rcheck
+{dup xcheck{({)tprint{typeprint}forall(})tprint}{([)tprint{typeprint}forall(])
+tprint}ifelse}{pop(-array- )tprint}ifelse}readonly def/packedarraytype{dup
+rcheck{dup xcheck{({)tprint{typeprint}forall(})tprint}{([)tprint{typeprint}
+forall(])tprint}ifelse}{pop(-packedarray- )tprint}ifelse}readonly def/courier
+/Courier findfont 10 scalefont def end errordict/handleerror{systemdict begin
+$error begin $brkpage begin newerror{/newerror false store vmstatus pop pop 0
+ne{grestoreall}if errorname(VMerror)ne{showpage}if initgraphics courier setfont
+lmargin 720 moveto errorname(VMerror)eq{userdict/ehsave known{clear userdict
+/ehsave get restore 2 vmreclaim}if vmstatus exch pop exch pop PrtVMMsg}{
+(ERROR: )prnt errorname prnt nl(OFFENDING COMMAND: )prnt/command load prnt
+$error/ostack known{nl nl(STACK:)prnt nl nl $error/ostack get aload length{==}
+repeat}if}ifelse systemdict/showpage get exec(%%[ Error: )print errorname
+=print(; OffendingCommand: )print/command load =print( ]%%)= flush}if end end
+end}dup 0 systemdict put dup 4 $brkpage put bind readonly put/currentpacking
+where{pop/setpacking where{pop oldpack setpacking}if}if
+%%EndResource
+%%BeginProcSet: Pscript_Res_Emul 5.0 0
+/defineresource where{pop}{userdict begin/defineresource{userdict/Resources 2
+copy known{get begin}{15 dict dup begin put}ifelse exch readonly exch
+currentdict 1 index known not{dup 30 dict def}if load 3 -1 roll 2 index put
+end}bind readonly def/findresource{userdict/Resources get exch get exch get}
+bind readonly def/resourceforall{pop pop pop pop}bind readonly def
+/resourcestatus{userdict/Resources 2 copy known{get exch 2 copy known{get exch
+known{0 -1 true}{false}ifelse}{pop pop pop false}ifelse}{pop pop pop pop false}
+ifelse}bind readonly def end}ifelse
+%%EndProcSet
+userdict /Pscript_WinNT_Incr 230 dict dup begin put
+%%BeginResource: file Pscript_FatalError 5.0 0
+userdict begin/FatalErrorIf{{initgraphics findfont 1 index 0 eq{exch pop}{dup
+length dict begin{1 index/FID ne{def}{pop pop}ifelse}forall/Encoding
+{ISOLatin1Encoding}stopped{StandardEncoding}if def currentdict end
+/ErrFont-Latin1 exch definefont}ifelse exch scalefont setfont counttomark 3 div
+cvi{moveto show}repeat showpage quit}{cleartomark}ifelse}bind def end
+%%EndResource
+userdict begin/PrtVMMsg{vmstatus exch sub exch pop gt{[
+(This job requires more memory than is available in this printer.)100 500
+(Try one or more of the following, and then print again:)100 485
+(For the output format, choose Optimize For Portability.)115 470
+(In the Device Settings page, make sure the Available PostScript Memory is accurate.)
+115 455(Reduce the number of fonts in the document.)115 440
+(Print the document in parts.)115 425 12/Times-Roman showpage
+(%%[ PrinterError: Low Printer VM ]%%)= true FatalErrorIf}if}bind def end
+version cvi 2016 ge{/VM?{pop}bind def}{/VM? userdict/PrtVMMsg get def}ifelse
+105000 VM?
+%%BeginResource: file Pscript_Win_Basic 5.0 0
+/d/def load def/,/load load d/~/exch , d/?/ifelse , d/!/pop , d/`/begin , d/^
+/index , d/@/dup , d/+/translate , d/$/roll , d/U/userdict , d/M/moveto , d/-
+/rlineto , d/&/currentdict , d/:/gsave , d/;/grestore , d/F/false , d/T/true ,
+d/N/newpath , d/E/end , d/Ac/arc , d/An/arcn , d/A/ashow , d/D/awidthshow , d/C
+/closepath , d/V/div , d/O/eofill , d/L/fill , d/I/lineto , d/-c/curveto , d/-M
+/rmoveto , d/+S/scale , d/Ji/setfont , d/Lc/setlinecap , d/Lj/setlinejoin , d
+/Lw/setlinewidth , d/Lm/setmiterlimit , d/sd/setdash , d/S/show , d/LH/showpage
+, d/K/stroke , d/W/widthshow , d/R/rotate , d/L2? false/languagelevel where{pop
+languagelevel 2 ge{pop true}if}if d L2?{/xS/xshow , d/yS/yshow , d/zS/xyshow ,
+d}if/b{bind d}bind d/bd{bind d}bind d/xd{~ d}bd/ld{, d}bd/bn/bind ld/lw/Lw ld
+/lc/Lc ld/lj/Lj ld/sg/setgray ld/ADO_mxRot null d/self & d/OrgMx matrix
+currentmatrix d/reinitialize{: OrgMx setmatrix[/TextInit/GraphInit/UtilsInit
+counttomark{@ where{self eq}{F}?{cvx exec}{!}?}repeat cleartomark ;}b
+/initialize{`{/Pscript_Win_Data where{!}{U/Pscript_Win_Data & put}?/ADO_mxRot ~
+d/TextInitialised? F d reinitialize E}{U/Pscript_Win_Data 230 dict @ ` put
+/ADO_mxRot ~ d/TextInitialised? F d reinitialize}?}b/terminate{!{& self eq
+{exit}{E}?}loop E}b/suspend/terminate , d/resume{` Pscript_Win_Data `}b U `
+/lucas 21690 d/featurebegin{countdictstack lucas[}b/featurecleanup{stopped
+{cleartomark @ lucas eq{! exit}if}loop countdictstack ~ sub @ 0 gt{{E}repeat}
+{!}?}b E/snap{transform 0.25 sub round 0.25 add ~ 0.25 sub round 0.25 add ~
+itransform}b/dsnap{dtransform round ~ round ~ idtransform}b/nonzero_round{@ 0.5
+ge{round}{@ -0.5 lt{round}{0 ge{1}{-1}?}?}?}b/nonzero_dsnap{dtransform
+nonzero_round ~ nonzero_round ~ idtransform}b U<04>cvn{}put/rr{1 ^ 0 - 0 ~ -
+neg 0 - C}b/irp{4 -2 $ + +S fx 4 2 $ M 1 ^ 0 - 0 ~ - neg 0 -}b/rp{4 2 $ M 1 ^ 0
+- 0 ~ - neg 0 -}b/solid{[]0 sd}b/g{@ not{U/DefIf_save save put}if U/DefIf_bool
+2 ^ put}b/DefIf_El{if U/DefIf_bool get not @{U/DefIf_save get restore}if}b/e
+{DefIf_El !}b/UDF{L2?{undefinefont}{!}?}b/UDR{L2?{undefineresource}{! !}?}b
+/freeVM{/Courier findfont[40 0 0 -40 0 0]makefont Ji 2 vmreclaim}b/hfRedefFont
+{findfont @ length dict `{1 ^/FID ne{d}{! !}?}forall & E @ ` ~{/CharStrings 1
+dict `/.notdef 0 d & E d}if/Encoding 256 array 0 1 255{1 ^ ~/.notdef put}for d
+E definefont !}bind d/hfMkCIDFont{/CIDFont findresource @ length 2 add dict `{1
+^ @/FID eq ~ @/XUID eq ~/UIDBase eq or or{! !}{d}?}forall/CDevProc ~ d/Metrics2
+16 dict d/CIDFontName 1 ^ d & E 1 ^ ~/CIDFont defineresource ![~]composefont !}
+bind d
+%%EndResource
+%%BeginResource: file Pscript_Win_Utils_L1 5.0 0
+/rf{N rp L}b/fx{1 1 dtransform @ 0 ge{1 sub 1}{1 add -0.25}? 3 -1 $ @ 0 ge{1
+sub 1}{1 add -0.25}? 3 1 $ 4 1 $ idtransform 4 -2 $ idtransform}b/BZ{4 -2 $
+snap + +S fx rf}b/rs{N rp C K}b/rc{N rp clip N}b/UtilsInit{}b/setcolorspace{!}b
+/scol{[/setgray/setrgbcolor/setcolor/setcmykcolor/setcolor/setgray]~ get cvx
+exec}b/colspRefresh{}b/AddFontInfoBegin{/FontInfo 8 dict @ `}bind d/AddFontInfo
+{/GlyphNames2Unicode 16 dict d/GlyphNames2HostCode 16 dict d}bind d
+/AddFontInfoEnd{E d}bind d
+%%EndResource
+end
+%%EndProlog
+
+%%BeginSetup
+statusdict begin (%%[ ProductName: ) print product print ( ]%%)= flush end
+[ 1 0 0 1 0 0 ] false Pscript_WinNT_Incr dup /initialize get exec
+featurebegin{
+%%BeginNonPPDFeature: JobTimeout 0
+0 /languagelevel where{pop languagelevel}{1}ifelse 2 ge{1 dict dup/JobTimeout  4 -1 roll put setuserparams}{statusdict/setjobtimeout get exec}ifelse
+%%EndNonPPDFeature
+}featurecleanup
+
+featurebegin{
+%%BeginNonPPDFeature: WaitTimeout 300
+300 /languagelevel where{pop languagelevel}{1}ifelse 2 ge{1 dict dup/WaitTimeout 4 -1 roll put setuserparams}{statusdict/waittimeout 3 -1 roll put}ifelse
+%%EndNonPPDFeature
+}featurecleanup
+
+featurebegin{
+%%BeginFeature: *Resolution 600dpi
+
+%%EndFeature
+}featurecleanup
+featurebegin{
+%%BeginFeature: *PageSize Letter
+letter
+%%EndFeature
+}featurecleanup
+1 setlinecap 1 setlinejoin
+/mysetup [ 72 600 V 0 0 -72 600 V 0 792 ] def 
+%%EndSetup
+
+userdict begin /VMsave save def end
+%%Page: 1 1
+%%PageBoundingBox: 0 0 612 792
+%%EndPageComments
+%%BeginPageSetup
+/DeviceRGB dup setcolorspace /colspABC exch def
+mysetup concat colspRefresh
+%%EndPageSetup
+
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_Win_GdiObject 5.0 0
+/SavedCTM null d/CTMsave{/SavedCTM SavedCTM currentmatrix d}b/CTMrestore
+{SavedCTM setmatrix}b/mp null d/ADO_mxRot null d/GDIHMatrix null d
+/GDIHPatternDict 22 dict d GDIHPatternDict `/PatternType 1 d/PaintType 2 d/Reps
+L2?{1}{5}? d/XStep 8 Reps mul d/YStep XStep d/BBox[0 0 XStep YStep]d/TilingType
+1 d/PaintProc{` 1 Lw[]0 sd PaintData , exec E}b/FGnd null d/BGnd null d
+/HS_Horizontal{horiz}b/HS_Vertical{vert}b/HS_FDiagonal{fdiag}b/HS_BDiagonal
+{biag}b/HS_Cross{horiz vert}b/HS_DiagCross{fdiag biag}b/MaxXYStep XStep YStep
+gt{XStep}{YStep}? d/horiz{Reps{0 4 M XStep 0 - 0 8 +}repeat 0 -8 Reps mul + K}b
+/vert{Reps{4 0 M 0 YStep - 8 0 +}repeat 0 -8 Reps mul + K}b/biag{Reps{0 0 M
+MaxXYStep @ - 0 YStep neg M MaxXYStep @ - 0 8 +}repeat 0 -8 Reps mul + 0 YStep
+M 8 8 - K}b/fdiag{Reps{0 0 M MaxXYStep @ neg - 0 YStep M MaxXYStep @ neg - 0 8
++}repeat 0 -8 Reps mul + MaxXYStep @ M 8 -8 - K}b E/makehatch{4 -2 $/yOrg ~ d
+/xOrg ~ d GDIHPatternDict/PaintData 3 -1 $ put CTMsave GDIHMatrix setmatrix
+GDIHPatternDict matrix xOrg yOrg + mp CTMrestore ~ U ~ 2 ^ put}b/h0{/h0
+/HS_Horizontal makehatch}b/h1{/h1/HS_Vertical makehatch}b/h2{/h2/HS_FDiagonal
+makehatch}b/h3{/h3/HS_BDiagonal makehatch}b/h4{/h4/HS_Cross makehatch}b/h5{/h5
+/HS_DiagCross makehatch}b/GDIBWPatternMx null d/pfprep{save 8 1 $
+/PatternOfTheDay 8 1 $ GDIBWPatternDict `/yOrg ~ d/xOrg ~ d/PaintData ~ d/yExt
+~ d/Width ~ d/BGnd ~ d/FGnd ~ d/Height yExt RepsV mul d/mx[Width 0 0 Height 0
+0]d E build_pattern ~ !}b/pfbf{/fEOFill ~ d pfprep hbf fEOFill{O}{L}? restore}b
+/GraphInit{GDIHMatrix null eq{/SavedCTM matrix d : ADO_mxRot concat 0 0 snap +
+: 0.48 @ GDIHPatternDict ` YStep mul ~ XStep mul ~ nonzero_dsnap YStep V ~
+XStep V ~ E +S/GDIHMatrix matrix currentmatrix readonly d ; : 0.24 -0.24 +S
+GDIBWPatternDict ` Width Height E nonzero_dsnap +S/GDIBWPatternMx matrix
+currentmatrix readonly d ; ;}if}b
+%%EndResource
+%%BeginResource: file Pscript_Win_GdiObject_L1 5.0 0
+/GDIBWPatternDict 25 dict @ `/PatternType 1 d/PaintType 2 d/RepsV 6 d/RepsH 5 d
+/BBox[0 0 RepsH 1]d/TilingType 1 d/XStep 1 d/YStep 1 d/Height 8 RepsV mul d
+/Width 8 d/mx[Width 0 0 Height neg 0 Height]d/FGnd null d/BGnd null d
+/SetBGndFGnd{}b/PaintProc{` SetBGndFGnd RepsH{Width Height F mx PaintData
+imagemask Width 0 +}repeat E}b E d/GDIpattfill{@ ` BGnd null ne PaintType 2 eq
+and{: BGnd aload ! scol fEOFill{O}{L}? ; FGnd aload ! U/iCol 2 ^ put @ 0 eq{!
+2}{@ 1 eq ~ 2 eq or{4}{5}?}? -1 $}if E @ patterncalc : 4 ^/PaintType get 2 eq
+{iCol 0 eq{6 -1 $}if iCol 1 eq iCol 2 eq or{8 -3 $}if iCol 3 eq iCol 4 eq or{9
+-4 $}if iCol scol}if fEOFill{eoclip}{clip}? N patternfill ; N}b/hbf
+{GDIpattfill}b/hfMain{/fEOFill ~ d ~/iCol ~ d GDIpattfill}b/hf{: hfMain ;}b
+/mpstr 1 string d/mp{~ @ length 12 add dict copy `/PatternCTM matrix
+currentmatrix d/PatternMatrix ~ d/PatWidth XStep mpstr length mul d/PatHeight
+YStep d/FontType 3 d/Encoding 256 array d 3 string 0 1 255{Encoding ~ @ 3 ^ cvs
+cvn put}for !/FontMatrix matrix d/FontBBox BBox d/BuildChar{! @ ` XStep 0
+FontBBox aload ! setcachedevice/PaintProc , E : exec ;}b & E ~ @ 3 -1 $
+definefont}b/build_pattern{: GDIBWPatternDict ` Width Height E dsnap +S
+/GDIBWPatternMx matrix currentmatrix d ; CTMsave GDIBWPatternMx setmatrix
+GDIBWPatternDict @ ` xOrg yOrg E matrix + mp CTMrestore}b/patterncalc{` :
+PatternCTM setmatrix PatternMatrix concat BBox aload ! ! ! + pathbbox ;
+PatHeight V ceiling 4 1 $ PatWidth V ceiling 4 1 $ PatHeight V floor 4 1 $
+PatWidth V floor 4 1 $ 2 ^ sub cvi abs ~ 3 ^ sub cvi abs ~ 4 2 $ PatHeight mul
+~ PatWidth mul ~ E}b/patternfill{5 -1 $ @ ` Ji PatternCTM setmatrix
+PatternMatrix concat 0 2 ^ 2 ^ M 0 1 mpstr length 1 sub{1 ^ mpstr 3 1 $ put}for
+! 2 ^{currentpoint 5 ^{mpstr S}repeat YStep add M}repeat ! ! ! ! E}b/pbf{: 14
+dict `/fGray ~ d/fEOFill ~ d/yOrg ~ d/xOrg ~ d/PaintData ~ d/OutputBPP ~ d
+/Height ~ d/Width ~ d/mx xOrg yOrg matrix + d fGray{/PaintProc{` Width Height
+OutputBPP mx PaintData image E}b}{/PaintProc{` Width Height 8 mx PaintData F
+OutputBPP 8 idiv colorimage E}b}? pathbbox fEOFill{eoclip}{clip}?/Top ~ d/Right
+~ d/Bottom ~ d/Left ~ d Top Height neg Bottom 1 sub{Left Width Right 1 sub{1 ^
+2 copy + & PaintProc neg ~ neg ~ +}bind for !}bind for E ;}b
+%%EndResource
+end reinitialize
+0 0 0.496 1 scol N 1113 2196 M 1113 2258 I K 
+: N 1113 2258 1 1 rp C 
+ L ; N 1113 2178 M 1113 2116 I K 
+: N 1113 2116 1 1 rp C 
+ L ; N 1078 2178 M 1149 2178 I K 
+: N 1149 2178 1 1 rp C 
+ L ; N 1078 2196 M 1149 2196 I K 
+: N 1149 2196 1 1 rp C 
+ L ; 0 0 0 1 scol N 1137 2133 M 1137 2129 1134 2127 1130 2127 -c 1126 2127 1124 2129 1124 2133 -c 1124 2136 1126 2139 1130 2139 -c 1134 2139 1137 2136 1137 2133 -c C 
+K 
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_Text 5.0 0
+/TextInit{TextInitialised? not{/Pscript_Windows_Font & d/TextInitialised? T d
+/fM[1 0 0 1 0 0]d/mFM matrix d/iMat[1 0 0.212557 1 0 0]d}if}b/copyfont{1 ^
+length add dict `{1 ^/FID ne{d}{! !}?}forall & E}b/EncodeDict 11 dict d/bullets
+{{/bullet}repeat}b/rF{3 copyfont @ ` ~ EncodeDict ~ get/Encoding ~ 3 ^/0 eq{&
+/CharStrings known{CharStrings/Eth known not{! EncodeDict/ANSIEncodingOld get}
+if}if}if d E}b/mF{@ 7 1 $ findfont ~{@/Encoding get @ StandardEncoding eq{! T}{
+{ISOLatin1Encoding}stopped{! F}{eq}?{T}{@ ` T 32 1 127{Encoding 1 ^ get
+StandardEncoding 3 -1 $ get eq and}for E}?}?}{F}?{1 ^ ~ rF}{0 copyfont}? 6 -2 $
+! ! ~ !/pd_charset @ where{~ get 128 eq{@ FDV 2 copy get @ length array copy
+put pd_CoverFCRange}if}{!}? 2 ^ ~ definefont fM 5 4 -1 $ put fM 4 0 put fM
+makefont Pscript_Windows_Font 3 1 $ put}b/sLT{: Lw -M currentpoint snap M 0 - 0
+Lc K ;}b/xUP null d/yUP null d/uW null d/xSP null d/ySP null d/sW null d/sSU{N
+/uW ~ d/yUP ~ d/xUP ~ d}b/sU{xUP yUP uW sLT}b/sST{N/sW ~ d/ySP ~ d/xSP ~ d}b/sT
+{xSP ySP sW sLT}b/sR{: + R 0 0 M}b/sRxy{: matrix astore concat 0 0 M}b/eR/; , d
+/AddOrigFP{{&/FontInfo known{&/FontInfo get length 6 add}{6}? dict `
+/WinPitchAndFamily ~ d/WinCharSet ~ d/OrigFontType ~ d/OrigFontStyle ~ d
+/OrigFontName ~ d & E/FontInfo ~ d}{! ! ! ! !}?}b/mFS{makefont
+Pscript_Windows_Font 3 1 $ put}b/mF42D{0 copyfont `/FontName ~ d 2 copy ~ sub 1
+add dict `/.notdef 0 d 2 copy 1 ~{@ 3 ^ sub Encoding ~ get ~ d}for & E
+/CharStrings ~ d ! ! & @ E/FontName get ~ definefont}b/mF42{15 dict ` @ 4 1 $
+FontName ~ d/FontType 0 d/FMapType 2 d/FontMatrix[1 0 0 1 0 0]d 1 ^ 254 add 255
+idiv @ array/Encoding ~ d 0 1 3 -1 $ 1 sub{@ Encoding 3 1 $ put}for/FDepVector
+Encoding length array d/CharStrings 2 dict `/.notdef 0 d & E d 0 1 Encoding
+length 1 sub{@ @ 10 lt{! FontName length 1 add string}{100 lt{FontName length 2
+add string}{FontName length 3 add string}?}? @ 0 FontName @ length string cvs
+putinterval @ 3 -1 $ @ 4 1 $ 3 string cvs FontName length ~ putinterval cvn 1 ^
+256 mul @ 255 add 3 -1 $ 4 ^ findfont mF42D FDepVector 3 1 $ put}for & @ E
+/FontName get ~ definefont ! ! ! mF}b/mF_OTF_V{~ ! ~ ! 4 -1 $ ! findfont 2 ^ ~
+definefont fM @ @ 4 6 -1 $ neg put 5 0 put 90 matrix R matrix concatmatrix
+makefont Pscript_Windows_Font 3 1 $ put}b/mF_TTF_V{3{~ !}repeat 3 -1 $ !
+findfont 1 ^ ~ definefont Pscript_Windows_Font 3 1 $ put}b/UmF{L2?
+{Pscript_Windows_Font ~ undef}{!}?}b/UmF42{@ findfont/FDepVector get{/FontName
+get undefinefont}forall undefinefont}b
+%%EndResource
+end reinitialize
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_Encoding256 5.0 0
+/CharCol256Encoding[/.notdef/breve/caron/dotaccent/dotlessi/fi/fl/fraction
+/hungarumlaut/Lslash/lslash/minus/ogonek/ring/Zcaron/zcaron/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/space/exclam/quotedbl/numbersign
+/dollar/percent/ampersand/quotesingle/parenleft/parenright/asterisk/plus/comma
+/hyphen/period/slash/zero/one/two/three/four/five/six/seven/eight/nine/colon
+/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M/N/O/P/Q/R/S
+/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/asciicircum/underscore/grave
+/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft/bar/braceright
+/asciitilde/.notdef/Euro/.notdef/quotesinglbase/florin/quotedblbase/ellipsis
+/dagger/daggerdbl/circumflex/perthousand/Scaron/guilsinglleft/OE/.notdef
+/.notdef/.notdef/.notdef/quoteleft/quoteright/quotedblleft/quotedblright/bullet
+/endash/emdash/tilde/trademark/scaron/guilsinglright/oe/.notdef/.notdef
+/Ydieresis/.notdef/exclamdown/cent/sterling/currency/yen/brokenbar/section
+/dieresis/copyright/ordfeminine/guillemotleft/logicalnot/.notdef/registered
+/macron/degree/plusminus/twosuperior/threesuperior/acute/mu/paragraph
+/periodcentered/cedilla/onesuperior/ordmasculine/guillemotright/onequarter
+/onehalf/threequarters/questiondown/Agrave/Aacute/Acircumflex/Atilde/Adieresis
+/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute
+/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis
+/multiply/Oslash/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn/germandbls
+/agrave/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla/egrave/eacute
+/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis/eth/ntilde/ograve
+/oacute/ocircumflex/otilde/odieresis/divide/oslash/ugrave/uacute/ucircumflex
+/udieresis/yacute/thorn/ydieresis]def EncodeDict/256 CharCol256Encoding put
+%%EndResource
+end reinitialize
+
+%%IncludeResource: font Helvetica-Bold
+F /F0 0 /256 T /Helvetica-Bold mF 
+/F0S36YFFFFFFC9 F0 [54.496 0 0 -54.598 0 0 ] mFS
+F0S36YFFFFFFC9 Ji 
+1131 2153 M (C)S 
+1168 2153 M (1)S  
+N 1137 2239 M 1137 2235 1134 2233 1130 2233 -c 1126 2233 1124 2235 1124 2239 -c 1124 2243 1126 2246 1130 2246 -c 1134 2246 1137 2243 1137 2239 -c C 
+K 
+1131 2259 M (4)S 
+1160 2259 M (7)S  1189 2259 M <B5>S  1219 2259 M (F)S  
+0 0 0.496 1 scol N 1255 2196 M 1255 2258 I K 
+: N 1255 2258 1 1 rp C 
+ L ; N 1255 2178 M 1255 2116 I K 
+: N 1255 2116 1 1 rp C 
+ L ; N 1220 2178 M 1290 2178 I K 
+: N 1290 2178 1 1 rp C 
+ L ; N 1220 2196 M 1290 2196 I K 
+: N 1290 2196 1 1 rp C 
+ L ; 0 0 0 1 scol N 1278 2133 M 1278 2129 1275 2127 1272 2127 -c 1268 2127 1266 2129 1266 2133 -c 1266 2136 1268 2139 1272 2139 -c 1275 2139 1278 2136 1278 2133 -c C 
+K 
+1273 2153 M (C)S 
+1310 2153 M (2)S  
+N 1278 2239 M 1278 2235 1275 2233 1272 2233 -c 1268 2233 1266 2235 1266 2239 -c 1266 2243 1268 2246 1272 2246 -c 1275 2246 1278 2243 1278 2239 -c C 
+K 
+1273 2259 M (4)S 
+1302 2259 M (7)S  1331 2259 M <B5>S  1361 2259 M (F)S  
+0 0 0.496 1 scol N 1397 2196 M 1397 2258 I K 
+: N 1397 2258 1 1 rp C 
+ L ; N 1397 2178 M 1397 2116 I K 
+: N 1397 2116 1 1 rp C 
+ L ; N 1361 2178 M 1432 2178 I K 
+: N 1432 2178 1 1 rp C 
+ L ; N 1361 2196 M 1432 2196 I K 
+: N 1432 2196 1 1 rp C 
+ L ; 0 0 0 1 scol N 1420 2133 M 1420 2129 1417 2127 1414 2127 -c 1410 2127 1408 2129 1408 2133 -c 1408 2136 1410 2139 1414 2139 -c 1417 2139 1420 2136 1420 2133 -c C 
+K 
+1414 2153 M (C)S 
+1451 2153 M (3)S  
+N 1420 2239 M 1420 2235 1417 2233 1414 2233 -c 1410 2233 1408 2235 1408 2239 -c 1408 2243 1410 2246 1414 2246 -c 1417 2246 1420 2243 1420 2239 -c C 
+K 
+1414 2259 M (1)S 
+1443 2259 M (5)S  1472 2259 M <B5>S  1502 2259 M (F)S  
+0 0 0.496 1 scol N 1113 3471 M 1113 3533 I K 
+: N 1113 3533 1 1 rp C 
+ L ; N 1113 3453 M 1113 3391 I K 
+: N 1113 3391 1 1 rp C 
+ L ; N 1078 3453 M 1149 3453 I K 
+: N 1149 3453 1 1 rp C 
+ L ; N 1078 3471 M 1149 3471 I K 
+: N 1149 3471 1 1 rp C 
+ L ; 0 0 0 1 scol N 1137 3408 M 1137 3404 1134 3402 1130 3402 -c 1126 3402 1124 3404 1124 3408 -c 1124 3411 1126 3414 1130 3414 -c 1134 3414 1137 3411 1137 3408 -c C 
+K 
+1131 3428 M (C)S 
+1168 3428 M (4)S  
+N 1137 3514 M 1137 3510 1134 3508 1130 3508 -c 1126 3508 1124 3510 1124 3514 -c 1124 3518 1126 3521 1130 3521 -c 1134 3521 1137 3518 1137 3514 -c C 
+K 
+1131 3534 M (4)S 
+1160 3534 M (7)S  1189 3534 M <B5>S  1219 3534 M (F)S  
+0 0 0.496 1 scol N 1255 3471 M 1255 3533 I K 
+: N 1255 3533 1 1 rp C 
+ L ; N 1255 3453 M 1255 3391 I K 
+: N 1255 3391 1 1 rp C 
+ L ; N 1220 3453 M 1290 3453 I K 
+: N 1290 3453 1 1 rp C 
+ L ; N 1220 3471 M 1290 3471 I K 
+: N 1290 3471 1 1 rp C 
+ L ; 0 0 0 1 scol N 1278 3408 M 1278 3404 1275 3402 1272 3402 -c 1268 3402 1266 3404 1266 3408 -c 1266 3411 1268 3414 1272 3414 -c 1275 3414 1278 3411 1278 3408 -c C 
+K 
+1273 3428 M (C)S 
+1310 3428 M (5)S  
+N 1278 3514 M 1278 3510 1275 3508 1272 3508 -c 1268 3508 1266 3510 1266 3514 -c 1266 3518 1268 3521 1272 3521 -c 1275 3521 1278 3518 1278 3514 -c C 
+K 
+1273 3534 M (4)S 
+1302 3534 M (7)S  1331 3534 M <B5>S  1361 3534 M (F)S  
+0 0 0.496 1 scol N 1397 3471 M 1397 3533 I K 
+: N 1397 3533 1 1 rp C 
+ L ; N 1397 3453 M 1397 3391 I K 
+: N 1397 3391 1 1 rp C 
+ L ; N 1361 3453 M 1432 3453 I K 
+: N 1432 3453 1 1 rp C 
+ L ; N 1361 3471 M 1432 3471 I K 
+: N 1432 3471 1 1 rp C 
+ L ; 0 0 0 1 scol N 1420 3408 M 1420 3404 1417 3402 1414 3402 -c 1410 3402 1408 3404 1408 3408 -c 1408 3411 1410 3414 1414 3414 -c 1417 3414 1420 3411 1420 3408 -c C 
+K 
+1414 3428 M (C)S 
+1451 3428 M (6)S  
+N 1420 3514 M 1420 3510 1417 3508 1414 3508 -c 1410 3508 1408 3510 1408 3514 -c 1408 3518 1410 3521 1414 3521 -c 1417 3521 1420 3518 1420 3514 -c C 
+K 
+1414 3534 M (1)S 
+1443 3534 M (5)S  1472 3534 M <B5>S  1502 3534 M (F)S  
+: N 1715 2045 638 1133 rp C 
+1 1 0.754 1 scol  L ; 0 0 0.496 1 scol N 1715 2045 M 2353 2045 I K 
+: N 2353 2045 1 1 rp C 
+ L ; N 2353 2045 M 2353 3178 I K 
+: N 2353 3178 1 1 rp C 
+ L ; N 2353 3178 M 1715 3178 I K 
+: N 1715 3178 1 1 rp C 
+ L ; N 1715 3178 M 1715 2045 I K 
+: N 1715 2045 1 1 rp C 
+ L ; N 1990 2045 M 1990 2081 I K 
+: N 1990 2081 1 1 rp C 
+ L ; N 2078 2045 M 2078 2081 I K 
+: N 2078 2081 1 1 rp C 
+ L ; N 2016 2107 M 2052 2107 I K 
+: N 2052 2107 1 1 rp C 
+ L ; N 2016 2107 M 2015 2107 I K 
+: N 2015 2107 1 1 rp C 
+ L ; N 2015 2107 M 2014 2107 I K 
+: N 2014 2107 1 1 rp C 
+ L ; N 2014 2107 M 2012 2107 I K 
+: N 2012 2107 1 1 rp C 
+ L ; N 2012 2107 M 2011 2107 I K 
+: N 2011 2107 1 1 rp C 
+ L ; N 2011 2107 M 2010 2106 I K 
+: N 2010 2106 1 1 rp C 
+ L ; N 2010 2106 M 2009 2106 I K 
+: N 2009 2106 1 1 rp C 
+ L ; N 2009 2106 M 2007 2106 I K 
+: N 2007 2106 1 1 rp C 
+ L ; N 2007 2106 M 2006 2105 I K 
+: N 2006 2105 1 1 rp C 
+ L ; N 2006 2105 M 2005 2105 I K 
+: N 2005 2105 1 1 rp C 
+ L ; N 2005 2105 M 2004 2104 I K 
+: N 2004 2104 1 1 rp C 
+ L ; N 2004 2104 M 2003 2103 I K 
+: N 2003 2103 1 1 rp C 
+ L ; N 2003 2103 M 2002 2103 I K 
+: N 2002 2103 1 1 rp C 
+ L ; N 2002 2103 M 2001 2102 I K 
+: N 2001 2102 1 1 rp C 
+ L ; N 2001 2102 M 2000 2101 I K 
+: N 2000 2101 1 1 rp C 
+ L ; N 2000 2101 M 1999 2100 I K 
+: N 1999 2100 1 1 rp C 
+ L ; N 1999 2100 M 1998 2099 I K 
+: N 1998 2099 1 1 rp C 
+ L ; N 1998 2099 M 1997 2098 I K 
+: N 1997 2098 1 1 rp C 
+ L ; N 1997 2098 M 1996 2097 I K 
+: N 1996 2097 1 1 rp C 
+ L ; N 1996 2097 M 1995 2096 I K 
+: N 1995 2096 1 1 rp C 
+ L ; N 1995 2096 M 1994 2095 I K 
+: N 1994 2095 1 1 rp C 
+ L ; N 1994 2095 M 1994 2094 I K 
+: N 1994 2094 1 1 rp C 
+ L ; N 1994 2094 M 1993 2093 I K 
+: N 1993 2093 1 1 rp C 
+ L ; N 1993 2093 M 1992 2092 I K 
+: N 1992 2092 1 1 rp C 
+ L ; N 1992 2092 M 1992 2091 I K 
+: N 1992 2091 1 1 rp C 
+ L ; N 1992 2091 M 1991 2090 I K 
+: N 1991 2090 1 1 rp C 
+ L ; N 1991 2090 M 1991 2088 I K 
+: N 1991 2088 1 1 rp C 
+ L ; N 1991 2088 M 1991 2087 I K 
+: N 1991 2087 1 1 rp C 
+ L ; N 1991 2087 M 1990 2086 I K 
+: N 1990 2086 1 1 rp C 
+ L ; N 1990 2086 M 1990 2084 I K 
+: N 1990 2084 1 1 rp C 
+ L ; N 1990 2084 M 1990 2083 I K 
+: N 1990 2083 1 1 rp C 
+ L ; N 1990 2083 M 1990 2082 I K 
+: N 1990 2082 1 1 rp C 
+ L ; N 1990 2082 M 1990 2081 I K 
+: N 1990 2081 1 1 rp C 
+ L ; N 2078 2081 M 2078 2082 I K 
+: N 2078 2082 1 1 rp C 
+ L ; N 2078 2082 M 2078 2083 I K 
+: N 2078 2083 1 1 rp C 
+ L ; N 2078 2083 M 2078 2084 I K 
+: N 2078 2084 1 1 rp C 
+ L ; N 2078 2084 M 2078 2086 I K 
+: N 2078 2086 1 1 rp C 
+ L ; N 2078 2086 M 2078 2087 I K 
+: N 2078 2087 1 1 rp C 
+ L ; N 2078 2087 M 2077 2088 I K 
+: N 2077 2088 1 1 rp C 
+ L ; N 2077 2088 M 2077 2090 I K 
+: N 2077 2090 1 1 rp C 
+ L ; N 2077 2090 M 2076 2091 I K 
+: N 2076 2091 1 1 rp C 
+ L ; N 2076 2091 M 2076 2092 I K 
+: N 2076 2092 1 1 rp C 
+ L ; N 2076 2092 M 2075 2093 I K 
+: N 2075 2093 1 1 rp C 
+ L ; N 2075 2093 M 2075 2094 I K 
+: N 2075 2094 1 1 rp C 
+ L ; N 2075 2094 M 2074 2095 I K 
+: N 2074 2095 1 1 rp C 
+ L ; N 2074 2095 M 2073 2096 I K 
+: N 2073 2096 1 1 rp C 
+ L ; N 2073 2096 M 2072 2097 I K 
+: N 2072 2097 1 1 rp C 
+ L ; N 2072 2097 M 2071 2098 I K 
+: N 2071 2098 1 1 rp C 
+ L ; N 2071 2098 M 2071 2099 I K 
+: N 2071 2099 1 1 rp C 
+ L ; N 2071 2099 M 2070 2100 I K 
+: N 2070 2100 1 1 rp C 
+ L ; N 2070 2100 M 2069 2101 I K 
+: N 2069 2101 1 1 rp C 
+ L ; N 2069 2101 M 2068 2102 I K 
+: N 2068 2102 1 1 rp C 
+ L ; N 2068 2102 M 2067 2103 I K 
+: N 2067 2103 1 1 rp C 
+ L ; N 2067 2103 M 2065 2103 I K 
+: N 2065 2103 1 1 rp C 
+ L ; N 2065 2103 M 2064 2104 I K 
+: N 2064 2104 1 1 rp C 
+ L ; N 2064 2104 M 2063 2105 I K 
+: N 2063 2105 1 1 rp C 
+ L ; N 2063 2105 M 2062 2105 I K 
+: N 2062 2105 1 1 rp C 
+ L ; N 2062 2105 M 2061 2106 I K 
+: N 2061 2106 1 1 rp C 
+ L ; N 2061 2106 M 2060 2106 I K 
+: N 2060 2106 1 1 rp C 
+ L ; N 2060 2106 M 2058 2106 I K 
+: N 2058 2106 1 1 rp C 
+ L ; N 2058 2106 M 2057 2107 I K 
+: N 2057 2107 1 1 rp C 
+ L ; N 2057 2107 M 2056 2107 I K 
+: N 2056 2107 1 1 rp C 
+ L ; N 2056 2107 M 2054 2107 I K 
+: N 2054 2107 1 1 rp C 
+ L ; N 2054 2107 M 2053 2107 I K 
+: N 2053 2107 1 1 rp C 
+ L ; N 2053 2107 M 2052 2107 I K 
+: N 2052 2107 1 1 rp C 
+ L ; 1 0 0 1 scol N 1972 2575 M 2035 2575 I K 
+: N 2035 2575 1 1 rp C 
+ L ; N 1970 2575 M 2035 2575 I K 
+: N 2035 2575 1 1 rp C 
+ L ; N 1969 2576 M 2034 2576 I K 
+: N 2034 2576 1 1 rp C 
+ L ; N 1967 2576 M 2034 2576 I K 
+: N 2034 2576 1 1 rp C 
+ L ; N 2096 2507 M 2033 2507 I K 
+: N 2033 2507 1 1 rp C 
+ L ; N 2098 2507 M 2034 2507 I K 
+: N 2034 2507 1 1 rp C 
+ L ; N 2100 2506 M 2034 2506 I K 
+: N 2034 2506 1 1 rp C 
+ L ; N 2101 2506 M 2034 2506 I K 
+: N 2034 2506 1 1 rp C 
+ L ; N 1975 2573 M 2035 2573 I K 
+: N 2035 2573 1 1 rp C 
+ L ; N 1974 2573 M 2035 2573 I K 
+: N 2035 2573 1 1 rp C 
+ L ; N 1973 2574 M 2035 2574 I K 
+: N 2035 2574 1 1 rp C 
+ L ; N 1972 2575 M 2035 2575 I K 
+: N 2035 2575 1 1 rp C 
+ L ; N 2093 2509 M 2033 2509 I K 
+: N 2033 2509 1 1 rp C 
+ L ; N 2094 2509 M 2033 2509 I K 
+: N 2033 2509 1 1 rp C 
+ L ; N 2095 2508 M 2033 2508 I K 
+: N 2033 2508 1 1 rp C 
+ L ; N 2096 2507 M 2033 2507 I K 
+: N 2033 2507 1 1 rp C 
+ L ; N 1977 2571 M 2036 2571 I K 
+: N 2036 2571 1 1 rp C 
+ L ; N 1976 2572 M 2036 2572 I K 
+: N 2036 2572 1 1 rp C 
+ L ; N 1976 2572 M 2035 2572 I K 
+: N 2035 2572 1 1 rp C 
+ L ; N 1975 2573 M 2035 2573 I K 
+: N 2035 2573 1 1 rp C 
+ L ; N 2091 2511 M 2032 2511 I K 
+: N 2032 2511 1 1 rp C 
+ L ; N 2092 2510 M 2032 2510 I K 
+: N 2032 2510 1 1 rp C 
+ L ; N 2093 2510 M 2033 2510 I K 
+: N 2033 2510 1 1 rp C 
+ L ; N 2093 2509 M 2033 2509 I K 
+: N 2033 2509 1 1 rp C 
+ L ; N 1979 2569 M 2036 2569 I K 
+: N 2036 2569 1 1 rp C 
+ L ; N 1978 2570 M 2036 2570 I K 
+: N 2036 2570 1 1 rp C 
+ L ; N 1978 2571 M 2036 2571 I K 
+: N 2036 2571 1 1 rp C 
+ L ; N 1977 2571 M 2036 2571 I K 
+: N 2036 2571 1 1 rp C 
+ L ; N 2089 2513 M 2032 2513 I K 
+: N 2032 2513 1 1 rp C 
+ L ; N 2090 2512 M 2032 2512 I K 
+: N 2032 2512 1 1 rp C 
+ L ; N 2091 2511 M 2032 2511 I K 
+: N 2032 2511 1 1 rp C 
+ L ; N 2091 2511 M 2032 2511 I K 
+: N 2032 2511 1 1 rp C 
+ L ; N 1980 2568 M 2028 2568 I K 
+: N 2028 2568 1 1 rp C 
+ L ; N 1980 2568 M 2031 2568 I K 
+: N 2031 2568 1 1 rp C 
+ L ; N 1979 2569 M 2034 2569 I K 
+: N 2034 2569 1 1 rp C 
+ L ; N 1979 2569 M 2036 2569 I K 
+: N 2036 2569 1 1 rp C 
+ L ; N 2088 2514 M 2040 2514 I K 
+: N 2040 2514 1 1 rp C 
+ L ; N 2088 2514 M 2037 2514 I K 
+: N 2037 2514 1 1 rp C 
+ L ; N 2089 2513 M 2035 2513 I K 
+: N 2035 2513 1 1 rp C 
+ L ; N 2089 2513 M 2032 2513 I K 
+: N 2032 2513 1 1 rp C 
+ L ; N 1982 2566 M 2020 2566 I K 
+: N 2020 2566 1 1 rp C 
+ L ; N 1981 2566 M 2023 2566 I K 
+: N 2023 2566 1 1 rp C 
+ L ; N 1981 2567 M 2025 2567 I K 
+: N 2025 2567 1 1 rp C 
+ L ; N 1980 2568 M 2028 2568 I K 
+: N 2028 2568 1 1 rp C 
+ L ; N 2087 2516 M 2048 2516 I K 
+: N 2048 2516 1 1 rp C 
+ L ; N 2087 2516 M 2045 2516 I K 
+: N 2045 2516 1 1 rp C 
+ L ; N 2087 2515 M 2043 2515 I K 
+: N 2043 2515 1 1 rp C 
+ L ; N 2088 2514 M 2040 2514 I K 
+: N 2040 2514 1 1 rp C 
+ L ; N 1983 2564 M 2017 2564 I K 
+: N 2017 2564 1 1 rp C 
+ L ; N 1982 2565 M 2018 2565 I K 
+: N 2018 2565 1 1 rp C 
+ L ; N 1982 2565 M 2019 2565 I K 
+: N 2019 2565 1 1 rp C 
+ L ; N 1982 2566 M 2020 2566 I K 
+: N 2020 2566 1 1 rp C 
+ L ; N 2085 2518 M 2051 2518 I K 
+: N 2051 2518 1 1 rp C 
+ L ; N 2086 2517 M 2050 2517 I K 
+: N 2050 2517 1 1 rp C 
+ L ; N 2086 2517 M 2049 2517 I K 
+: N 2049 2517 1 1 rp C 
+ L ; N 2087 2516 M 2048 2516 I K 
+: N 2048 2516 1 1 rp C 
+ L ; N 1984 2562 M 2014 2562 I K 
+: N 2014 2562 1 1 rp C 
+ L ; N 1984 2563 M 2015 2563 I K 
+: N 2015 2563 1 1 rp C 
+ L ; N 1983 2563 M 2016 2563 I K 
+: N 2016 2563 1 1 rp C 
+ L ; N 1983 2564 M 2017 2564 I K 
+: N 2017 2564 1 1 rp C 
+ L ; N 2084 2520 M 2054 2520 I K 
+: N 2054 2520 1 1 rp C 
+ L ; N 2085 2519 M 2053 2519 I K 
+: N 2053 2519 1 1 rp C 
+ L ; N 2085 2519 M 2052 2519 I K 
+: N 2052 2519 1 1 rp C 
+ L ; N 2085 2518 M 2051 2518 I K 
+: N 2051 2518 1 1 rp C 
+ L ; N 1985 2560 M 2013 2560 I K 
+: N 2013 2560 1 1 rp C 
+ L ; N 1984 2561 M 2013 2561 I K 
+: N 2013 2561 1 1 rp C 
+ L ; N 1984 2562 M 2014 2562 I K 
+: N 2014 2562 1 1 rp C 
+ L ; N 1984 2562 M 2014 2562 I K 
+: N 2014 2562 1 1 rp C 
+ L ; N 2084 2522 M 2056 2522 I K 
+: N 2056 2522 1 1 rp C 
+ L ; N 2084 2521 M 2055 2521 I K 
+: N 2055 2521 1 1 rp C 
+ L ; N 2084 2520 M 2054 2520 I K 
+: N 2054 2520 1 1 rp C 
+ L ; N 2084 2520 M 2054 2520 I K 
+: N 2054 2520 1 1 rp C 
+ L ; N 1985 2559 M 2011 2559 I K 
+: N 2011 2559 1 1 rp C 
+ L ; N 1985 2559 M 2011 2559 I K 
+: N 2011 2559 1 1 rp C 
+ L ; N 1985 2560 M 2012 2560 I K 
+: N 2012 2560 1 1 rp C 
+ L ; N 1985 2560 M 2013 2560 I K 
+: N 2013 2560 1 1 rp C 
+ L ; N 2083 2523 M 2057 2523 I K 
+: N 2057 2523 1 1 rp C 
+ L ; N 2083 2523 M 2057 2523 I K 
+: N 2057 2523 1 1 rp C 
+ L ; N 2083 2522 M 2056 2522 I K 
+: N 2056 2522 1 1 rp C 
+ L ; N 2084 2522 M 2056 2522 I K 
+: N 2056 2522 1 1 rp C 
+ L ; N 1986 2557 M 2010 2557 I K 
+: N 2010 2557 1 1 rp C 
+ L ; N 1986 2558 M 2010 2558 I K 
+: N 2010 2558 1 1 rp C 
+ L ; N 1986 2558 M 2011 2558 I K 
+: N 2011 2558 1 1 rp C 
+ L ; N 1985 2559 M 2011 2559 I K 
+: N 2011 2559 1 1 rp C 
+ L ; N 2082 2525 M 2058 2525 I K 
+: N 2058 2525 1 1 rp C 
+ L ; N 2082 2524 M 2058 2524 I K 
+: N 2058 2524 1 1 rp C 
+ L ; N 2082 2524 M 2058 2524 I K 
+: N 2058 2524 1 1 rp C 
+ L ; N 2083 2523 M 2057 2523 I K 
+: N 2057 2523 1 1 rp C 
+ L ; N 1987 2555 M 2009 2555 I K 
+: N 2009 2555 1 1 rp C 
+ L ; N 1987 2556 M 2009 2556 I K 
+: N 2009 2556 1 1 rp C 
+ L ; N 1987 2556 M 2010 2556 I K 
+: N 2010 2556 1 1 rp C 
+ L ; N 1986 2557 M 2010 2557 I K 
+: N 2010 2557 1 1 rp C 
+ L ; N 2081 2527 M 2059 2527 I K 
+: N 2059 2527 1 1 rp C 
+ L ; N 2081 2526 M 2059 2526 I K 
+: N 2059 2526 1 1 rp C 
+ L ; N 2082 2526 M 2059 2526 I K 
+: N 2059 2526 1 1 rp C 
+ L ; N 2082 2525 M 2058 2525 I K 
+: N 2058 2525 1 1 rp C 
+ L ; N 1988 2553 M 2008 2553 I K 
+: N 2008 2553 1 1 rp C 
+ L ; N 1988 2554 M 2009 2554 I K 
+: N 2009 2554 1 1 rp C 
+ L ; N 1987 2555 M 2009 2555 I K 
+: N 2009 2555 1 1 rp C 
+ L ; N 1987 2555 M 2009 2555 I K 
+: N 2009 2555 1 1 rp C 
+ L ; N 2080 2529 M 2060 2529 I K 
+: N 2060 2529 1 1 rp C 
+ L ; N 2081 2528 M 2060 2528 I K 
+: N 2060 2528 1 1 rp C 
+ L ; N 2081 2527 M 2059 2527 I K 
+: N 2059 2527 1 1 rp C 
+ L ; N 2081 2527 M 2059 2527 I K 
+: N 2059 2527 1 1 rp C 
+ L ; N 1989 2552 M 2008 2552 I K 
+: N 2008 2552 1 1 rp C 
+ L ; N 1988 2552 M 2008 2552 I K 
+: N 2008 2552 1 1 rp C 
+ L ; N 1988 2553 M 2008 2553 I K 
+: N 2008 2553 1 1 rp C 
+ L ; N 1988 2553 M 2008 2553 I K 
+: N 2008 2553 1 1 rp C 
+ L ; N 2080 2530 M 2060 2530 I K 
+: N 2060 2530 1 1 rp C 
+ L ; N 2080 2530 M 2060 2530 I K 
+: N 2060 2530 1 1 rp C 
+ L ; N 2080 2529 M 2060 2529 I K 
+: N 2060 2529 1 1 rp C 
+ L ; N 2080 2529 M 2060 2529 I K 
+: N 2060 2529 1 1 rp C 
+ L ; N 1989 2550 M 2008 2550 I K 
+: N 2008 2550 1 1 rp C 
+ L ; N 1989 2550 M 2008 2550 I K 
+: N 2008 2550 1 1 rp C 
+ L ; N 1989 2551 M 2008 2551 I K 
+: N 2008 2551 1 1 rp C 
+ L ; N 1989 2552 M 2008 2552 I K 
+: N 2008 2552 1 1 rp C 
+ L ; N 2079 2532 M 2061 2532 I K 
+: N 2061 2532 1 1 rp C 
+ L ; N 2079 2532 M 2061 2532 I K 
+: N 2061 2532 1 1 rp C 
+ L ; N 2079 2531 M 2060 2531 I K 
+: N 2060 2531 1 1 rp C 
+ L ; N 2080 2530 M 2060 2530 I K 
+: N 2060 2530 1 1 rp C 
+ L ; N 1990 2548 M 2007 2548 I K 
+: N 2007 2548 1 1 rp C 
+ L ; N 1990 2549 M 2007 2549 I K 
+: N 2007 2549 1 1 rp C 
+ L ; N 1990 2549 M 2007 2549 I K 
+: N 2007 2549 1 1 rp C 
+ L ; N 1989 2550 M 2008 2550 I K 
+: N 2008 2550 1 1 rp C 
+ L ; N 2078 2534 M 2061 2534 I K 
+: N 2061 2534 1 1 rp C 
+ L ; N 2078 2533 M 2061 2533 I K 
+: N 2061 2533 1 1 rp C 
+ L ; N 2078 2533 M 2061 2533 I K 
+: N 2061 2533 1 1 rp C 
+ L ; N 2079 2532 M 2061 2532 I K 
+: N 2061 2532 1 1 rp C 
+ L ; N 1991 2546 M 2007 2546 I K 
+: N 2007 2546 1 1 rp C 
+ L ; N 1991 2547 M 2007 2547 I K 
+: N 2007 2547 1 1 rp C 
+ L ; N 1990 2547 M 2007 2547 I K 
+: N 2007 2547 1 1 rp C 
+ L ; N 1990 2548 M 2007 2548 I K 
+: N 2007 2548 1 1 rp C 
+ L ; N 2077 2536 M 2061 2536 I K 
+: N 2061 2536 1 1 rp C 
+ L ; N 2078 2535 M 2061 2535 I K 
+: N 2061 2535 1 1 rp C 
+ L ; N 2078 2534 M 2061 2534 I K 
+: N 2061 2534 1 1 rp C 
+ L ; N 2078 2534 M 2061 2534 I K 
+: N 2061 2534 1 1 rp C 
+ L ; N 1991 2545 M 2007 2545 I K 
+: N 2007 2545 1 1 rp C 
+ L ; N 1991 2545 M 2007 2545 I K 
+: N 2007 2545 1 1 rp C 
+ L ; N 1991 2546 M 2007 2546 I K 
+: N 2007 2546 1 1 rp C 
+ L ; N 1991 2546 M 2007 2546 I K 
+: N 2007 2546 1 1 rp C 
+ L ; N 2077 2537 M 2061 2537 I K 
+: N 2061 2537 1 1 rp C 
+ L ; N 2077 2537 M 2061 2537 I K 
+: N 2061 2537 1 1 rp C 
+ L ; N 2077 2536 M 2061 2536 I K 
+: N 2061 2536 1 1 rp C 
+ L ; N 2077 2536 M 2061 2536 I K 
+: N 2061 2536 1 1 rp C 
+ L ; N 1992 2543 M 2007 2543 I K 
+: N 2007 2543 1 1 rp C 
+ L ; N 1992 2543 M 2007 2543 I K 
+: N 2007 2543 1 1 rp C 
+ L ; N 1992 2544 M 2007 2544 I K 
+: N 2007 2544 1 1 rp C 
+ L ; N 1991 2545 M 2007 2545 I K 
+: N 2007 2545 1 1 rp C 
+ L ; N 2076 2539 M 2061 2539 I K 
+: N 2061 2539 1 1 rp C 
+ L ; N 2076 2539 M 2061 2539 I K 
+: N 2061 2539 1 1 rp C 
+ L ; N 2076 2538 M 2061 2538 I K 
+: N 2061 2538 1 1 rp C 
+ L ; N 2077 2537 M 2061 2537 I K 
+: N 2061 2537 1 1 rp C 
+ L ; N 1993 2541 M 2007 2541 I K 
+: N 2007 2541 1 1 rp C 
+ L ; N 1993 2542 M 2007 2542 I K 
+: N 2007 2542 1 1 rp C 
+ L ; N 1992 2542 M 2007 2542 I K 
+: N 2007 2542 1 1 rp C 
+ L ; N 1992 2543 M 2007 2543 I K 
+: N 2007 2543 1 1 rp C 
+ L ; N 2075 2541 M 2061 2541 I K 
+: N 2061 2541 1 1 rp C 
+ L ; N 2076 2540 M 2061 2540 I K 
+: N 2061 2540 1 1 rp C 
+ L ; N 2076 2540 M 2061 2540 I K 
+: N 2061 2540 1 1 rp C 
+ L ; N 2076 2539 M 2061 2539 I K 
+: N 2061 2539 1 1 rp C 
+ L ; N 1994 2539 M 2008 2539 I K 
+: N 2008 2539 1 1 rp C 
+ L ; N 1993 2540 M 2008 2540 I K 
+: N 2008 2540 1 1 rp C 
+ L ; N 1993 2540 M 2008 2540 I K 
+: N 2008 2540 1 1 rp C 
+ L ; N 1993 2541 M 2007 2541 I K 
+: N 2007 2541 1 1 rp C 
+ L ; N 2075 2543 M 2060 2543 I K 
+: N 2060 2543 1 1 rp C 
+ L ; N 2075 2542 M 2061 2542 I K 
+: N 2061 2542 1 1 rp C 
+ L ; N 2075 2542 M 2061 2542 I K 
+: N 2061 2542 1 1 rp C 
+ L ; N 2075 2541 M 2061 2541 I K 
+: N 2061 2541 1 1 rp C 
+ L ; N 1994 2537 M 2008 2537 I K 
+: N 2008 2537 1 1 rp C 
+ L ; N 1994 2538 M 2008 2538 I K 
+: N 2008 2538 1 1 rp C 
+ L ; N 1994 2539 M 2008 2539 I K 
+: N 2008 2539 1 1 rp C 
+ L ; N 1994 2539 M 2008 2539 I K 
+: N 2008 2539 1 1 rp C 
+ L ; N 2074 2545 M 2060 2545 I K 
+: N 2060 2545 1 1 rp C 
+ L ; N 2074 2544 M 2060 2544 I K 
+: N 2060 2544 1 1 rp C 
+ L ; N 2074 2543 M 2060 2543 I K 
+: N 2060 2543 1 1 rp C 
+ L ; N 2075 2543 M 2060 2543 I K 
+: N 2060 2543 1 1 rp C 
+ L ; N 1995 2536 M 2009 2536 I K 
+: N 2009 2536 1 1 rp C 
+ L ; N 1995 2536 M 2009 2536 I K 
+: N 2009 2536 1 1 rp C 
+ L ; N 1994 2537 M 2008 2537 I K 
+: N 2008 2537 1 1 rp C 
+ L ; N 1994 2537 M 2008 2537 I K 
+: N 2008 2537 1 1 rp C 
+ L ; N 2073 2546 M 2059 2546 I K 
+: N 2059 2546 1 1 rp C 
+ L ; N 2073 2546 M 2060 2546 I K 
+: N 2060 2546 1 1 rp C 
+ L ; N 2074 2545 M 2060 2545 I K 
+: N 2060 2545 1 1 rp C 
+ L ; N 2074 2545 M 2060 2545 I K 
+: N 2060 2545 1 1 rp C 
+ L ; N 1996 2534 M 2009 2534 I K 
+: N 2009 2534 1 1 rp C 
+ L ; N 1995 2534 M 2009 2534 I K 
+: N 2009 2534 1 1 rp C 
+ L ; N 1995 2535 M 2009 2535 I K 
+: N 2009 2535 1 1 rp C 
+ L ; N 1995 2536 M 2009 2536 I K 
+: N 2009 2536 1 1 rp C 
+ L ; N 2073 2548 M 2059 2548 I K 
+: N 2059 2548 1 1 rp C 
+ L ; N 2073 2547 M 2059 2547 I K 
+: N 2059 2547 1 1 rp C 
+ L ; N 2073 2547 M 2059 2547 I K 
+: N 2059 2547 1 1 rp C 
+ L ; N 2073 2546 M 2059 2546 I K 
+: N 2059 2546 1 1 rp C 
+ L ; N 1996 2532 M 2010 2532 I K 
+: N 2010 2532 1 1 rp C 
+ L ; N 1996 2533 M 2010 2533 I K 
+: N 2010 2533 1 1 rp C 
+ L ; N 1996 2533 M 2009 2533 I K 
+: N 2009 2533 1 1 rp C 
+ L ; N 1996 2534 M 2009 2534 I K 
+: N 2009 2534 1 1 rp C 
+ L ; N 2072 2550 M 2058 2550 I K 
+: N 2058 2550 1 1 rp C 
+ L ; N 2072 2549 M 2059 2549 I K 
+: N 2059 2549 1 1 rp C 
+ L ; N 2072 2549 M 2059 2549 I K 
+: N 2059 2549 1 1 rp C 
+ L ; N 2073 2548 M 2059 2548 I K 
+: N 2059 2548 1 1 rp C 
+ L ; N 1997 2530 M 2010 2530 I K 
+: N 2010 2530 1 1 rp C 
+ L ; N 1997 2531 M 2010 2531 I K 
+: N 2010 2531 1 1 rp C 
+ L ; N 1997 2532 M 2010 2532 I K 
+: N 2010 2532 1 1 rp C 
+ L ; N 1996 2532 M 2010 2532 I K 
+: N 2010 2532 1 1 rp C 
+ L ; N 2071 2552 M 2058 2552 I K 
+: N 2058 2552 1 1 rp C 
+ L ; N 2071 2551 M 2058 2551 I K 
+: N 2058 2551 1 1 rp C 
+ L ; N 2072 2550 M 2058 2550 I K 
+: N 2058 2550 1 1 rp C 
+ L ; N 2072 2550 M 2058 2550 I K 
+: N 2058 2550 1 1 rp C 
+ L ; N 1998 2529 M 2011 2529 I K 
+: N 2011 2529 1 1 rp C 
+ L ; N 1997 2529 M 2011 2529 I K 
+: N 2011 2529 1 1 rp C 
+ L ; N 1997 2530 M 2011 2530 I K 
+: N 2011 2530 1 1 rp C 
+ L ; N 1997 2530 M 2010 2530 I K 
+: N 2010 2530 1 1 rp C 
+ L ; N 2070 2553 M 2057 2553 I K 
+: N 2057 2553 1 1 rp C 
+ L ; N 2071 2553 M 2057 2553 I K 
+: N 2057 2553 1 1 rp C 
+ L ; N 2071 2552 M 2058 2552 I K 
+: N 2058 2552 1 1 rp C 
+ L ; N 2071 2552 M 2058 2552 I K 
+: N 2058 2552 1 1 rp C 
+ L ; N 1998 2527 M 2011 2527 I K 
+: N 2011 2527 1 1 rp C 
+ L ; N 1998 2527 M 2011 2527 I K 
+: N 2011 2527 1 1 rp C 
+ L ; N 1998 2528 M 2011 2528 I K 
+: N 2011 2528 1 1 rp C 
+ L ; N 1998 2529 M 2011 2529 I K 
+: N 2011 2529 1 1 rp C 
+ L ; N 2070 2555 M 2057 2555 I K 
+: N 2057 2555 1 1 rp C 
+ L ; N 2070 2555 M 2057 2555 I K 
+: N 2057 2555 1 1 rp C 
+ L ; N 2070 2554 M 2057 2554 I K 
+: N 2057 2554 1 1 rp C 
+ L ; N 2070 2553 M 2057 2553 I K 
+: N 2057 2553 1 1 rp C 
+ L ; N 1999 2525 M 2012 2525 I K 
+: N 2012 2525 1 1 rp C 
+ L ; N 1999 2526 M 2012 2526 I K 
+: N 2012 2526 1 1 rp C 
+ L ; N 1999 2526 M 2012 2526 I K 
+: N 2012 2526 1 1 rp C 
+ L ; N 1998 2527 M 2011 2527 I K 
+: N 2011 2527 1 1 rp C 
+ L ; N 2069 2557 M 2056 2557 I K 
+: N 2056 2557 1 1 rp C 
+ L ; N 2069 2556 M 2056 2556 I K 
+: N 2056 2556 1 1 rp C 
+ L ; N 2069 2556 M 2057 2556 I K 
+: N 2057 2556 1 1 rp C 
+ L ; N 2070 2555 M 2057 2555 I K 
+: N 2057 2555 1 1 rp C 
+ L ; N 2000 2523 M 2013 2523 I K 
+: N 2013 2523 1 1 rp C 
+ L ; N 2000 2524 M 2012 2524 I K 
+: N 2012 2524 1 1 rp C 
+ L ; N 1999 2524 M 2012 2524 I K 
+: N 2012 2524 1 1 rp C 
+ L ; N 1999 2525 M 2012 2525 I K 
+: N 2012 2525 1 1 rp C 
+ L ; N 2068 2559 M 2056 2559 I K 
+: N 2056 2559 1 1 rp C 
+ L ; N 2069 2558 M 2056 2558 I K 
+: N 2056 2558 1 1 rp C 
+ L ; N 2069 2558 M 2056 2558 I K 
+: N 2056 2558 1 1 rp C 
+ L ; N 2069 2557 M 2056 2557 I K 
+: N 2056 2557 1 1 rp C 
+ L ; N 2001 2522 M 2013 2522 I K 
+: N 2013 2522 1 1 rp C 
+ L ; N 2000 2522 M 2013 2522 I K 
+: N 2013 2522 1 1 rp C 
+ L ; N 2000 2523 M 2013 2523 I K 
+: N 2013 2523 1 1 rp C 
+ L ; N 2000 2523 M 2013 2523 I K 
+: N 2013 2523 1 1 rp C 
+ L ; N 2068 2560 M 2055 2560 I K 
+: N 2055 2560 1 1 rp C 
+ L ; N 2068 2560 M 2055 2560 I K 
+: N 2055 2560 1 1 rp C 
+ L ; N 2068 2559 M 2055 2559 I K 
+: N 2055 2559 1 1 rp C 
+ L ; N 2068 2559 M 2056 2559 I K 
+: N 2056 2559 1 1 rp C 
+ L ; N 2001 2520 M 2014 2520 I K 
+: N 2014 2520 1 1 rp C 
+ L ; N 2001 2520 M 2014 2520 I K 
+: N 2014 2520 1 1 rp C 
+ L ; N 2001 2521 M 2013 2521 I K 
+: N 2013 2521 1 1 rp C 
+ L ; N 2001 2522 M 2013 2522 I K 
+: N 2013 2522 1 1 rp C 
+ L ; N 2067 2562 M 2054 2562 I K 
+: N 2054 2562 1 1 rp C 
+ L ; N 2067 2562 M 2055 2562 I K 
+: N 2055 2562 1 1 rp C 
+ L ; N 2067 2561 M 2055 2561 I K 
+: N 2055 2561 1 1 rp C 
+ L ; N 2068 2560 M 2055 2560 I K 
+: N 2055 2560 1 1 rp C 
+ L ; N 2002 2518 M 2014 2518 I K 
+: N 2014 2518 1 1 rp C 
+ L ; N 2002 2519 M 2014 2519 I K 
+: N 2014 2519 1 1 rp C 
+ L ; N 2002 2519 M 2014 2519 I K 
+: N 2014 2519 1 1 rp C 
+ L ; N 2001 2520 M 2014 2520 I K 
+: N 2014 2520 1 1 rp C 
+ L ; N 2066 2564 M 2054 2564 I K 
+: N 2054 2564 1 1 rp C 
+ L ; N 2066 2563 M 2054 2563 I K 
+: N 2054 2563 1 1 rp C 
+ L ; N 2067 2563 M 2054 2563 I K 
+: N 2054 2563 1 1 rp C 
+ L ; N 2067 2562 M 2054 2562 I K 
+: N 2054 2562 1 1 rp C 
+ L ; N 2003 2516 M 2015 2516 I K 
+: N 2015 2516 1 1 rp C 
+ L ; N 2003 2517 M 2015 2517 I K 
+: N 2015 2517 1 1 rp C 
+ L ; N 2002 2517 M 2014 2517 I K 
+: N 2014 2517 1 1 rp C 
+ L ; N 2002 2518 M 2014 2518 I K 
+: N 2014 2518 1 1 rp C 
+ L ; N 2065 2566 M 2053 2566 I K 
+: N 2053 2566 1 1 rp C 
+ L ; N 2066 2565 M 2054 2565 I K 
+: N 2054 2565 1 1 rp C 
+ L ; N 2066 2565 M 2054 2565 I K 
+: N 2054 2565 1 1 rp C 
+ L ; N 2066 2564 M 2054 2564 I K 
+: N 2054 2564 1 1 rp C 
+ L ; N 2004 2514 M 2016 2514 I K 
+: N 2016 2514 1 1 rp C 
+ L ; N 2003 2515 M 2015 2515 I K 
+: N 2015 2515 1 1 rp C 
+ L ; N 2003 2516 M 2015 2516 I K 
+: N 2015 2516 1 1 rp C 
+ L ; N 2003 2516 M 2015 2516 I K 
+: N 2015 2516 1 1 rp C 
+ L ; N 2064 2568 M 2053 2568 I K 
+: N 2053 2568 1 1 rp C 
+ L ; N 2065 2567 M 2053 2567 I K 
+: N 2053 2567 1 1 rp C 
+ L ; N 2065 2566 M 2053 2566 I K 
+: N 2053 2566 1 1 rp C 
+ L ; N 2065 2566 M 2053 2566 I K 
+: N 2053 2566 1 1 rp C 
+ L ; N 2005 2513 M 2016 2513 I K 
+: N 2016 2513 1 1 rp C 
+ L ; N 2004 2513 M 2016 2513 I K 
+: N 2016 2513 1 1 rp C 
+ L ; N 2004 2514 M 2016 2514 I K 
+: N 2016 2514 1 1 rp C 
+ L ; N 2004 2514 M 2016 2514 I K 
+: N 2016 2514 1 1 rp C 
+ L ; N 2063 2569 M 2052 2569 I K 
+: N 2052 2569 1 1 rp C 
+ L ; N 2064 2569 M 2052 2569 I K 
+: N 2052 2569 1 1 rp C 
+ L ; N 2064 2568 M 2052 2568 I K 
+: N 2052 2568 1 1 rp C 
+ L ; N 2064 2568 M 2053 2568 I K 
+: N 2053 2568 1 1 rp C 
+ L ; N 2006 2511 M 2017 2511 I K 
+: N 2017 2511 1 1 rp C 
+ L ; N 2006 2511 M 2017 2511 I K 
+: N 2017 2511 1 1 rp C 
+ L ; N 2005 2512 M 2017 2512 I K 
+: N 2017 2512 1 1 rp C 
+ L ; N 2005 2513 M 2016 2513 I K 
+: N 2016 2513 1 1 rp C 
+ L ; N 2062 2571 M 2051 2571 I K 
+: N 2051 2571 1 1 rp C 
+ L ; N 2062 2571 M 2051 2571 I K 
+: N 2051 2571 1 1 rp C 
+ L ; N 2063 2570 M 2052 2570 I K 
+: N 2052 2570 1 1 rp C 
+ L ; N 2063 2569 M 2052 2569 I K 
+: N 2052 2569 1 1 rp C 
+ L ; N 2008 2509 M 2018 2509 I K 
+: N 2018 2509 1 1 rp C 
+ L ; N 2007 2510 M 2017 2510 I K 
+: N 2017 2510 1 1 rp C 
+ L ; N 2007 2510 M 2017 2510 I K 
+: N 2017 2510 1 1 rp C 
+ L ; N 2006 2511 M 2017 2511 I K 
+: N 2017 2511 1 1 rp C 
+ L ; N 2060 2573 M 2051 2573 I K 
+: N 2051 2573 1 1 rp C 
+ L ; N 2061 2572 M 2051 2572 I K 
+: N 2051 2572 1 1 rp C 
+ L ; N 2061 2572 M 2051 2572 I K 
+: N 2051 2572 1 1 rp C 
+ L ; N 2062 2571 M 2051 2571 I K 
+: N 2051 2571 1 1 rp C 
+ L ; N 2011 2507 M 2018 2507 I K 
+: N 2018 2507 1 1 rp C 
+ L ; N 2010 2508 M 2018 2508 I K 
+: N 2018 2508 1 1 rp C 
+ L ; N 2009 2509 M 2018 2509 I K 
+: N 2018 2509 1 1 rp C 
+ L ; N 2008 2509 M 2018 2509 I K 
+: N 2018 2509 1 1 rp C 
+ L ; N 2057 2575 M 2050 2575 I K 
+: N 2050 2575 1 1 rp C 
+ L ; N 2058 2574 M 2050 2574 I K 
+: N 2050 2574 1 1 rp C 
+ L ; N 2059 2573 M 2050 2573 I K 
+: N 2050 2573 1 1 rp C 
+ L ; N 2060 2573 M 2051 2573 I K 
+: N 2051 2573 1 1 rp C 
+ L ; N 2016 2506 M 2019 2506 I K 
+: N 2019 2506 1 1 rp C 
+ L ; N 2014 2506 M 2019 2506 I K 
+: N 2019 2506 1 1 rp C 
+ L ; N 2013 2507 M 2019 2507 I K 
+: N 2019 2507 1 1 rp C 
+ L ; N 2011 2507 M 2018 2507 I K 
+: N 2018 2507 1 1 rp C 
+ L ; N 2052 2576 M 2049 2576 I K 
+: N 2049 2576 1 1 rp C 
+ L ; N 2054 2576 M 2049 2576 I K 
+: N 2049 2576 1 1 rp C 
+ L ; N 2056 2575 M 2050 2575 I K 
+: N 2050 2575 1 1 rp C 
+ L ; N 2057 2575 M 2050 2575 I K 
+: N 2050 2575 1 1 rp C 
+ L ; 0 0 0 1 scol 1733 2135 M (V)S 
+1768 2135 M (M)S  1811 2135 M (O)S  1851 2135 M (T)S  
+1733 2277 M (G)S 
+1773 2277 M (N)S  1810 2277 M (D)S  
+1733 2418 M (B)S 
+1770 2418 M (2)S  
+1733 2560 M (B)S 
+1770 2560 M (1)S  
+1733 2702 M (A)S 
+1770 2702 M (1)S  
+1733 2843 M (A)S 
+1770 2843 M (2)S  
+0 0 1 1 scol N 1709 2959 M 1722 2959 I K 
+: N 1722 2959 1 1 rp C 
+ L ; N 1722 2959 M 1722 2973 I K 
+: N 1722 2973 1 1 rp C 
+ L ; N 1722 2973 M 1709 2973 I K 
+: N 1709 2973 1 1 rp C 
+ L ; N 1709 2973 M 1709 2959 I K 
+: N 1709 2959 1 1 rp C 
+ L ; : N 1715 2966 1 1 rp C 
+1 1 1 1 scol  L ; 0 0 0 1 scol 1733 2985 M (F)S 
+1765 2985 M (L)S  1797 2985 M (T)S  
+1733 3127 M (G)S 
+1773 3127 M (N)S  1810 3127 M (D)S  
+2247 3127 M (D)S 
+2284 3127 M (I)S  2298 3127 M (R)S  
+2198 2985 M (S)S 
+2233 2985 M (T)S  2265 2985 M (E)S  2300 2985 M (P)S  
+2233 2843 M (S)S 
+2268 2843 M (L)S  2300 2843 M (P)S  
+2231 2702 M (R)S 
+2268 2702 M (S)S  2303 2702 M (T)S  
+0 0 1 1 scol N 2346 2534 M 2359 2534 I K 
+: N 2359 2534 1 1 rp C 
+ L ; N 2359 2534 M 2359 2548 I K 
+: N 2359 2548 1 1 rp C 
+ L ; N 2359 2548 M 2346 2548 I K 
+: N 2346 2548 1 1 rp C 
+ L ; N 2346 2548 M 2346 2534 I K 
+: N 2346 2534 1 1 rp C 
+ L ; : N 2353 2541 1 1 rp C 
+1 1 1 1 scol  L ; 0 0 0 1 scol 2263 2560 M (M)S 
+2306 2560 M (2)S  
+0 0 1 1 scol N 2346 2393 M 2359 2393 I K 
+: N 2359 2393 1 1 rp C 
+ L ; N 2359 2393 M 2359 2406 I K 
+: N 2359 2406 1 1 rp C 
+ L ; N 2359 2406 M 2346 2406 I K 
+: N 2346 2406 1 1 rp C 
+ L ; N 2346 2406 M 2346 2393 I K 
+: N 2346 2393 1 1 rp C 
+ L ; : N 2353 2399 1 1 rp C 
+1 1 1 1 scol  L ; 0 0 0 1 scol 2263 2418 M (M)S 
+2306 2418 M (1)S  
+0 0 1 1 scol N 2346 2251 M 2359 2251 I K 
+: N 2359 2251 1 1 rp C 
+ L ; N 2359 2251 M 2359 2264 I K 
+: N 2359 2264 1 1 rp C 
+ L ; N 2359 2264 M 2346 2264 I K 
+: N 2346 2264 1 1 rp C 
+ L ; N 2346 2264 M 2346 2251 I K 
+: N 2346 2251 1 1 rp C 
+ L ; : N 2353 2258 1 1 rp C 
+1 1 1 1 scol  L ; 0 0 0 1 scol 2263 2277 M (M)S 
+2306 2277 M (0)S  
+2263 2135 M (E)S 
+2298 2135 M (N)S  
+N 2040 2009 M 2040 2005 2037 2003 2033 2003 -c 2029 2003 2027 2005 2027 2009 -c 2027 2012 2029 2015 2033 2015 -c 2037 2015 2040 2012 2040 2009 -c C 
+K 
+1913 2029 M (X)S 
+1948 2029 M (-)S  1965 2029 M (A)S  2002 2029 M (x)S  2031 2029 M (i)S  2045 2029 M (s)S  2074 2029 M (M)S  2117 2029 M (D)S  
+: N 1715 3320 638 1133 rp C 
+1 1 0.754 1 scol  L ; 0 0 0.496 1 scol N 1715 3320 M 2353 3320 I K 
+: N 2353 3320 1 1 rp C 
+ L ; N 2353 3320 M 2353 4453 I K 
+: N 2353 4453 1 1 rp C 
+ L ; N 2353 4453 M 1715 4453 I K 
+: N 1715 4453 1 1 rp C 
+ L ; N 1715 4453 M 1715 3320 I K 
+: N 1715 3320 1 1 rp C 
+ L ; N 1990 3320 M 1990 3356 I K 
+: N 1990 3356 1 1 rp C 
+ L ; N 2078 3320 M 2078 3356 I K 
+: N 2078 3356 1 1 rp C 
+ L ; N 2016 3382 M 2052 3382 I K 
+: N 2052 3382 1 1 rp C 
+ L ; N 2016 3382 M 2015 3382 I K 
+: N 2015 3382 1 1 rp C 
+ L ; N 2015 3382 M 2014 3382 I K 
+: N 2014 3382 1 1 rp C 
+ L ; N 2014 3382 M 2012 3382 I K 
+: N 2012 3382 1 1 rp C 
+ L ; N 2012 3382 M 2011 3382 I K 
+: N 2011 3382 1 1 rp C 
+ L ; N 2011 3382 M 2010 3381 I K 
+: N 2010 3381 1 1 rp C 
+ L ; N 2010 3381 M 2009 3381 I K 
+: N 2009 3381 1 1 rp C 
+ L ; N 2009 3381 M 2007 3381 I K 
+: N 2007 3381 1 1 rp C 
+ L ; N 2007 3381 M 2006 3380 I K 
+: N 2006 3380 1 1 rp C 
+ L ; N 2006 3380 M 2005 3380 I K 
+: N 2005 3380 1 1 rp C 
+ L ; N 2005 3380 M 2004 3379 I K 
+: N 2004 3379 1 1 rp C 
+ L ; N 2004 3379 M 2003 3378 I K 
+: N 2003 3378 1 1 rp C 
+ L ; N 2003 3378 M 2002 3378 I K 
+: N 2002 3378 1 1 rp C 
+ L ; N 2002 3378 M 2001 3377 I K 
+: N 2001 3377 1 1 rp C 
+ L ; N 2001 3377 M 2000 3376 I K 
+: N 2000 3376 1 1 rp C 
+ L ; N 2000 3376 M 1999 3375 I K 
+: N 1999 3375 1 1 rp C 
+ L ; N 1999 3375 M 1998 3374 I K 
+: N 1998 3374 1 1 rp C 
+ L ; N 1998 3374 M 1997 3373 I K 
+: N 1997 3373 1 1 rp C 
+ L ; N 1997 3373 M 1996 3372 I K 
+: N 1996 3372 1 1 rp C 
+ L ; N 1996 3372 M 1995 3371 I K 
+: N 1995 3371 1 1 rp C 
+ L ; N 1995 3371 M 1994 3370 I K 
+: N 1994 3370 1 1 rp C 
+ L ; N 1994 3370 M 1994 3369 I K 
+: N 1994 3369 1 1 rp C 
+ L ; N 1994 3369 M 1993 3368 I K 
+: N 1993 3368 1 1 rp C 
+ L ; N 1993 3368 M 1992 3367 I K 
+: N 1992 3367 1 1 rp C 
+ L ; N 1992 3367 M 1992 3366 I K 
+: N 1992 3366 1 1 rp C 
+ L ; N 1992 3366 M 1991 3364 I K 
+: N 1991 3364 1 1 rp C 
+ L ; N 1991 3364 M 1991 3363 I K 
+: N 1991 3363 1 1 rp C 
+ L ; N 1991 3363 M 1991 3362 I K 
+: N 1991 3362 1 1 rp C 
+ L ; N 1991 3362 M 1990 3361 I K 
+: N 1990 3361 1 1 rp C 
+ L ; N 1990 3361 M 1990 3359 I K 
+: N 1990 3359 1 1 rp C 
+ L ; N 1990 3359 M 1990 3358 I K 
+: N 1990 3358 1 1 rp C 
+ L ; N 1990 3358 M 1990 3357 I K 
+: N 1990 3357 1 1 rp C 
+ L ; N 1990 3357 M 1990 3356 I K 
+: N 1990 3356 1 1 rp C 
+ L ; N 2078 3356 M 2078 3357 I K 
+: N 2078 3357 1 1 rp C 
+ L ; N 2078 3357 M 2078 3358 I K 
+: N 2078 3358 1 1 rp C 
+ L ; N 2078 3358 M 2078 3359 I K 
+: N 2078 3359 1 1 rp C 
+ L ; N 2078 3359 M 2078 3361 I K 
+: N 2078 3361 1 1 rp C 
+ L ; N 2078 3361 M 2078 3362 I K 
+: N 2078 3362 1 1 rp C 
+ L ; N 2078 3362 M 2077 3363 I K 
+: N 2077 3363 1 1 rp C 
+ L ; N 2077 3363 M 2077 3364 I K 
+: N 2077 3364 1 1 rp C 
+ L ; N 2077 3364 M 2076 3366 I K 
+: N 2076 3366 1 1 rp C 
+ L ; N 2076 3366 M 2076 3367 I K 
+: N 2076 3367 1 1 rp C 
+ L ; N 2076 3367 M 2075 3368 I K 
+: N 2075 3368 1 1 rp C 
+ L ; N 2075 3368 M 2075 3369 I K 
+: N 2075 3369 1 1 rp C 
+ L ; N 2075 3369 M 2074 3370 I K 
+: N 2074 3370 1 1 rp C 
+ L ; N 2074 3370 M 2073 3371 I K 
+: N 2073 3371 1 1 rp C 
+ L ; N 2073 3371 M 2072 3372 I K 
+: N 2072 3372 1 1 rp C 
+ L ; N 2072 3372 M 2071 3373 I K 
+: N 2071 3373 1 1 rp C 
+ L ; N 2071 3373 M 2071 3374 I K 
+: N 2071 3374 1 1 rp C 
+ L ; N 2071 3374 M 2070 3375 I K 
+: N 2070 3375 1 1 rp C 
+ L ; N 2070 3375 M 2069 3376 I K 
+: N 2069 3376 1 1 rp C 
+ L ; N 2069 3376 M 2068 3377 I K 
+: N 2068 3377 1 1 rp C 
+ L ; N 2068 3377 M 2067 3378 I K 
+: N 2067 3378 1 1 rp C 
+ L ; N 2067 3378 M 2065 3378 I K 
+: N 2065 3378 1 1 rp C 
+ L ; N 2065 3378 M 2064 3379 I K 
+: N 2064 3379 1 1 rp C 
+ L ; N 2064 3379 M 2063 3380 I K 
+: N 2063 3380 1 1 rp C 
+ L ; N 2063 3380 M 2062 3380 I K 
+: N 2062 3380 1 1 rp C 
+ L ; N 2062 3380 M 2061 3381 I K 
+: N 2061 3381 1 1 rp C 
+ L ; N 2061 3381 M 2060 3381 I K 
+: N 2060 3381 1 1 rp C 
+ L ; N 2060 3381 M 2058 3381 I K 
+: N 2058 3381 1 1 rp C 
+ L ; N 2058 3381 M 2057 3382 I K 
+: N 2057 3382 1 1 rp C 
+ L ; N 2057 3382 M 2056 3382 I K 
+: N 2056 3382 1 1 rp C 
+ L ; N 2056 3382 M 2054 3382 I K 
+: N 2054 3382 1 1 rp C 
+ L ; N 2054 3382 M 2053 3382 I K 
+: N 2053 3382 1 1 rp C 
+ L ; N 2053 3382 M 2052 3382 I K 
+: N 2052 3382 1 1 rp C 
+ L ; 1 0 0 1 scol N 1972 3850 M 2035 3850 I K 
+: N 2035 3850 1 1 rp C 
+ L ; N 1970 3850 M 2035 3850 I K 
+: N 2035 3850 1 1 rp C 
+ L ; N 1969 3851 M 2034 3851 I K 
+: N 2034 3851 1 1 rp C 
+ L ; N 1967 3851 M 2034 3851 I K 
+: N 2034 3851 1 1 rp C 
+ L ; N 2096 3782 M 2033 3782 I K 
+: N 2033 3782 1 1 rp C 
+ L ; N 2098 3782 M 2034 3782 I K 
+: N 2034 3782 1 1 rp C 
+ L ; N 2100 3781 M 2034 3781 I K 
+: N 2034 3781 1 1 rp C 
+ L ; N 2101 3780 M 2034 3780 I K 
+: N 2034 3780 1 1 rp C 
+ L ; N 1975 3848 M 2035 3848 I K 
+: N 2035 3848 1 1 rp C 
+ L ; N 1974 3848 M 2035 3848 I K 
+: N 2035 3848 1 1 rp C 
+ L ; N 1973 3849 M 2035 3849 I K 
+: N 2035 3849 1 1 rp C 
+ L ; N 1972 3850 M 2035 3850 I K 
+: N 2035 3850 1 1 rp C 
+ L ; N 2093 3784 M 2033 3784 I K 
+: N 2033 3784 1 1 rp C 
+ L ; N 2094 3783 M 2033 3783 I K 
+: N 2033 3783 1 1 rp C 
+ L ; N 2095 3783 M 2033 3783 I K 
+: N 2033 3783 1 1 rp C 
+ L ; N 2096 3782 M 2033 3782 I K 
+: N 2033 3782 1 1 rp C 
+ L ; N 1977 3846 M 2036 3846 I K 
+: N 2036 3846 1 1 rp C 
+ L ; N 1976 3847 M 2036 3847 I K 
+: N 2036 3847 1 1 rp C 
+ L ; N 1976 3847 M 2035 3847 I K 
+: N 2035 3847 1 1 rp C 
+ L ; N 1975 3848 M 2035 3848 I K 
+: N 2035 3848 1 1 rp C 
+ L ; N 2091 3786 M 2032 3786 I K 
+: N 2032 3786 1 1 rp C 
+ L ; N 2092 3785 M 2032 3785 I K 
+: N 2032 3785 1 1 rp C 
+ L ; N 2093 3785 M 2033 3785 I K 
+: N 2033 3785 1 1 rp C 
+ L ; N 2093 3784 M 2033 3784 I K 
+: N 2033 3784 1 1 rp C 
+ L ; N 1979 3844 M 2036 3844 I K 
+: N 2036 3844 1 1 rp C 
+ L ; N 1978 3845 M 2036 3845 I K 
+: N 2036 3845 1 1 rp C 
+ L ; N 1978 3845 M 2036 3845 I K 
+: N 2036 3845 1 1 rp C 
+ L ; N 1977 3846 M 2036 3846 I K 
+: N 2036 3846 1 1 rp C 
+ L ; N 2089 3788 M 2032 3788 I K 
+: N 2032 3788 1 1 rp C 
+ L ; N 2090 3787 M 2032 3787 I K 
+: N 2032 3787 1 1 rp C 
+ L ; N 2091 3786 M 2032 3786 I K 
+: N 2032 3786 1 1 rp C 
+ L ; N 2091 3786 M 2032 3786 I K 
+: N 2032 3786 1 1 rp C 
+ L ; N 1980 3842 M 2028 3842 I K 
+: N 2028 3842 1 1 rp C 
+ L ; N 1980 3843 M 2031 3843 I K 
+: N 2031 3843 1 1 rp C 
+ L ; N 1979 3844 M 2034 3844 I K 
+: N 2034 3844 1 1 rp C 
+ L ; N 1979 3844 M 2036 3844 I K 
+: N 2036 3844 1 1 rp C 
+ L ; N 2088 3789 M 2040 3789 I K 
+: N 2040 3789 1 1 rp C 
+ L ; N 2088 3789 M 2037 3789 I K 
+: N 2037 3789 1 1 rp C 
+ L ; N 2089 3788 M 2035 3788 I K 
+: N 2035 3788 1 1 rp C 
+ L ; N 2089 3788 M 2032 3788 I K 
+: N 2032 3788 1 1 rp C 
+ L ; N 1982 3841 M 2020 3841 I K 
+: N 2020 3841 1 1 rp C 
+ L ; N 1981 3841 M 2023 3841 I K 
+: N 2023 3841 1 1 rp C 
+ L ; N 1981 3842 M 2025 3842 I K 
+: N 2025 3842 1 1 rp C 
+ L ; N 1980 3842 M 2028 3842 I K 
+: N 2028 3842 1 1 rp C 
+ L ; N 2087 3791 M 2048 3791 I K 
+: N 2048 3791 1 1 rp C 
+ L ; N 2087 3791 M 2045 3791 I K 
+: N 2045 3791 1 1 rp C 
+ L ; N 2087 3790 M 2043 3790 I K 
+: N 2043 3790 1 1 rp C 
+ L ; N 2088 3789 M 2040 3789 I K 
+: N 2040 3789 1 1 rp C 
+ L ; N 1983 3839 M 2017 3839 I K 
+: N 2017 3839 1 1 rp C 
+ L ; N 1982 3840 M 2018 3840 I K 
+: N 2018 3840 1 1 rp C 
+ L ; N 1982 3840 M 2019 3840 I K 
+: N 2019 3840 1 1 rp C 
+ L ; N 1982 3841 M 2020 3841 I K 
+: N 2020 3841 1 1 rp C 
+ L ; N 2085 3793 M 2051 3793 I K 
+: N 2051 3793 1 1 rp C 
+ L ; N 2086 3792 M 2050 3792 I K 
+: N 2050 3792 1 1 rp C 
+ L ; N 2086 3792 M 2049 3792 I K 
+: N 2049 3792 1 1 rp C 
+ L ; N 2087 3791 M 2048 3791 I K 
+: N 2048 3791 1 1 rp C 
+ L ; N 1984 3837 M 2014 3837 I K 
+: N 2014 3837 1 1 rp C 
+ L ; N 1984 3838 M 2015 3838 I K 
+: N 2015 3838 1 1 rp C 
+ L ; N 1983 3838 M 2016 3838 I K 
+: N 2016 3838 1 1 rp C 
+ L ; N 1983 3839 M 2017 3839 I K 
+: N 2017 3839 1 1 rp C 
+ L ; N 2084 3795 M 2054 3795 I K 
+: N 2054 3795 1 1 rp C 
+ L ; N 2085 3794 M 2053 3794 I K 
+: N 2053 3794 1 1 rp C 
+ L ; N 2085 3793 M 2052 3793 I K 
+: N 2052 3793 1 1 rp C 
+ L ; N 2085 3793 M 2051 3793 I K 
+: N 2051 3793 1 1 rp C 
+ L ; N 1985 3835 M 2013 3835 I K 
+: N 2013 3835 1 1 rp C 
+ L ; N 1984 3836 M 2013 3836 I K 
+: N 2013 3836 1 1 rp C 
+ L ; N 1984 3837 M 2014 3837 I K 
+: N 2014 3837 1 1 rp C 
+ L ; N 1984 3837 M 2014 3837 I K 
+: N 2014 3837 1 1 rp C 
+ L ; N 2084 3796 M 2056 3796 I K 
+: N 2056 3796 1 1 rp C 
+ L ; N 2084 3796 M 2055 3796 I K 
+: N 2055 3796 1 1 rp C 
+ L ; N 2084 3795 M 2054 3795 I K 
+: N 2054 3795 1 1 rp C 
+ L ; N 2084 3795 M 2054 3795 I K 
+: N 2054 3795 1 1 rp C 
+ L ; N 1985 3834 M 2011 3834 I K 
+: N 2011 3834 1 1 rp C 
+ L ; N 1985 3834 M 2011 3834 I K 
+: N 2011 3834 1 1 rp C 
+ L ; N 1985 3835 M 2012 3835 I K 
+: N 2012 3835 1 1 rp C 
+ L ; N 1985 3835 M 2013 3835 I K 
+: N 2013 3835 1 1 rp C 
+ L ; N 2083 3798 M 2057 3798 I K 
+: N 2057 3798 1 1 rp C 
+ L ; N 2083 3798 M 2057 3798 I K 
+: N 2057 3798 1 1 rp C 
+ L ; N 2083 3797 M 2056 3797 I K 
+: N 2056 3797 1 1 rp C 
+ L ; N 2084 3796 M 2056 3796 I K 
+: N 2056 3796 1 1 rp C 
+ L ; N 1986 3832 M 2010 3832 I K 
+: N 2010 3832 1 1 rp C 
+ L ; N 1986 3832 M 2010 3832 I K 
+: N 2010 3832 1 1 rp C 
+ L ; N 1986 3833 M 2011 3833 I K 
+: N 2011 3833 1 1 rp C 
+ L ; N 1985 3834 M 2011 3834 I K 
+: N 2011 3834 1 1 rp C 
+ L ; N 2082 3800 M 2058 3800 I K 
+: N 2058 3800 1 1 rp C 
+ L ; N 2082 3799 M 2058 3799 I K 
+: N 2058 3799 1 1 rp C 
+ L ; N 2082 3799 M 2058 3799 I K 
+: N 2058 3799 1 1 rp C 
+ L ; N 2083 3798 M 2057 3798 I K 
+: N 2057 3798 1 1 rp C 
+ L ; N 1987 3830 M 2009 3830 I K 
+: N 2009 3830 1 1 rp C 
+ L ; N 1987 3831 M 2009 3831 I K 
+: N 2009 3831 1 1 rp C 
+ L ; N 1987 3831 M 2010 3831 I K 
+: N 2010 3831 1 1 rp C 
+ L ; N 1986 3832 M 2010 3832 I K 
+: N 2010 3832 1 1 rp C 
+ L ; N 2081 3802 M 2059 3802 I K 
+: N 2059 3802 1 1 rp C 
+ L ; N 2081 3801 M 2059 3801 I K 
+: N 2059 3801 1 1 rp C 
+ L ; N 2082 3801 M 2059 3801 I K 
+: N 2059 3801 1 1 rp C 
+ L ; N 2082 3800 M 2058 3800 I K 
+: N 2058 3800 1 1 rp C 
+ L ; N 1988 3828 M 2008 3828 I K 
+: N 2008 3828 1 1 rp C 
+ L ; N 1988 3829 M 2009 3829 I K 
+: N 2009 3829 1 1 rp C 
+ L ; N 1987 3829 M 2009 3829 I K 
+: N 2009 3829 1 1 rp C 
+ L ; N 1987 3830 M 2009 3830 I K 
+: N 2009 3830 1 1 rp C 
+ L ; N 2080 3804 M 2060 3804 I K 
+: N 2060 3804 1 1 rp C 
+ L ; N 2081 3803 M 2060 3803 I K 
+: N 2060 3803 1 1 rp C 
+ L ; N 2081 3802 M 2059 3802 I K 
+: N 2059 3802 1 1 rp C 
+ L ; N 2081 3802 M 2059 3802 I K 
+: N 2059 3802 1 1 rp C 
+ L ; N 1989 3827 M 2008 3827 I K 
+: N 2008 3827 1 1 rp C 
+ L ; N 1988 3827 M 2008 3827 I K 
+: N 2008 3827 1 1 rp C 
+ L ; N 1988 3828 M 2008 3828 I K 
+: N 2008 3828 1 1 rp C 
+ L ; N 1988 3828 M 2008 3828 I K 
+: N 2008 3828 1 1 rp C 
+ L ; N 2080 3805 M 2060 3805 I K 
+: N 2060 3805 1 1 rp C 
+ L ; N 2080 3805 M 2060 3805 I K 
+: N 2060 3805 1 1 rp C 
+ L ; N 2080 3804 M 2060 3804 I K 
+: N 2060 3804 1 1 rp C 
+ L ; N 2080 3804 M 2060 3804 I K 
+: N 2060 3804 1 1 rp C 
+ L ; N 1989 3825 M 2008 3825 I K 
+: N 2008 3825 1 1 rp C 
+ L ; N 1989 3825 M 2008 3825 I K 
+: N 2008 3825 1 1 rp C 
+ L ; N 1989 3826 M 2008 3826 I K 
+: N 2008 3826 1 1 rp C 
+ L ; N 1989 3827 M 2008 3827 I K 
+: N 2008 3827 1 1 rp C 
+ L ; N 2079 3807 M 2061 3807 I K 
+: N 2061 3807 1 1 rp C 
+ L ; N 2079 3806 M 2061 3806 I K 
+: N 2061 3806 1 1 rp C 
+ L ; N 2079 3806 M 2060 3806 I K 
+: N 2060 3806 1 1 rp C 
+ L ; N 2080 3805 M 2060 3805 I K 
+: N 2060 3805 1 1 rp C 
+ L ; N 1990 3823 M 2007 3823 I K 
+: N 2007 3823 1 1 rp C 
+ L ; N 1990 3824 M 2007 3824 I K 
+: N 2007 3824 1 1 rp C 
+ L ; N 1990 3824 M 2007 3824 I K 
+: N 2007 3824 1 1 rp C 
+ L ; N 1989 3825 M 2008 3825 I K 
+: N 2008 3825 1 1 rp C 
+ L ; N 2078 3809 M 2061 3809 I K 
+: N 2061 3809 1 1 rp C 
+ L ; N 2078 3808 M 2061 3808 I K 
+: N 2061 3808 1 1 rp C 
+ L ; N 2078 3808 M 2061 3808 I K 
+: N 2061 3808 1 1 rp C 
+ L ; N 2079 3807 M 2061 3807 I K 
+: N 2061 3807 1 1 rp C 
+ L ; N 1991 3821 M 2007 3821 I K 
+: N 2007 3821 1 1 rp C 
+ L ; N 1991 3822 M 2007 3822 I K 
+: N 2007 3822 1 1 rp C 
+ L ; N 1990 3822 M 2007 3822 I K 
+: N 2007 3822 1 1 rp C 
+ L ; N 1990 3823 M 2007 3823 I K 
+: N 2007 3823 1 1 rp C 
+ L ; N 2077 3811 M 2061 3811 I K 
+: N 2061 3811 1 1 rp C 
+ L ; N 2078 3810 M 2061 3810 I K 
+: N 2061 3810 1 1 rp C 
+ L ; N 2078 3809 M 2061 3809 I K 
+: N 2061 3809 1 1 rp C 
+ L ; N 2078 3809 M 2061 3809 I K 
+: N 2061 3809 1 1 rp C 
+ L ; N 1991 3819 M 2007 3819 I K 
+: N 2007 3819 1 1 rp C 
+ L ; N 1991 3820 M 2007 3820 I K 
+: N 2007 3820 1 1 rp C 
+ L ; N 1991 3821 M 2007 3821 I K 
+: N 2007 3821 1 1 rp C 
+ L ; N 1991 3821 M 2007 3821 I K 
+: N 2007 3821 1 1 rp C 
+ L ; N 2077 3812 M 2061 3812 I K 
+: N 2061 3812 1 1 rp C 
+ L ; N 2077 3812 M 2061 3812 I K 
+: N 2061 3812 1 1 rp C 
+ L ; N 2077 3811 M 2061 3811 I K 
+: N 2061 3811 1 1 rp C 
+ L ; N 2077 3811 M 2061 3811 I K 
+: N 2061 3811 1 1 rp C 
+ L ; N 1992 3818 M 2007 3818 I K 
+: N 2007 3818 1 1 rp C 
+ L ; N 1992 3818 M 2007 3818 I K 
+: N 2007 3818 1 1 rp C 
+ L ; N 1992 3819 M 2007 3819 I K 
+: N 2007 3819 1 1 rp C 
+ L ; N 1991 3819 M 2007 3819 I K 
+: N 2007 3819 1 1 rp C 
+ L ; N 2076 3814 M 2061 3814 I K 
+: N 2061 3814 1 1 rp C 
+ L ; N 2076 3814 M 2061 3814 I K 
+: N 2061 3814 1 1 rp C 
+ L ; N 2076 3813 M 2061 3813 I K 
+: N 2061 3813 1 1 rp C 
+ L ; N 2077 3812 M 2061 3812 I K 
+: N 2061 3812 1 1 rp C 
+ L ; N 1993 3816 M 2007 3816 I K 
+: N 2007 3816 1 1 rp C 
+ L ; N 1993 3817 M 2007 3817 I K 
+: N 2007 3817 1 1 rp C 
+ L ; N 1992 3817 M 2007 3817 I K 
+: N 2007 3817 1 1 rp C 
+ L ; N 1992 3818 M 2007 3818 I K 
+: N 2007 3818 1 1 rp C 
+ L ; N 2075 3816 M 2061 3816 I K 
+: N 2061 3816 1 1 rp C 
+ L ; N 2076 3815 M 2061 3815 I K 
+: N 2061 3815 1 1 rp C 
+ L ; N 2076 3815 M 2061 3815 I K 
+: N 2061 3815 1 1 rp C 
+ L ; N 2076 3814 M 2061 3814 I K 
+: N 2061 3814 1 1 rp C 
+ L ; N 1994 3814 M 2008 3814 I K 
+: N 2008 3814 1 1 rp C 
+ L ; N 1993 3815 M 2008 3815 I K 
+: N 2008 3815 1 1 rp C 
+ L ; N 1993 3815 M 2008 3815 I K 
+: N 2008 3815 1 1 rp C 
+ L ; N 1993 3816 M 2007 3816 I K 
+: N 2007 3816 1 1 rp C 
+ L ; N 2075 3818 M 2060 3818 I K 
+: N 2060 3818 1 1 rp C 
+ L ; N 2075 3817 M 2061 3817 I K 
+: N 2061 3817 1 1 rp C 
+ L ; N 2075 3817 M 2061 3817 I K 
+: N 2061 3817 1 1 rp C 
+ L ; N 2075 3816 M 2061 3816 I K 
+: N 2061 3816 1 1 rp C 
+ L ; N 1994 3812 M 2008 3812 I K 
+: N 2008 3812 1 1 rp C 
+ L ; N 1994 3813 M 2008 3813 I K 
+: N 2008 3813 1 1 rp C 
+ L ; N 1994 3814 M 2008 3814 I K 
+: N 2008 3814 1 1 rp C 
+ L ; N 1994 3814 M 2008 3814 I K 
+: N 2008 3814 1 1 rp C 
+ L ; N 2074 3819 M 2060 3819 I K 
+: N 2060 3819 1 1 rp C 
+ L ; N 2074 3819 M 2060 3819 I K 
+: N 2060 3819 1 1 rp C 
+ L ; N 2074 3818 M 2060 3818 I K 
+: N 2060 3818 1 1 rp C 
+ L ; N 2075 3818 M 2060 3818 I K 
+: N 2060 3818 1 1 rp C 
+ L ; N 1995 3811 M 2009 3811 I K 
+: N 2009 3811 1 1 rp C 
+ L ; N 1995 3811 M 2009 3811 I K 
+: N 2009 3811 1 1 rp C 
+ L ; N 1994 3812 M 2008 3812 I K 
+: N 2008 3812 1 1 rp C 
+ L ; N 1994 3812 M 2008 3812 I K 
+: N 2008 3812 1 1 rp C 
+ L ; N 2073 3821 M 2059 3821 I K 
+: N 2059 3821 1 1 rp C 
+ L ; N 2073 3821 M 2060 3821 I K 
+: N 2060 3821 1 1 rp C 
+ L ; N 2074 3820 M 2060 3820 I K 
+: N 2060 3820 1 1 rp C 
+ L ; N 2074 3819 M 2060 3819 I K 
+: N 2060 3819 1 1 rp C 
+ L ; N 1996 3809 M 2009 3809 I K 
+: N 2009 3809 1 1 rp C 
+ L ; N 1995 3809 M 2009 3809 I K 
+: N 2009 3809 1 1 rp C 
+ L ; N 1995 3810 M 2009 3810 I K 
+: N 2009 3810 1 1 rp C 
+ L ; N 1995 3811 M 2009 3811 I K 
+: N 2009 3811 1 1 rp C 
+ L ; N 2073 3823 M 2059 3823 I K 
+: N 2059 3823 1 1 rp C 
+ L ; N 2073 3822 M 2059 3822 I K 
+: N 2059 3822 1 1 rp C 
+ L ; N 2073 3822 M 2059 3822 I K 
+: N 2059 3822 1 1 rp C 
+ L ; N 2073 3821 M 2059 3821 I K 
+: N 2059 3821 1 1 rp C 
+ L ; N 1996 3807 M 2010 3807 I K 
+: N 2010 3807 1 1 rp C 
+ L ; N 1996 3808 M 2010 3808 I K 
+: N 2010 3808 1 1 rp C 
+ L ; N 1996 3808 M 2009 3808 I K 
+: N 2009 3808 1 1 rp C 
+ L ; N 1996 3809 M 2009 3809 I K 
+: N 2009 3809 1 1 rp C 
+ L ; N 2072 3825 M 2058 3825 I K 
+: N 2058 3825 1 1 rp C 
+ L ; N 2072 3824 M 2059 3824 I K 
+: N 2059 3824 1 1 rp C 
+ L ; N 2072 3824 M 2059 3824 I K 
+: N 2059 3824 1 1 rp C 
+ L ; N 2073 3823 M 2059 3823 I K 
+: N 2059 3823 1 1 rp C 
+ L ; N 1997 3805 M 2010 3805 I K 
+: N 2010 3805 1 1 rp C 
+ L ; N 1997 3806 M 2010 3806 I K 
+: N 2010 3806 1 1 rp C 
+ L ; N 1997 3806 M 2010 3806 I K 
+: N 2010 3806 1 1 rp C 
+ L ; N 1996 3807 M 2010 3807 I K 
+: N 2010 3807 1 1 rp C 
+ L ; N 2071 3827 M 2058 3827 I K 
+: N 2058 3827 1 1 rp C 
+ L ; N 2071 3826 M 2058 3826 I K 
+: N 2058 3826 1 1 rp C 
+ L ; N 2072 3825 M 2058 3825 I K 
+: N 2058 3825 1 1 rp C 
+ L ; N 2072 3825 M 2058 3825 I K 
+: N 2058 3825 1 1 rp C 
+ L ; N 1998 3804 M 2011 3804 I K 
+: N 2011 3804 1 1 rp C 
+ L ; N 1997 3804 M 2011 3804 I K 
+: N 2011 3804 1 1 rp C 
+ L ; N 1997 3805 M 2011 3805 I K 
+: N 2011 3805 1 1 rp C 
+ L ; N 1997 3805 M 2010 3805 I K 
+: N 2010 3805 1 1 rp C 
+ L ; N 2070 3828 M 2057 3828 I K 
+: N 2057 3828 1 1 rp C 
+ L ; N 2071 3828 M 2057 3828 I K 
+: N 2057 3828 1 1 rp C 
+ L ; N 2071 3827 M 2058 3827 I K 
+: N 2058 3827 1 1 rp C 
+ L ; N 2071 3827 M 2058 3827 I K 
+: N 2058 3827 1 1 rp C 
+ L ; N 1998 3802 M 2011 3802 I K 
+: N 2011 3802 1 1 rp C 
+ L ; N 1998 3802 M 2011 3802 I K 
+: N 2011 3802 1 1 rp C 
+ L ; N 1998 3803 M 2011 3803 I K 
+: N 2011 3803 1 1 rp C 
+ L ; N 1998 3804 M 2011 3804 I K 
+: N 2011 3804 1 1 rp C 
+ L ; N 2070 3830 M 2057 3830 I K 
+: N 2057 3830 1 1 rp C 
+ L ; N 2070 3829 M 2057 3829 I K 
+: N 2057 3829 1 1 rp C 
+ L ; N 2070 3829 M 2057 3829 I K 
+: N 2057 3829 1 1 rp C 
+ L ; N 2070 3828 M 2057 3828 I K 
+: N 2057 3828 1 1 rp C 
+ L ; N 1999 3800 M 2012 3800 I K 
+: N 2012 3800 1 1 rp C 
+ L ; N 1999 3801 M 2012 3801 I K 
+: N 2012 3801 1 1 rp C 
+ L ; N 1999 3801 M 2012 3801 I K 
+: N 2012 3801 1 1 rp C 
+ L ; N 1998 3802 M 2011 3802 I K 
+: N 2011 3802 1 1 rp C 
+ L ; N 2069 3832 M 2056 3832 I K 
+: N 2056 3832 1 1 rp C 
+ L ; N 2069 3831 M 2056 3831 I K 
+: N 2056 3831 1 1 rp C 
+ L ; N 2069 3831 M 2057 3831 I K 
+: N 2057 3831 1 1 rp C 
+ L ; N 2070 3830 M 2057 3830 I K 
+: N 2057 3830 1 1 rp C 
+ L ; N 2000 3798 M 2013 3798 I K 
+: N 2013 3798 1 1 rp C 
+ L ; N 2000 3799 M 2012 3799 I K 
+: N 2012 3799 1 1 rp C 
+ L ; N 1999 3799 M 2012 3799 I K 
+: N 2012 3799 1 1 rp C 
+ L ; N 1999 3800 M 2012 3800 I K 
+: N 2012 3800 1 1 rp C 
+ L ; N 2068 3834 M 2056 3834 I K 
+: N 2056 3834 1 1 rp C 
+ L ; N 2069 3833 M 2056 3833 I K 
+: N 2056 3833 1 1 rp C 
+ L ; N 2069 3832 M 2056 3832 I K 
+: N 2056 3832 1 1 rp C 
+ L ; N 2069 3832 M 2056 3832 I K 
+: N 2056 3832 1 1 rp C 
+ L ; N 2001 3796 M 2013 3796 I K 
+: N 2013 3796 1 1 rp C 
+ L ; N 2000 3797 M 2013 3797 I K 
+: N 2013 3797 1 1 rp C 
+ L ; N 2000 3798 M 2013 3798 I K 
+: N 2013 3798 1 1 rp C 
+ L ; N 2000 3798 M 2013 3798 I K 
+: N 2013 3798 1 1 rp C 
+ L ; N 2068 3835 M 2055 3835 I K 
+: N 2055 3835 1 1 rp C 
+ L ; N 2068 3835 M 2055 3835 I K 
+: N 2055 3835 1 1 rp C 
+ L ; N 2068 3834 M 2055 3834 I K 
+: N 2055 3834 1 1 rp C 
+ L ; N 2068 3834 M 2056 3834 I K 
+: N 2056 3834 1 1 rp C 
+ L ; N 2001 3795 M 2014 3795 I K 
+: N 2014 3795 1 1 rp C 
+ L ; N 2001 3795 M 2014 3795 I K 
+: N 2014 3795 1 1 rp C 
+ L ; N 2001 3796 M 2013 3796 I K 
+: N 2013 3796 1 1 rp C 
+ L ; N 2001 3796 M 2013 3796 I K 
+: N 2013 3796 1 1 rp C 
+ L ; N 2067 3837 M 2054 3837 I K 
+: N 2054 3837 1 1 rp C 
+ L ; N 2067 3837 M 2055 3837 I K 
+: N 2055 3837 1 1 rp C 
+ L ; N 2067 3836 M 2055 3836 I K 
+: N 2055 3836 1 1 rp C 
+ L ; N 2068 3835 M 2055 3835 I K 
+: N 2055 3835 1 1 rp C 
+ L ; N 2002 3793 M 2014 3793 I K 
+: N 2014 3793 1 1 rp C 
+ L ; N 2002 3793 M 2014 3793 I K 
+: N 2014 3793 1 1 rp C 
+ L ; N 2002 3794 M 2014 3794 I K 
+: N 2014 3794 1 1 rp C 
+ L ; N 2001 3795 M 2014 3795 I K 
+: N 2014 3795 1 1 rp C 
+ L ; N 2066 3839 M 2054 3839 I K 
+: N 2054 3839 1 1 rp C 
+ L ; N 2066 3838 M 2054 3838 I K 
+: N 2054 3838 1 1 rp C 
+ L ; N 2067 3838 M 2054 3838 I K 
+: N 2054 3838 1 1 rp C 
+ L ; N 2067 3837 M 2054 3837 I K 
+: N 2054 3837 1 1 rp C 
+ L ; N 2003 3791 M 2015 3791 I K 
+: N 2015 3791 1 1 rp C 
+ L ; N 2003 3792 M 2015 3792 I K 
+: N 2015 3792 1 1 rp C 
+ L ; N 2002 3792 M 2014 3792 I K 
+: N 2014 3792 1 1 rp C 
+ L ; N 2002 3793 M 2014 3793 I K 
+: N 2014 3793 1 1 rp C 
+ L ; N 2065 3841 M 2053 3841 I K 
+: N 2053 3841 1 1 rp C 
+ L ; N 2066 3840 M 2054 3840 I K 
+: N 2054 3840 1 1 rp C 
+ L ; N 2066 3840 M 2054 3840 I K 
+: N 2054 3840 1 1 rp C 
+ L ; N 2066 3839 M 2054 3839 I K 
+: N 2054 3839 1 1 rp C 
+ L ; N 2004 3789 M 2016 3789 I K 
+: N 2016 3789 1 1 rp C 
+ L ; N 2003 3790 M 2015 3790 I K 
+: N 2015 3790 1 1 rp C 
+ L ; N 2003 3791 M 2015 3791 I K 
+: N 2015 3791 1 1 rp C 
+ L ; N 2003 3791 M 2015 3791 I K 
+: N 2015 3791 1 1 rp C 
+ L ; N 2064 3842 M 2053 3842 I K 
+: N 2053 3842 1 1 rp C 
+ L ; N 2065 3842 M 2053 3842 I K 
+: N 2053 3842 1 1 rp C 
+ L ; N 2065 3841 M 2053 3841 I K 
+: N 2053 3841 1 1 rp C 
+ L ; N 2065 3841 M 2053 3841 I K 
+: N 2053 3841 1 1 rp C 
+ L ; N 2005 3788 M 2016 3788 I K 
+: N 2016 3788 1 1 rp C 
+ L ; N 2004 3788 M 2016 3788 I K 
+: N 2016 3788 1 1 rp C 
+ L ; N 2004 3789 M 2016 3789 I K 
+: N 2016 3789 1 1 rp C 
+ L ; N 2004 3789 M 2016 3789 I K 
+: N 2016 3789 1 1 rp C 
+ L ; N 2063 3844 M 2052 3844 I K 
+: N 2052 3844 1 1 rp C 
+ L ; N 2064 3844 M 2052 3844 I K 
+: N 2052 3844 1 1 rp C 
+ L ; N 2064 3843 M 2052 3843 I K 
+: N 2052 3843 1 1 rp C 
+ L ; N 2064 3842 M 2053 3842 I K 
+: N 2053 3842 1 1 rp C 
+ L ; N 2006 3786 M 2017 3786 I K 
+: N 2017 3786 1 1 rp C 
+ L ; N 2006 3786 M 2017 3786 I K 
+: N 2017 3786 1 1 rp C 
+ L ; N 2005 3787 M 2017 3787 I K 
+: N 2017 3787 1 1 rp C 
+ L ; N 2005 3788 M 2016 3788 I K 
+: N 2016 3788 1 1 rp C 
+ L ; N 2062 3846 M 2051 3846 I K 
+: N 2051 3846 1 1 rp C 
+ L ; N 2062 3845 M 2051 3845 I K 
+: N 2051 3845 1 1 rp C 
+ L ; N 2063 3845 M 2052 3845 I K 
+: N 2052 3845 1 1 rp C 
+ L ; N 2063 3844 M 2052 3844 I K 
+: N 2052 3844 1 1 rp C 
+ L ; N 2008 3784 M 2018 3784 I K 
+: N 2018 3784 1 1 rp C 
+ L ; N 2007 3785 M 2017 3785 I K 
+: N 2017 3785 1 1 rp C 
+ L ; N 2007 3785 M 2017 3785 I K 
+: N 2017 3785 1 1 rp C 
+ L ; N 2006 3786 M 2017 3786 I K 
+: N 2017 3786 1 1 rp C 
+ L ; N 2060 3848 M 2051 3848 I K 
+: N 2051 3848 1 1 rp C 
+ L ; N 2061 3847 M 2051 3847 I K 
+: N 2051 3847 1 1 rp C 
+ L ; N 2061 3847 M 2051 3847 I K 
+: N 2051 3847 1 1 rp C 
+ L ; N 2062 3846 M 2051 3846 I K 
+: N 2051 3846 1 1 rp C 
+ L ; N 2011 3782 M 2018 3782 I K 
+: N 2018 3782 1 1 rp C 
+ L ; N 2010 3783 M 2018 3783 I K 
+: N 2018 3783 1 1 rp C 
+ L ; N 2009 3783 M 2018 3783 I K 
+: N 2018 3783 1 1 rp C 
+ L ; N 2008 3784 M 2018 3784 I K 
+: N 2018 3784 1 1 rp C 
+ L ; N 2057 3850 M 2050 3850 I K 
+: N 2050 3850 1 1 rp C 
+ L ; N 2058 3849 M 2050 3849 I K 
+: N 2050 3849 1 1 rp C 
+ L ; N 2059 3848 M 2050 3848 I K 
+: N 2050 3848 1 1 rp C 
+ L ; N 2060 3848 M 2051 3848 I K 
+: N 2051 3848 1 1 rp C 
+ L ; N 2016 3780 M 2019 3780 I K 
+: N 2019 3780 1 1 rp C 
+ L ; N 2014 3781 M 2019 3781 I K 
+: N 2019 3781 1 1 rp C 
+ L ; N 2013 3782 M 2019 3782 I K 
+: N 2019 3782 1 1 rp C 
+ L ; N 2011 3782 M 2018 3782 I K 
+: N 2018 3782 1 1 rp C 
+ L ; N 2052 3851 M 2049 3851 I K 
+: N 2049 3851 1 1 rp C 
+ L ; N 2054 3851 M 2049 3851 I K 
+: N 2049 3851 1 1 rp C 
+ L ; N 2056 3850 M 2050 3850 I K 
+: N 2050 3850 1 1 rp C 
+ L ; N 2057 3850 M 2050 3850 I K 
+: N 2050 3850 1 1 rp C 
+ L ; 0 0 0 1 scol 1733 3410 M (V)S 
+1768 3410 M (M)S  1811 3410 M (O)S  1851 3410 M (T)S  
+1733 3552 M (G)S 
+1773 3552 M (N)S  1810 3552 M (D)S  
+1733 3693 M (B)S 
+1770 3693 M (2)S  
+1733 3835 M (B)S 
+1770 3835 M (1)S  
+1733 3977 M (A)S 
+1770 3977 M (1)S  
+1733 4118 M (A)S 
+1770 4118 M (2)S  
+0 0 1 1 scol N 1709 4234 M 1722 4234 I K 
+: N 1722 4234 1 1 rp C 
+ L ; N 1722 4234 M 1722 4248 I K 
+: N 1722 4248 1 1 rp C 
+ L ; N 1722 4248 M 1709 4248 I K 
+: N 1709 4248 1 1 rp C 
+ L ; N 1709 4248 M 1709 4234 I K 
+: N 1709 4234 1 1 rp C 
+ L ; : N 1715 4241 1 1 rp C 
+1 1 1 1 scol  L ; 0 0 0 1 scol 1733 4260 M (F)S 
+1765 4260 M (L)S  1797 4260 M (T)S  
+1733 4402 M (G)S 
+1773 4402 M (N)S  1810 4402 M (D)S  
+2247 4402 M (D)S 
+2284 4402 M (I)S  2298 4402 M (R)S  
+2198 4260 M (S)S 
+2233 4260 M (T)S  2265 4260 M (E)S  2300 4260 M (P)S  
+0 0 1 1 scol N 2346 4093 M 2359 4093 I K 
+: N 2359 4093 1 1 rp C 
+ L ; N 2359 4093 M 2359 4106 I K 
+: N 2359 4106 1 1 rp C 
+ L ; N 2359 4106 M 2346 4106 I K 
+: N 2346 4106 1 1 rp C 
+ L ; N 2346 4106 M 2346 4093 I K 
+: N 2346 4093 1 1 rp C 
+ L ; : N 2353 4099 1 1 rp C 
+1 1 1 1 scol  L ; 0 0 0 1 scol 2233 4118 M (S)S 
+2268 4118 M (L)S  2300 4118 M (P)S  
+2231 3977 M (R)S 
+2268 3977 M (S)S  2303 3977 M (T)S  
+0 0 1 1 scol N 2346 3809 M 2359 3809 I K 
+: N 2359 3809 1 1 rp C 
+ L ; N 2359 3809 M 2359 3823 I K 
+: N 2359 3823 1 1 rp C 
+ L ; N 2359 3823 M 2346 3823 I K 
+: N 2346 3823 1 1 rp C 
+ L ; N 2346 3823 M 2346 3809 I K 
+: N 2346 3809 1 1 rp C 
+ L ; : N 2353 3816 1 1 rp C 
+1 1 1 1 scol  L ; 0 0 0 1 scol 2263 3835 M (M)S 
+2306 3835 M (2)S  
+0 0 1 1 scol N 2346 3668 M 2359 3668 I K 
+: N 2359 3668 1 1 rp C 
+ L ; N 2359 3668 M 2359 3681 I K 
+: N 2359 3681 1 1 rp C 
+ L ; N 2359 3681 M 2346 3681 I K 
+: N 2346 3681 1 1 rp C 
+ L ; N 2346 3681 M 2346 3668 I K 
+: N 2346 3668 1 1 rp C 
+ L ; : N 2353 3674 1 1 rp C 
+1 1 1 1 scol  L ; 0 0 0 1 scol 2263 3693 M (M)S 
+2306 3693 M (1)S  
+0 0 1 1 scol N 2346 3526 M 2359 3526 I K 
+: N 2359 3526 1 1 rp C 
+ L ; N 2359 3526 M 2359 3539 I K 
+: N 2359 3539 1 1 rp C 
+ L ; N 2359 3539 M 2346 3539 I K 
+: N 2346 3539 1 1 rp C 
+ L ; N 2346 3539 M 2346 3526 I K 
+: N 2346 3526 1 1 rp C 
+ L ; : N 2353 3533 1 1 rp C 
+1 1 1 1 scol  L ; 0 0 0 1 scol 2263 3552 M (M)S 
+2306 3552 M (0)S  
+2263 3410 M (E)S 
+2298 3410 M (N)S  
+N 2040 3284 M 2040 3280 2037 3278 2033 3278 -c 2029 3278 2027 3280 2027 3284 -c 2027 3287 2029 3290 2033 3290 -c 2037 3290 2040 3287 2040 3284 -c C 
+K 
+1913 3304 M (Y)S 
+1948 3304 M (-)S  1965 3304 M (A)S  2002 3304 M (x)S  2031 3304 M (i)S  2045 3304 M (s)S  2074 3304 M (M)S  2117 3304 M (D)S  
+: N 3132 2895 637 1133 rp C 
+1 1 0.754 1 scol  L ; 0 0 0.496 1 scol N 3132 2895 M 3769 2895 I K 
+: N 3769 2895 1 1 rp C 
+ L ; N 3769 2895 M 3769 4028 I K 
+: N 3769 4028 1 1 rp C 
+ L ; N 3769 4028 M 3132 4028 I K 
+: N 3132 4028 1 1 rp C 
+ L ; N 3132 4028 M 3132 2895 I K 
+: N 3132 2895 1 1 rp C 
+ L ; N 3406 2895 M 3406 2931 I K 
+: N 3406 2931 1 1 rp C 
+ L ; N 3495 2895 M 3495 2931 I K 
+: N 3495 2931 1 1 rp C 
+ L ; N 3433 2957 M 3468 2957 I K 
+: N 3468 2957 1 1 rp C 
+ L ; N 3433 2957 M 3432 2957 I K 
+: N 3432 2957 1 1 rp C 
+ L ; N 3432 2957 M 3430 2957 I K 
+: N 3430 2957 1 1 rp C 
+ L ; N 3430 2957 M 3429 2957 I K 
+: N 3429 2957 1 1 rp C 
+ L ; N 3429 2957 M 3428 2957 I K 
+: N 3428 2957 1 1 rp C 
+ L ; N 3428 2957 M 3426 2956 I K 
+: N 3426 2956 1 1 rp C 
+ L ; N 3426 2956 M 3425 2956 I K 
+: N 3425 2956 1 1 rp C 
+ L ; N 3425 2956 M 3424 2956 I K 
+: N 3424 2956 1 1 rp C 
+ L ; N 3424 2956 M 3423 2955 I K 
+: N 3423 2955 1 1 rp C 
+ L ; N 3423 2955 M 3422 2955 I K 
+: N 3422 2955 1 1 rp C 
+ L ; N 3422 2955 M 3420 2954 I K 
+: N 3420 2954 1 1 rp C 
+ L ; N 3420 2954 M 3419 2953 I K 
+: N 3419 2953 1 1 rp C 
+ L ; N 3419 2953 M 3418 2953 I K 
+: N 3418 2953 1 1 rp C 
+ L ; N 3418 2953 M 3417 2952 I K 
+: N 3417 2952 1 1 rp C 
+ L ; N 3417 2952 M 3416 2951 I K 
+: N 3416 2951 1 1 rp C 
+ L ; N 3416 2951 M 3415 2950 I K 
+: N 3415 2950 1 1 rp C 
+ L ; N 3415 2950 M 3414 2949 I K 
+: N 3414 2949 1 1 rp C 
+ L ; N 3414 2949 M 3413 2948 I K 
+: N 3413 2948 1 1 rp C 
+ L ; N 3413 2948 M 3412 2947 I K 
+: N 3412 2947 1 1 rp C 
+ L ; N 3412 2947 M 3412 2946 I K 
+: N 3412 2946 1 1 rp C 
+ L ; N 3412 2946 M 3411 2945 I K 
+: N 3411 2945 1 1 rp C 
+ L ; N 3411 2945 M 3410 2944 I K 
+: N 3410 2944 1 1 rp C 
+ L ; N 3410 2944 M 3410 2943 I K 
+: N 3410 2943 1 1 rp C 
+ L ; N 3410 2943 M 3409 2942 I K 
+: N 3409 2942 1 1 rp C 
+ L ; N 3409 2942 M 3408 2941 I K 
+: N 3408 2941 1 1 rp C 
+ L ; N 3408 2941 M 3408 2939 I K 
+: N 3408 2939 1 1 rp C 
+ L ; N 3408 2939 M 3408 2938 I K 
+: N 3408 2938 1 1 rp C 
+ L ; N 3408 2938 M 3407 2937 I K 
+: N 3407 2937 1 1 rp C 
+ L ; N 3407 2937 M 3407 2936 I K 
+: N 3407 2936 1 1 rp C 
+ L ; N 3407 2936 M 3407 2934 I K 
+: N 3407 2934 1 1 rp C 
+ L ; N 3407 2934 M 3407 2933 I K 
+: N 3407 2933 1 1 rp C 
+ L ; N 3407 2933 M 3406 2932 I K 
+: N 3406 2932 1 1 rp C 
+ L ; N 3406 2932 M 3406 2931 I K 
+: N 3406 2931 1 1 rp C 
+ L ; N 3495 2931 M 3495 2932 I K 
+: N 3495 2932 1 1 rp C 
+ L ; N 3495 2932 M 3495 2933 I K 
+: N 3495 2933 1 1 rp C 
+ L ; N 3495 2933 M 3495 2934 I K 
+: N 3495 2934 1 1 rp C 
+ L ; N 3495 2934 M 3494 2936 I K 
+: N 3494 2936 1 1 rp C 
+ L ; N 3494 2936 M 3494 2937 I K 
+: N 3494 2937 1 1 rp C 
+ L ; N 3494 2937 M 3494 2938 I K 
+: N 3494 2938 1 1 rp C 
+ L ; N 3494 2938 M 3493 2939 I K 
+: N 3493 2939 1 1 rp C 
+ L ; N 3493 2939 M 3493 2941 I K 
+: N 3493 2941 1 1 rp C 
+ L ; N 3493 2941 M 3492 2942 I K 
+: N 3492 2942 1 1 rp C 
+ L ; N 3492 2942 M 3492 2943 I K 
+: N 3492 2943 1 1 rp C 
+ L ; N 3492 2943 M 3491 2944 I K 
+: N 3491 2944 1 1 rp C 
+ L ; N 3491 2944 M 3490 2945 I K 
+: N 3490 2945 1 1 rp C 
+ L ; N 3490 2945 M 3490 2946 I K 
+: N 3490 2946 1 1 rp C 
+ L ; N 3490 2946 M 3489 2947 I K 
+: N 3489 2947 1 1 rp C 
+ L ; N 3489 2947 M 3488 2948 I K 
+: N 3488 2948 1 1 rp C 
+ L ; N 3488 2948 M 3487 2949 I K 
+: N 3487 2949 1 1 rp C 
+ L ; N 3487 2949 M 3486 2950 I K 
+: N 3486 2950 1 1 rp C 
+ L ; N 3486 2950 M 3485 2951 I K 
+: N 3485 2951 1 1 rp C 
+ L ; N 3485 2951 M 3484 2952 I K 
+: N 3484 2952 1 1 rp C 
+ L ; N 3484 2952 M 3483 2953 I K 
+: N 3483 2953 1 1 rp C 
+ L ; N 3483 2953 M 3482 2953 I K 
+: N 3482 2953 1 1 rp C 
+ L ; N 3482 2953 M 3481 2954 I K 
+: N 3481 2954 1 1 rp C 
+ L ; N 3481 2954 M 3480 2955 I K 
+: N 3480 2955 1 1 rp C 
+ L ; N 3480 2955 M 3479 2955 I K 
+: N 3479 2955 1 1 rp C 
+ L ; N 3479 2955 M 3477 2956 I K 
+: N 3477 2956 1 1 rp C 
+ L ; N 3477 2956 M 3476 2956 I K 
+: N 3476 2956 1 1 rp C 
+ L ; N 3476 2956 M 3475 2956 I K 
+: N 3475 2956 1 1 rp C 
+ L ; N 3475 2956 M 3474 2957 I K 
+: N 3474 2957 1 1 rp C 
+ L ; N 3474 2957 M 3472 2957 I K 
+: N 3472 2957 1 1 rp C 
+ L ; N 3472 2957 M 3471 2957 I K 
+: N 3471 2957 1 1 rp C 
+ L ; N 3471 2957 M 3470 2957 I K 
+: N 3470 2957 1 1 rp C 
+ L ; N 3470 2957 M 3468 2957 I K 
+: N 3468 2957 1 1 rp C 
+ L ; 1 0 0 1 scol N 3388 3425 M 3451 3425 I K 
+: N 3451 3425 1 1 rp C 
+ L ; N 3387 3425 M 3451 3425 I K 
+: N 3451 3425 1 1 rp C 
+ L ; N 3385 3426 M 3451 3426 I K 
+: N 3451 3426 1 1 rp C 
+ L ; N 3384 3426 M 3451 3426 I K 
+: N 3451 3426 1 1 rp C 
+ L ; N 3513 3357 M 3450 3357 I K 
+: N 3450 3357 1 1 rp C 
+ L ; N 3515 3357 M 3450 3357 I K 
+: N 3450 3357 1 1 rp C 
+ L ; N 3516 3356 M 3450 3356 I K 
+: N 3450 3356 1 1 rp C 
+ L ; N 3518 3356 M 3451 3356 I K 
+: N 3451 3356 1 1 rp C 
+ L ; N 3391 3423 M 3452 3423 I K 
+: N 3452 3423 1 1 rp C 
+ L ; N 3390 3423 M 3452 3423 I K 
+: N 3452 3423 1 1 rp C 
+ L ; N 3389 3424 M 3451 3424 I K 
+: N 3451 3424 1 1 rp C 
+ L ; N 3388 3425 M 3451 3425 I K 
+: N 3451 3425 1 1 rp C 
+ L ; N 3510 3359 M 3449 3359 I K 
+: N 3449 3359 1 1 rp C 
+ L ; N 3511 3358 M 3450 3358 I K 
+: N 3450 3358 1 1 rp C 
+ L ; N 3512 3358 M 3450 3358 I K 
+: N 3450 3358 1 1 rp C 
+ L ; N 3513 3357 M 3450 3357 I K 
+: N 3450 3357 1 1 rp C 
+ L ; N 3394 3421 M 3452 3421 I K 
+: N 3452 3421 1 1 rp C 
+ L ; N 3393 3422 M 3452 3422 I K 
+: N 3452 3422 1 1 rp C 
+ L ; N 3392 3422 M 3452 3422 I K 
+: N 3452 3422 1 1 rp C 
+ L ; N 3391 3423 M 3452 3423 I K 
+: N 3452 3423 1 1 rp C 
+ L ; N 3508 3361 M 3449 3361 I K 
+: N 3449 3361 1 1 rp C 
+ L ; N 3508 3360 M 3449 3360 I K 
+: N 3449 3360 1 1 rp C 
+ L ; N 3509 3360 M 3449 3360 I K 
+: N 3449 3360 1 1 rp C 
+ L ; N 3510 3359 M 3449 3359 I K 
+: N 3449 3359 1 1 rp C 
+ L ; N 3395 3419 M 3453 3419 I K 
+: N 3453 3419 1 1 rp C 
+ L ; N 3395 3420 M 3453 3420 I K 
+: N 3453 3420 1 1 rp C 
+ L ; N 3394 3420 M 3453 3420 I K 
+: N 3453 3420 1 1 rp C 
+ L ; N 3394 3421 M 3452 3421 I K 
+: N 3452 3421 1 1 rp C 
+ L ; N 3506 3363 M 3448 3363 I K 
+: N 3448 3363 1 1 rp C 
+ L ; N 3507 3362 M 3448 3362 I K 
+: N 3448 3362 1 1 rp C 
+ L ; N 3507 3361 M 3449 3361 I K 
+: N 3449 3361 1 1 rp C 
+ L ; N 3508 3361 M 3449 3361 I K 
+: N 3449 3361 1 1 rp C 
+ L ; N 3397 3417 M 3445 3417 I K 
+: N 3445 3417 1 1 rp C 
+ L ; N 3396 3418 M 3447 3418 I K 
+: N 3447 3418 1 1 rp C 
+ L ; N 3396 3419 M 3450 3419 I K 
+: N 3450 3419 1 1 rp C 
+ L ; N 3395 3419 M 3453 3419 I K 
+: N 3453 3419 1 1 rp C 
+ L ; N 3504 3364 M 3457 3364 I K 
+: N 3457 3364 1 1 rp C 
+ L ; N 3505 3364 M 3454 3364 I K 
+: N 3454 3364 1 1 rp C 
+ L ; N 3505 3363 M 3451 3363 I K 
+: N 3451 3363 1 1 rp C 
+ L ; N 3506 3363 M 3448 3363 I K 
+: N 3448 3363 1 1 rp C 
+ L ; N 3398 3416 M 3437 3416 I K 
+: N 3437 3416 1 1 rp C 
+ L ; N 3398 3416 M 3440 3416 I K 
+: N 3440 3416 1 1 rp C 
+ L ; N 3397 3417 M 3442 3417 I K 
+: N 3442 3417 1 1 rp C 
+ L ; N 3397 3417 M 3445 3417 I K 
+: N 3445 3417 1 1 rp C 
+ L ; N 3503 3366 M 3464 3366 I K 
+: N 3464 3366 1 1 rp C 
+ L ; N 3503 3366 M 3462 3366 I K 
+: N 3462 3366 1 1 rp C 
+ L ; N 3504 3365 M 3459 3365 I K 
+: N 3459 3365 1 1 rp C 
+ L ; N 3504 3364 M 3457 3364 I K 
+: N 3457 3364 1 1 rp C 
+ L ; N 3399 3414 M 3433 3414 I K 
+: N 3433 3414 1 1 rp C 
+ L ; N 3399 3415 M 3435 3415 I K 
+: N 3435 3415 1 1 rp C 
+ L ; N 3399 3415 M 3436 3415 I K 
+: N 3436 3415 1 1 rp C 
+ L ; N 3398 3416 M 3437 3416 I K 
+: N 3437 3416 1 1 rp C 
+ L ; N 3502 3368 M 3468 3368 I K 
+: N 3468 3368 1 1 rp C 
+ L ; N 3502 3367 M 3467 3367 I K 
+: N 3467 3367 1 1 rp C 
+ L ; N 3503 3367 M 3465 3367 I K 
+: N 3465 3367 1 1 rp C 
+ L ; N 3503 3366 M 3464 3366 I K 
+: N 3464 3366 1 1 rp C 
+ L ; N 3400 3412 M 3431 3412 I K 
+: N 3431 3412 1 1 rp C 
+ L ; N 3400 3413 M 3432 3413 I K 
+: N 3432 3413 1 1 rp C 
+ L ; N 3400 3413 M 3433 3413 I K 
+: N 3433 3413 1 1 rp C 
+ L ; N 3399 3414 M 3433 3414 I K 
+: N 3433 3414 1 1 rp C 
+ L ; N 3501 3370 M 3470 3370 I K 
+: N 3470 3370 1 1 rp C 
+ L ; N 3501 3369 M 3470 3369 I K 
+: N 3470 3369 1 1 rp C 
+ L ; N 3502 3369 M 3469 3369 I K 
+: N 3469 3369 1 1 rp C 
+ L ; N 3502 3368 M 3468 3368 I K 
+: N 3468 3368 1 1 rp C 
+ L ; N 3401 3410 M 3429 3410 I K 
+: N 3429 3410 1 1 rp C 
+ L ; N 3401 3411 M 3430 3411 I K 
+: N 3430 3411 1 1 rp C 
+ L ; N 3401 3412 M 3430 3412 I K 
+: N 3430 3412 1 1 rp C 
+ L ; N 3400 3412 M 3431 3412 I K 
+: N 3431 3412 1 1 rp C 
+ L ; N 3500 3371 M 3472 3371 I K 
+: N 3472 3371 1 1 rp C 
+ L ; N 3500 3371 M 3472 3371 I K 
+: N 3472 3371 1 1 rp C 
+ L ; N 3501 3370 M 3471 3370 I K 
+: N 3471 3370 1 1 rp C 
+ L ; N 3501 3370 M 3470 3370 I K 
+: N 3470 3370 1 1 rp C 
+ L ; N 3402 3409 M 3427 3409 I K 
+: N 3427 3409 1 1 rp C 
+ L ; N 3402 3409 M 3428 3409 I K 
+: N 3428 3409 1 1 rp C 
+ L ; N 3401 3410 M 3429 3410 I K 
+: N 3429 3410 1 1 rp C 
+ L ; N 3401 3410 M 3429 3410 I K 
+: N 3429 3410 1 1 rp C 
+ L ; N 3499 3373 M 3474 3373 I K 
+: N 3474 3373 1 1 rp C 
+ L ; N 3500 3373 M 3473 3373 I K 
+: N 3473 3373 1 1 rp C 
+ L ; N 3500 3372 M 3473 3372 I K 
+: N 3473 3372 1 1 rp C 
+ L ; N 3500 3371 M 3472 3371 I K 
+: N 3472 3371 1 1 rp C 
+ L ; N 3403 3407 M 3426 3407 I K 
+: N 3426 3407 1 1 rp C 
+ L ; N 3403 3407 M 3427 3407 I K 
+: N 3427 3407 1 1 rp C 
+ L ; N 3402 3408 M 3427 3408 I K 
+: N 3427 3408 1 1 rp C 
+ L ; N 3402 3409 M 3427 3409 I K 
+: N 3427 3409 1 1 rp C 
+ L ; N 3498 3375 M 3475 3375 I K 
+: N 3475 3375 1 1 rp C 
+ L ; N 3499 3374 M 3475 3374 I K 
+: N 3475 3374 1 1 rp C 
+ L ; N 3499 3374 M 3474 3374 I K 
+: N 3474 3374 1 1 rp C 
+ L ; N 3499 3373 M 3474 3373 I K 
+: N 3474 3373 1 1 rp C 
+ L ; N 3404 3405 M 3426 3405 I K 
+: N 3426 3405 1 1 rp C 
+ L ; N 3403 3406 M 3426 3406 I K 
+: N 3426 3406 1 1 rp C 
+ L ; N 3403 3406 M 3426 3406 I K 
+: N 3426 3406 1 1 rp C 
+ L ; N 3403 3407 M 3426 3407 I K 
+: N 3426 3407 1 1 rp C 
+ L ; N 3498 3377 M 3476 3377 I K 
+: N 3476 3377 1 1 rp C 
+ L ; N 3498 3376 M 3475 3376 I K 
+: N 3475 3376 1 1 rp C 
+ L ; N 3498 3376 M 3475 3376 I K 
+: N 3475 3376 1 1 rp C 
+ L ; N 3498 3375 M 3475 3375 I K 
+: N 3475 3375 1 1 rp C 
+ L ; N 3404 3403 M 3425 3403 I K 
+: N 3425 3403 1 1 rp C 
+ L ; N 3404 3404 M 3425 3404 I K 
+: N 3425 3404 1 1 rp C 
+ L ; N 3404 3405 M 3425 3405 I K 
+: N 3425 3405 1 1 rp C 
+ L ; N 3404 3405 M 3426 3405 I K 
+: N 3426 3405 1 1 rp C 
+ L ; N 3497 3379 M 3476 3379 I K 
+: N 3476 3379 1 1 rp C 
+ L ; N 3497 3378 M 3476 3378 I K 
+: N 3476 3378 1 1 rp C 
+ L ; N 3497 3377 M 3476 3377 I K 
+: N 3476 3377 1 1 rp C 
+ L ; N 3498 3377 M 3476 3377 I K 
+: N 3476 3377 1 1 rp C 
+ L ; N 3405 3402 M 3424 3402 I K 
+: N 3424 3402 1 1 rp C 
+ L ; N 3405 3402 M 3425 3402 I K 
+: N 3425 3402 1 1 rp C 
+ L ; N 3405 3403 M 3425 3403 I K 
+: N 3425 3403 1 1 rp C 
+ L ; N 3404 3403 M 3425 3403 I K 
+: N 3425 3403 1 1 rp C 
+ L ; N 3496 3380 M 3477 3380 I K 
+: N 3477 3380 1 1 rp C 
+ L ; N 3496 3380 M 3477 3380 I K 
+: N 3477 3380 1 1 rp C 
+ L ; N 3497 3379 M 3477 3379 I K 
+: N 3477 3379 1 1 rp C 
+ L ; N 3497 3379 M 3476 3379 I K 
+: N 3476 3379 1 1 rp C 
+ L ; N 3406 3400 M 3424 3400 I K 
+: N 3424 3400 1 1 rp C 
+ L ; N 3406 3400 M 3424 3400 I K 
+: N 3424 3400 1 1 rp C 
+ L ; N 3405 3401 M 3424 3401 I K 
+: N 3424 3401 1 1 rp C 
+ L ; N 3405 3402 M 3424 3402 I K 
+: N 3424 3402 1 1 rp C 
+ L ; N 3495 3382 M 3477 3382 I K 
+: N 3477 3382 1 1 rp C 
+ L ; N 3496 3381 M 3477 3381 I K 
+: N 3477 3381 1 1 rp C 
+ L ; N 3496 3381 M 3477 3381 I K 
+: N 3477 3381 1 1 rp C 
+ L ; N 3496 3380 M 3477 3380 I K 
+: N 3477 3380 1 1 rp C 
+ L ; N 3407 3398 M 3424 3398 I K 
+: N 3424 3398 1 1 rp C 
+ L ; N 3406 3399 M 3424 3399 I K 
+: N 3424 3399 1 1 rp C 
+ L ; N 3406 3399 M 3424 3399 I K 
+: N 3424 3399 1 1 rp C 
+ L ; N 3406 3400 M 3424 3400 I K 
+: N 3424 3400 1 1 rp C 
+ L ; N 3495 3384 M 3477 3384 I K 
+: N 3477 3384 1 1 rp C 
+ L ; N 3495 3383 M 3477 3383 I K 
+: N 3477 3383 1 1 rp C 
+ L ; N 3495 3383 M 3477 3383 I K 
+: N 3477 3383 1 1 rp C 
+ L ; N 3495 3382 M 3477 3382 I K 
+: N 3477 3382 1 1 rp C 
+ L ; N 3407 3396 M 3424 3396 I K 
+: N 3424 3396 1 1 rp C 
+ L ; N 3407 3397 M 3424 3397 I K 
+: N 3424 3397 1 1 rp C 
+ L ; N 3407 3397 M 3424 3397 I K 
+: N 3424 3397 1 1 rp C 
+ L ; N 3407 3398 M 3424 3398 I K 
+: N 3424 3398 1 1 rp C 
+ L ; N 3494 3386 M 3478 3386 I K 
+: N 3478 3386 1 1 rp C 
+ L ; N 3494 3385 M 3478 3385 I K 
+: N 3478 3385 1 1 rp C 
+ L ; N 3494 3384 M 3478 3384 I K 
+: N 3478 3384 1 1 rp C 
+ L ; N 3495 3384 M 3477 3384 I K 
+: N 3477 3384 1 1 rp C 
+ L ; N 3408 3394 M 3424 3394 I K 
+: N 3424 3394 1 1 rp C 
+ L ; N 3408 3395 M 3424 3395 I K 
+: N 3424 3395 1 1 rp C 
+ L ; N 3408 3396 M 3424 3396 I K 
+: N 3424 3396 1 1 rp C 
+ L ; N 3407 3396 M 3424 3396 I K 
+: N 3424 3396 1 1 rp C 
+ L ; N 3493 3387 M 3478 3387 I K 
+: N 3478 3387 1 1 rp C 
+ L ; N 3493 3387 M 3478 3387 I K 
+: N 3478 3387 1 1 rp C 
+ L ; N 3494 3386 M 3478 3386 I K 
+: N 3478 3386 1 1 rp C 
+ L ; N 3494 3386 M 3478 3386 I K 
+: N 3478 3386 1 1 rp C 
+ L ; N 3409 3393 M 3424 3393 I K 
+: N 3424 3393 1 1 rp C 
+ L ; N 3408 3393 M 3424 3393 I K 
+: N 3424 3393 1 1 rp C 
+ L ; N 3408 3394 M 3424 3394 I K 
+: N 3424 3394 1 1 rp C 
+ L ; N 3408 3394 M 3424 3394 I K 
+: N 3424 3394 1 1 rp C 
+ L ; N 3493 3389 M 3478 3389 I K 
+: N 3478 3389 1 1 rp C 
+ L ; N 3493 3389 M 3478 3389 I K 
+: N 3478 3389 1 1 rp C 
+ L ; N 3493 3388 M 3478 3388 I K 
+: N 3478 3388 1 1 rp C 
+ L ; N 3493 3387 M 3478 3387 I K 
+: N 3478 3387 1 1 rp C 
+ L ; N 3409 3391 M 3424 3391 I K 
+: N 3424 3391 1 1 rp C 
+ L ; N 3409 3392 M 3424 3392 I K 
+: N 3424 3392 1 1 rp C 
+ L ; N 3409 3392 M 3424 3392 I K 
+: N 3424 3392 1 1 rp C 
+ L ; N 3409 3393 M 3424 3393 I K 
+: N 3424 3393 1 1 rp C 
+ L ; N 3492 3391 M 3477 3391 I K 
+: N 3477 3391 1 1 rp C 
+ L ; N 3492 3390 M 3477 3390 I K 
+: N 3477 3390 1 1 rp C 
+ L ; N 3492 3390 M 3478 3390 I K 
+: N 3478 3390 1 1 rp C 
+ L ; N 3493 3389 M 3478 3389 I K 
+: N 3478 3389 1 1 rp C 
+ L ; N 3410 3389 M 3424 3389 I K 
+: N 3424 3389 1 1 rp C 
+ L ; N 3410 3390 M 3424 3390 I K 
+: N 3424 3390 1 1 rp C 
+ L ; N 3410 3390 M 3424 3390 I K 
+: N 3424 3390 1 1 rp C 
+ L ; N 3409 3391 M 3424 3391 I K 
+: N 3424 3391 1 1 rp C 
+ L ; N 3491 3393 M 3477 3393 I K 
+: N 3477 3393 1 1 rp C 
+ L ; N 3491 3392 M 3477 3392 I K 
+: N 3477 3392 1 1 rp C 
+ L ; N 3492 3392 M 3477 3392 I K 
+: N 3477 3392 1 1 rp C 
+ L ; N 3492 3391 M 3477 3391 I K 
+: N 3477 3391 1 1 rp C 
+ L ; N 3411 3387 M 3425 3387 I K 
+: N 3425 3387 1 1 rp C 
+ L ; N 3411 3388 M 3425 3388 I K 
+: N 3425 3388 1 1 rp C 
+ L ; N 3410 3389 M 3424 3389 I K 
+: N 3424 3389 1 1 rp C 
+ L ; N 3410 3389 M 3424 3389 I K 
+: N 3424 3389 1 1 rp C 
+ L ; N 3491 3394 M 3476 3394 I K 
+: N 3476 3394 1 1 rp C 
+ L ; N 3491 3394 M 3477 3394 I K 
+: N 3477 3394 1 1 rp C 
+ L ; N 3491 3393 M 3477 3393 I K 
+: N 3477 3393 1 1 rp C 
+ L ; N 3491 3393 M 3477 3393 I K 
+: N 3477 3393 1 1 rp C 
+ L ; N 3411 3386 M 3425 3386 I K 
+: N 3425 3386 1 1 rp C 
+ L ; N 3411 3386 M 3425 3386 I K 
+: N 3425 3386 1 1 rp C 
+ L ; N 3411 3387 M 3425 3387 I K 
+: N 3425 3387 1 1 rp C 
+ L ; N 3411 3387 M 3425 3387 I K 
+: N 3425 3387 1 1 rp C 
+ L ; N 3490 3396 M 3476 3396 I K 
+: N 3476 3396 1 1 rp C 
+ L ; N 3490 3396 M 3476 3396 I K 
+: N 3476 3396 1 1 rp C 
+ L ; N 3490 3395 M 3476 3395 I K 
+: N 3476 3395 1 1 rp C 
+ L ; N 3491 3394 M 3476 3394 I K 
+: N 3476 3394 1 1 rp C 
+ L ; N 3412 3384 M 3426 3384 I K 
+: N 3426 3384 1 1 rp C 
+ L ; N 3412 3384 M 3426 3384 I K 
+: N 3426 3384 1 1 rp C 
+ L ; N 3412 3385 M 3425 3385 I K 
+: N 3425 3385 1 1 rp C 
+ L ; N 3411 3386 M 3425 3386 I K 
+: N 3425 3386 1 1 rp C 
+ L ; N 3489 3398 M 3476 3398 I K 
+: N 3476 3398 1 1 rp C 
+ L ; N 3489 3397 M 3476 3397 I K 
+: N 3476 3397 1 1 rp C 
+ L ; N 3490 3397 M 3476 3397 I K 
+: N 3476 3397 1 1 rp C 
+ L ; N 3490 3396 M 3476 3396 I K 
+: N 3476 3396 1 1 rp C 
+ L ; N 3413 3382 M 3426 3382 I K 
+: N 3426 3382 1 1 rp C 
+ L ; N 3413 3383 M 3426 3383 I K 
+: N 3426 3383 1 1 rp C 
+ L ; N 3412 3383 M 3426 3383 I K 
+: N 3426 3383 1 1 rp C 
+ L ; N 3412 3384 M 3426 3384 I K 
+: N 3426 3384 1 1 rp C 
+ L ; N 3488 3400 M 3475 3400 I K 
+: N 3475 3400 1 1 rp C 
+ L ; N 3489 3399 M 3475 3399 I K 
+: N 3475 3399 1 1 rp C 
+ L ; N 3489 3399 M 3475 3399 I K 
+: N 3475 3399 1 1 rp C 
+ L ; N 3489 3398 M 3476 3398 I K 
+: N 3476 3398 1 1 rp C 
+ L ; N 3414 3380 M 3427 3380 I K 
+: N 3427 3380 1 1 rp C 
+ L ; N 3413 3381 M 3427 3381 I K 
+: N 3427 3381 1 1 rp C 
+ L ; N 3413 3381 M 3426 3381 I K 
+: N 3426 3381 1 1 rp C 
+ L ; N 3413 3382 M 3426 3382 I K 
+: N 3426 3382 1 1 rp C 
+ L ; N 3488 3402 M 3474 3402 I K 
+: N 3474 3402 1 1 rp C 
+ L ; N 3488 3401 M 3475 3401 I K 
+: N 3475 3401 1 1 rp C 
+ L ; N 3488 3400 M 3475 3400 I K 
+: N 3475 3400 1 1 rp C 
+ L ; N 3488 3400 M 3475 3400 I K 
+: N 3475 3400 1 1 rp C 
+ L ; N 3414 3379 M 3427 3379 I K 
+: N 3427 3379 1 1 rp C 
+ L ; N 3414 3379 M 3427 3379 I K 
+: N 3427 3379 1 1 rp C 
+ L ; N 3414 3380 M 3427 3380 I K 
+: N 3427 3380 1 1 rp C 
+ L ; N 3414 3380 M 3427 3380 I K 
+: N 3427 3380 1 1 rp C 
+ L ; N 3487 3403 M 3474 3403 I K 
+: N 3474 3403 1 1 rp C 
+ L ; N 3487 3403 M 3474 3403 I K 
+: N 3474 3403 1 1 rp C 
+ L ; N 3487 3402 M 3474 3402 I K 
+: N 3474 3402 1 1 rp C 
+ L ; N 3488 3402 M 3474 3402 I K 
+: N 3474 3402 1 1 rp C 
+ L ; N 3415 3377 M 3428 3377 I K 
+: N 3428 3377 1 1 rp C 
+ L ; N 3415 3377 M 3428 3377 I K 
+: N 3428 3377 1 1 rp C 
+ L ; N 3415 3378 M 3428 3378 I K 
+: N 3428 3378 1 1 rp C 
+ L ; N 3414 3379 M 3427 3379 I K 
+: N 3427 3379 1 1 rp C 
+ L ; N 3486 3405 M 3473 3405 I K 
+: N 3473 3405 1 1 rp C 
+ L ; N 3487 3405 M 3473 3405 I K 
+: N 3473 3405 1 1 rp C 
+ L ; N 3487 3404 M 3474 3404 I K 
+: N 3474 3404 1 1 rp C 
+ L ; N 3487 3403 M 3474 3403 I K 
+: N 3474 3403 1 1 rp C 
+ L ; N 3416 3375 M 3429 3375 I K 
+: N 3429 3375 1 1 rp C 
+ L ; N 3415 3376 M 3428 3376 I K 
+: N 3428 3376 1 1 rp C 
+ L ; N 3415 3376 M 3428 3376 I K 
+: N 3428 3376 1 1 rp C 
+ L ; N 3415 3377 M 3428 3377 I K 
+: N 3428 3377 1 1 rp C 
+ L ; N 3486 3407 M 3473 3407 I K 
+: N 3473 3407 1 1 rp C 
+ L ; N 3486 3406 M 3473 3406 I K 
+: N 3473 3406 1 1 rp C 
+ L ; N 3486 3406 M 3473 3406 I K 
+: N 3473 3406 1 1 rp C 
+ L ; N 3486 3405 M 3473 3405 I K 
+: N 3473 3405 1 1 rp C 
+ L ; N 3416 3373 M 3429 3373 I K 
+: N 3429 3373 1 1 rp C 
+ L ; N 3416 3374 M 3429 3374 I K 
+: N 3429 3374 1 1 rp C 
+ L ; N 3416 3374 M 3429 3374 I K 
+: N 3429 3374 1 1 rp C 
+ L ; N 3416 3375 M 3429 3375 I K 
+: N 3429 3375 1 1 rp C 
+ L ; N 3485 3409 M 3472 3409 I K 
+: N 3472 3409 1 1 rp C 
+ L ; N 3485 3408 M 3472 3408 I K 
+: N 3472 3408 1 1 rp C 
+ L ; N 3485 3407 M 3473 3407 I K 
+: N 3473 3407 1 1 rp C 
+ L ; N 3486 3407 M 3473 3407 I K 
+: N 3473 3407 1 1 rp C 
+ L ; N 3417 3371 M 3430 3371 I K 
+: N 3430 3371 1 1 rp C 
+ L ; N 3417 3372 M 3430 3372 I K 
+: N 3430 3372 1 1 rp C 
+ L ; N 3417 3373 M 3429 3373 I K 
+: N 3429 3373 1 1 rp C 
+ L ; N 3416 3373 M 3429 3373 I K 
+: N 3429 3373 1 1 rp C 
+ L ; N 3484 3410 M 3471 3410 I K 
+: N 3471 3410 1 1 rp C 
+ L ; N 3484 3410 M 3472 3410 I K 
+: N 3472 3410 1 1 rp C 
+ L ; N 3485 3409 M 3472 3409 I K 
+: N 3472 3409 1 1 rp C 
+ L ; N 3485 3409 M 3472 3409 I K 
+: N 3472 3409 1 1 rp C 
+ L ; N 3418 3370 M 3430 3370 I K 
+: N 3430 3370 1 1 rp C 
+ L ; N 3418 3370 M 3430 3370 I K 
+: N 3430 3370 1 1 rp C 
+ L ; N 3417 3371 M 3430 3371 I K 
+: N 3430 3371 1 1 rp C 
+ L ; N 3417 3371 M 3430 3371 I K 
+: N 3430 3371 1 1 rp C 
+ L ; N 3483 3412 M 3471 3412 I K 
+: N 3471 3412 1 1 rp C 
+ L ; N 3484 3412 M 3471 3412 I K 
+: N 3471 3412 1 1 rp C 
+ L ; N 3484 3411 M 3471 3411 I K 
+: N 3471 3411 1 1 rp C 
+ L ; N 3484 3410 M 3471 3410 I K 
+: N 3471 3410 1 1 rp C 
+ L ; N 3419 3368 M 3431 3368 I K 
+: N 3431 3368 1 1 rp C 
+ L ; N 3418 3369 M 3431 3369 I K 
+: N 3431 3369 1 1 rp C 
+ L ; N 3418 3369 M 3430 3369 I K 
+: N 3430 3369 1 1 rp C 
+ L ; N 3418 3370 M 3430 3370 I K 
+: N 3430 3370 1 1 rp C 
+ L ; N 3483 3414 M 3470 3414 I K 
+: N 3470 3414 1 1 rp C 
+ L ; N 3483 3413 M 3471 3413 I K 
+: N 3471 3413 1 1 rp C 
+ L ; N 3483 3413 M 3471 3413 I K 
+: N 3471 3413 1 1 rp C 
+ L ; N 3483 3412 M 3471 3412 I K 
+: N 3471 3412 1 1 rp C 
+ L ; N 3419 3366 M 3431 3366 I K 
+: N 3431 3366 1 1 rp C 
+ L ; N 3419 3367 M 3431 3367 I K 
+: N 3431 3367 1 1 rp C 
+ L ; N 3419 3367 M 3431 3367 I K 
+: N 3431 3367 1 1 rp C 
+ L ; N 3419 3368 M 3431 3368 I K 
+: N 3431 3368 1 1 rp C 
+ L ; N 3482 3416 M 3470 3416 I K 
+: N 3470 3416 1 1 rp C 
+ L ; N 3482 3415 M 3470 3415 I K 
+: N 3470 3415 1 1 rp C 
+ L ; N 3482 3415 M 3470 3415 I K 
+: N 3470 3415 1 1 rp C 
+ L ; N 3483 3414 M 3470 3414 I K 
+: N 3470 3414 1 1 rp C 
+ L ; N 3420 3364 M 3432 3364 I K 
+: N 3432 3364 1 1 rp C 
+ L ; N 3420 3365 M 3432 3365 I K 
+: N 3432 3365 1 1 rp C 
+ L ; N 3420 3366 M 3432 3366 I K 
+: N 3432 3366 1 1 rp C 
+ L ; N 3419 3366 M 3431 3366 I K 
+: N 3431 3366 1 1 rp C 
+ L ; N 3481 3417 M 3469 3417 I K 
+: N 3469 3417 1 1 rp C 
+ L ; N 3481 3417 M 3469 3417 I K 
+: N 3469 3417 1 1 rp C 
+ L ; N 3482 3416 M 3470 3416 I K 
+: N 3470 3416 1 1 rp C 
+ L ; N 3482 3416 M 3470 3416 I K 
+: N 3470 3416 1 1 rp C 
+ L ; N 3421 3363 M 3433 3363 I K 
+: N 3433 3363 1 1 rp C 
+ L ; N 3421 3363 M 3433 3363 I K 
+: N 3433 3363 1 1 rp C 
+ L ; N 3421 3364 M 3432 3364 I K 
+: N 3432 3364 1 1 rp C 
+ L ; N 3420 3364 M 3432 3364 I K 
+: N 3432 3364 1 1 rp C 
+ L ; N 3480 3419 M 3468 3419 I K 
+: N 3468 3419 1 1 rp C 
+ L ; N 3480 3419 M 3469 3419 I K 
+: N 3469 3419 1 1 rp C 
+ L ; N 3481 3418 M 3469 3418 I K 
+: N 3469 3418 1 1 rp C 
+ L ; N 3481 3417 M 3469 3417 I K 
+: N 3469 3417 1 1 rp C 
+ L ; N 3423 3361 M 3434 3361 I K 
+: N 3434 3361 1 1 rp C 
+ L ; N 3422 3361 M 3433 3361 I K 
+: N 3433 3361 1 1 rp C 
+ L ; N 3422 3362 M 3433 3362 I K 
+: N 3433 3362 1 1 rp C 
+ L ; N 3421 3363 M 3433 3363 I K 
+: N 3433 3363 1 1 rp C 
+ L ; N 3478 3421 M 3468 3421 I K 
+: N 3468 3421 1 1 rp C 
+ L ; N 3479 3420 M 3468 3420 I K 
+: N 3468 3420 1 1 rp C 
+ L ; N 3479 3420 M 3468 3420 I K 
+: N 3468 3420 1 1 rp C 
+ L ; N 3480 3419 M 3468 3419 I K 
+: N 3468 3419 1 1 rp C 
+ L ; N 3425 3359 M 3434 3359 I K 
+: N 3434 3359 1 1 rp C 
+ L ; N 3424 3360 M 3434 3360 I K 
+: N 3434 3360 1 1 rp C 
+ L ; N 3424 3360 M 3434 3360 I K 
+: N 3434 3360 1 1 rp C 
+ L ; N 3423 3361 M 3434 3361 I K 
+: N 3434 3361 1 1 rp C 
+ L ; N 3477 3423 M 3467 3423 I K 
+: N 3467 3423 1 1 rp C 
+ L ; N 3477 3422 M 3467 3422 I K 
+: N 3467 3422 1 1 rp C 
+ L ; N 3478 3422 M 3468 3422 I K 
+: N 3468 3422 1 1 rp C 
+ L ; N 3478 3421 M 3468 3421 I K 
+: N 3468 3421 1 1 rp C 
+ L ; N 3428 3357 M 3435 3357 I K 
+: N 3435 3357 1 1 rp C 
+ L ; N 3427 3358 M 3435 3358 I K 
+: N 3435 3358 1 1 rp C 
+ L ; N 3426 3358 M 3434 3358 I K 
+: N 3434 3358 1 1 rp C 
+ L ; N 3425 3359 M 3434 3359 I K 
+: N 3434 3359 1 1 rp C 
+ L ; N 3474 3425 M 3466 3425 I K 
+: N 3466 3425 1 1 rp C 
+ L ; N 3475 3424 M 3467 3424 I K 
+: N 3467 3424 1 1 rp C 
+ L ; N 3476 3423 M 3467 3423 I K 
+: N 3467 3423 1 1 rp C 
+ L ; N 3477 3423 M 3467 3423 I K 
+: N 3467 3423 1 1 rp C 
+ L ; N 3432 3356 M 3436 3356 I K 
+: N 3436 3356 1 1 rp C 
+ L ; N 3431 3356 M 3435 3356 I K 
+: N 3435 3356 1 1 rp C 
+ L ; N 3429 3357 M 3435 3357 I K 
+: N 3435 3357 1 1 rp C 
+ L ; N 3428 3357 M 3435 3357 I K 
+: N 3435 3357 1 1 rp C 
+ L ; N 3469 3426 M 3466 3426 I K 
+: N 3466 3426 1 1 rp C 
+ L ; N 3471 3426 M 3466 3426 I K 
+: N 3466 3426 1 1 rp C 
+ L ; N 3472 3425 M 3466 3425 I K 
+: N 3466 3425 1 1 rp C 
+ L ; N 3474 3425 M 3466 3425 I K 
+: N 3466 3425 1 1 rp C 
+ L ; 0 0 0 1 scol 3150 2985 M (D)S 
+3187 2985 M (6)S  
+3150 3127 M (D)S 
+3187 3127 M (7)S  
+3150 3268 M (D)S 
+3187 3268 M (8)S  
+3150 3410 M (D)S 
+3187 3410 M (9)S  
+3150 3552 M (D)S 
+3187 3552 M (1)S  3216 3552 M (0)S  
+3150 3693 M (D)S 
+3187 3693 M (1)S  3216 3693 M (1)S  
+3150 3835 M (A)S 
+3187 3835 M (0)S  
+0 0 1 1 scol N 3125 3951 M 3139 3951 I K 
+: N 3139 3951 1 1 rp C 
+ L ; N 3139 3951 M 3139 3964 I K 
+: N 3139 3964 1 1 rp C 
+ L ; N 3139 3964 M 3125 3964 I K 
+: N 3125 3964 1 1 rp C 
+ L ; N 3125 3964 M 3125 3951 I K 
+: N 3125 3951 1 1 rp C 
+ L ; : N 3132 3958 1 1 rp C 
+1 1 1 1 scol  L ; 0 0 0 1 scol 3650 3977 M (M)S 
+3693 3977 M (3)S  3722 3977 M (+)S  
+3663 3835 M (M)S 
+3706 3835 M (3)S  3735 3835 M (-)S  
+3650 3693 M (M)S 
+3693 3693 M (4)S  3722 3693 M (+)S  
+3663 3552 M (M)S 
+3706 3552 M (4)S  3735 3552 M (-)S  
+3552 3410 M (P)S 
+3587 3410 M (o)S  3619 3410 M (w)S  3659 3410 M (e)S  3688 3410 M (r)S  3708 3410 M ( )S  3722 3410 M (+)S  
+3565 3268 M (P)S 
+3600 3268 M (o)S  3632 3268 M (w)S  3672 3268 M (e)S  3701 3268 M (r)S  3721 3268 M ( )S  3735 3268 M (-)S  
+3688 3127 M (5)S 
+3717 3127 M (V)S  
+3638 2985 M (G)S 
+3678 2985 M (N)S  3715 2985 M (D)S  
+N 3456 2859 M 3456 2855 3453 2853 3450 2853 -c 3446 2853 3444 2855 3444 2859 -c 3444 2862 3446 2865 3450 2865 -c 3453 2865 3456 2862 3456 2859 -c C 
+K 
+3351 2879 M (A)S 
+3388 2879 M (r)S  3408 2879 M (d)S  3440 2879 M (u)S  3472 2879 M (i)S  3486 2879 M (n)S  3518 2879 M (o)S  
+0 0 0.496 1 scol N 4442 3497 M 4442 3515 I K 
+: N 4442 3515 1 1 rp C 
+ L ; N 4442 3674 M 4442 3657 I K 
+: N 4442 3657 1 1 rp C 
+ L ; N 4512 3585 M 4512 3546 4480 3515 4441 3515 -c 4402 3515 4371 3546 4371 3585 -c 4371 3624 4402 3656 4441 3656 -c 4480 3656 4512 3624 4512 3585 -c C 
+K 
+0 0 0 1 scol 4420 3596 M (M)S 
+N 4501 3497 M 4501 3493 4498 3491 4495 3491 -c 4491 3491 4489 3493 4489 3497 -c 4489 3500 4491 3503 4495 3503 -c 4498 3503 4501 3500 4501 3497 -c C 
+K 
+4495 3516 M (M)S 
+4538 3516 M (2)S  
+N 4501 3691 M 4501 3687 4498 3685 4495 3685 -c 4491 3685 4489 3687 4489 3691 -c 4489 3695 4491 3698 4495 3698 -c 4498 3698 4501 3695 4501 3691 -c C 
+K 
+4495 3711 M (P)S 
+4530 3711 M (l)S  4544 3711 M (u)S  4576 3711 M (n)S  4608 3711 M (g)S  4640 3711 M (e)S  4669 3711 M (r)S  4689 3711 M (M)S  4732 3711 M (o)S  4764 3711 M (t)S  4781 3711 M (o)S  4813 3711 M (r)S  
+0 0 0.496 1 scol N 4442 3780 M 4442 3798 I K 
+: N 4442 3798 1 1 rp C 
+ L ; N 4442 3958 M 4442 3940 I K 
+: N 4442 3940 1 1 rp C 
+ L ; N 4512 3868 M 4512 3829 4480 3798 4441 3798 -c 4402 3798 4371 3829 4371 3868 -c 4371 3907 4402 3939 4441 3939 -c 4480 3939 4512 3907 4512 3868 -c C 
+K 
+0 0 0 1 scol 4420 3879 M (M)S 
+N 4501 3780 M 4501 3776 4498 3774 4495 3774 -c 4491 3774 4489 3776 4489 3780 -c 4489 3783 4491 3786 4495 3786 -c 4498 3786 4501 3783 4501 3780 -c C 
+K 
+4495 3799 M (M)S 
+4538 3799 M (1)S  
+N 4501 3975 M 4501 3971 4498 3969 4495 3969 -c 4491 3969 4489 3971 4489 3975 -c 4489 3978 4491 3981 4495 3981 -c 4498 3981 4501 3978 4501 3975 -c C 
+K 
+4495 3994 M (Z)S 
+4527 3994 M (-)S  4544 3994 M (A)S  4581 3994 M (x)S  4610 3994 M (i)S  4624 3994 M (s)S  4653 3994 M (M)S  4696 3994 M (o)S  4728 3994 M (t)S  4745 3994 M (o)S  4777 3994 M (r)S  
+0 0 0.496 1 scol N 4619 4329 M 4478 4329 I K 
+: N 4478 4329 1 1 rp C 
+ L ; N 4478 4329 M 4478 4188 I K 
+: N 4478 4188 1 1 rp C 
+ L ; N 4478 4188 M 4619 4188 I K 
+: N 4619 4188 1 1 rp C 
+ L ; N 4619 4188 M 4619 4329 I K 
+: N 4619 4329 1 1 rp C 
+ L ; N 4442 4241 M 4478 4241 I K 
+: N 4478 4241 1 1 rp C 
+ L ; N 4442 4276 M 4478 4276 I K 
+: N 4478 4276 1 1 rp C 
+ L ; N 4655 4241 M 4619 4241 I K 
+: N 4619 4241 1 1 rp C 
+ L ; N 4655 4276 M 4619 4276 I K 
+: N 4619 4276 1 1 rp C 
+ L ; 0 0 0 1 scol 4526 4269 M (I)S 
+4540 4269 M (R)S  
+N 4519 4147 M 4519 4143 4516 4141 4512 4141 -c 4508 4141 4506 4143 4506 4147 -c 4506 4151 4508 4154 4512 4154 -c 4516 4154 4519 4151 4519 4147 -c C 
+K 
+4513 4167 M (I)S 
+4527 4167 M (R)S  4564 4167 M (1)S  
+N 4432 4364 M 4432 4360 4429 4358 4426 4358 -c 4422 4358 4420 4360 4420 4364 -c 4420 4367 4422 4370 4426 4370 -c 4429 4370 4432 4367 4432 4364 -c C 
+K 
+4427 4384 M (I)S 
+4441 4384 M (R)S  4478 4384 M ( )S  4492 4384 M (S)S  4527 4384 M (e)S  4556 4384 M (n)S  4588 4384 M (s)S  4617 4384 M (o)S  4649 4384 M (r)S  
+0 0 0.496 1 scol N 4832 4400 M 4832 4418 I K 
+: N 4832 4418 1 1 rp C 
+ L ; N 4796 4383 M 4832 4400 I K 
+: N 4832 4400 1 1 rp C 
+ L ; N 4867 4347 M 4796 4383 I K 
+: N 4796 4383 1 1 rp C 
+ L ; N 4796 4312 M 4867 4347 I K 
+: N 4867 4347 1 1 rp C 
+ L ; N 4867 4276 M 4796 4312 I K 
+: N 4796 4312 1 1 rp C 
+ L ; N 4832 4241 M 4832 4259 I K 
+: N 4832 4259 1 1 rp C 
+ L ; N 4832 4259 M 4867 4276 I K 
+: N 4867 4276 1 1 rp C 
+ L ; 0 0 0 1 scol N 4882 4293 M 4882 4289 4879 4287 4875 4287 -c 4871 4287 4869 4289 4869 4293 -c 4869 4297 4871 4300 4875 4300 -c 4879 4300 4882 4297 4882 4293 -c C 
+K 
+4876 4313 M (R)S 
+4913 4313 M (1)S  
+N 4882 4373 M 4882 4369 4879 4367 4875 4367 -c 4871 4367 4869 4369 4869 4373 -c 4869 4376 4871 4379 4875 4379 -c 4879 4379 4882 4376 4882 4373 -c C 
+K 
+4876 4393 M (1)S 
+4905 4393 M (0)S  4934 4393 M (K)S  
+0 0 0.496 1 scol N 547 4241 M 193 4241 I K 
+: N 193 4241 1 1 rp C 
+ L ; N 193 4241 M 193 3887 I K 
+: N 193 3887 1 1 rp C 
+ L ; N 193 3887 M 547 3887 I K 
+: N 547 3887 1 1 rp C 
+ L ; N 547 3887 M 547 4241 I K 
+: N 547 4241 1 1 rp C 
+ L ; N 193 4099 M 122 4099 I K 
+: N 122 4099 1 1 rp C 
+ L ; N 193 3958 M 122 3958 I K 
+: N 122 3958 1 1 rp C 
+ L ; N 547 3958 M 618 3958 I K 
+: N 618 3958 1 1 rp C 
+ L ; N 547 4099 M 618 4099 I K 
+: N 618 4099 1 1 rp C 
+ L ; 0 0 0 1 scol N 311 3846 M 311 3842 308 3840 305 3840 -c 301 3840 299 3842 299 3846 -c 299 3850 301 3853 305 3853 -c 308 3853 311 3850 311 3846 -c C 
+K 
+305 3866 M (S)S 
+340 3866 M (M)S  383 3866 M (2)S  
+N 209 4045 M 209 4041 206 4039 203 4039 -c 199 4039 197 4041 197 4045 -c 197 4049 199 4052 203 4052 -c 206 4052 209 4049 209 4045 -c C 
+K 
+204 4065 M (S)S 
+239 4065 M (t)S  256 4065 M (e)S  285 4065 M (p)S  317 4065 M (p)S  349 4065 M (e)S  378 4065 M (r)S  398 4065 M (M)S  441 4065 M (o)S  473 4065 M (t)S  490 4065 M (o)S  522 4065 M (r)S  
+0 0 0.496 1 scol N 547 2966 M 193 2966 I K 
+: N 193 2966 1 1 rp C 
+ L ; N 193 2966 M 193 2612 I K 
+: N 193 2612 1 1 rp C 
+ L ; N 193 2612 M 547 2612 I K 
+: N 547 2612 1 1 rp C 
+ L ; N 547 2612 M 547 2966 I K 
+: N 547 2966 1 1 rp C 
+ L ; N 193 2824 M 122 2824 I K 
+: N 122 2824 1 1 rp C 
+ L ; N 193 2683 M 122 2683 I K 
+: N 122 2683 1 1 rp C 
+ L ; N 547 2683 M 618 2683 I K 
+: N 618 2683 1 1 rp C 
+ L ; N 547 2824 M 618 2824 I K 
+: N 618 2824 1 1 rp C 
+ L ; 0 0 0 1 scol N 311 2571 M 311 2567 308 2565 305 2565 -c 301 2565 299 2567 299 2571 -c 299 2575 301 2578 305 2578 -c 308 2578 311 2575 311 2571 -c C 
+K 
+305 2591 M (S)S 
+340 2591 M (M)S  383 2591 M (1)S  
+N 209 2771 M 209 2767 206 2765 203 2765 -c 199 2765 197 2767 197 2771 -c 197 2774 199 2777 203 2777 -c 206 2777 209 2774 209 2771 -c C 
+K 
+204 2790 M (S)S 
+239 2790 M (t)S  256 2790 M (e)S  285 2790 M (p)S  317 2790 M (p)S  349 2790 M (e)S  378 2790 M (r)S  398 2790 M (M)S  441 2790 M (o)S  473 2790 M (t)S  490 2790 M (o)S  522 2790 M (r)S  
+0 0 0.496 1 scol N 4301 4436 M 4301 4453 I K 
+: N 4301 4453 1 1 rp C 
+ L ; N 4265 4418 M 4301 4436 I K 
+: N 4301 4436 1 1 rp C 
+ L ; N 4336 4383 M 4265 4418 I K 
+: N 4265 4418 1 1 rp C 
+ L ; N 4265 4347 M 4336 4383 I K 
+: N 4336 4383 1 1 rp C 
+ L ; N 4336 4312 M 4265 4347 I K 
+: N 4265 4347 1 1 rp C 
+ L ; N 4301 4276 M 4301 4294 I K 
+: N 4301 4294 1 1 rp C 
+ L ; N 4301 4294 M 4336 4312 I K 
+: N 4336 4312 1 1 rp C 
+ L ; 0 0 0 1 scol N 4350 4329 M 4350 4325 4347 4323 4344 4323 -c 4340 4323 4338 4325 4338 4329 -c 4338 4332 4340 4335 4344 4335 -c 4347 4335 4350 4332 4350 4329 -c C 
+K 
+4345 4348 M (R)S 
+4382 4348 M (2)S  
+N 4346 4428 M 4346 4424 4343 4422 4340 4422 -c 4336 4422 4334 4424 4334 4428 -c 4334 4432 4336 4435 4340 4435 -c 4343 4435 4346 4432 4346 4428 -c C 
+K 
+4340 4448 M (1)S 
+4369 4448 M (0)S  4398 4448 M (0)S  
+0 0 1 1 scol N 3982 1833 M 865 1833 I K 
+: N 865 1833 1 1 rp C 
+ L ; N 3911 1904 M 936 1904 I K 
+: N 936 1904 1 1 rp C 
+ L ; N 865 1974 M 865 1833 I K 
+: N 865 1833 1 1 rp C 
+ L ; N 1574 1974 M 865 1974 I K 
+: N 865 1974 1 1 rp C 
+ L ; N 1255 2081 M 1113 2081 I K 
+: N 1113 2081 1 1 rp C 
+ L ; N 1397 2081 M 1255 2081 I K 
+: N 1255 2081 1 1 rp C 
+ L ; N 1503 2081 M 1397 2081 I K 
+: N 1397 2081 1 1 rp C 
+ L ; N 1113 2116 M 1113 2081 I K 
+: N 1113 2081 1 1 rp C 
+ L ; N 1255 2116 M 1255 2081 I K 
+: N 1255 2081 1 1 rp C 
+ L ; N 1397 2116 M 1397 2081 I K 
+: N 1397 2081 1 1 rp C 
+ L ; N 1503 2116 M 1503 2081 I K 
+: N 1503 2081 1 1 rp C 
+ L ; N 1574 2116 M 1574 1974 I K 
+: N 1574 1974 1 1 rp C 
+ L ; N 1574 2116 M 1503 2116 I K 
+: N 1503 2116 1 1 rp C 
+ L ; N 1715 2116 M 1574 2116 I K 
+: N 1574 2116 1 1 rp C 
+ L ; N 2778 2116 M 2353 2116 I K 
+: N 2353 2116 1 1 rp C 
+ L ; N 1574 2258 M 1503 2258 I K 
+: N 1503 2258 1 1 rp C 
+ L ; N 1715 2258 M 1574 2258 I K 
+: N 1574 2258 1 1 rp C 
+ L ; N 1113 2293 M 1113 2258 I K 
+: N 1113 2258 1 1 rp C 
+ L ; N 1255 2293 M 1255 2258 I K 
+: N 1255 2258 1 1 rp C 
+ L ; N 1255 2293 M 1113 2293 I K 
+: N 1113 2293 1 1 rp C 
+ L ; N 1397 2293 M 1397 2258 I K 
+: N 1397 2258 1 1 rp C 
+ L ; N 1397 2293 M 1255 2293 I K 
+: N 1255 2293 1 1 rp C 
+ L ; N 1503 2293 M 1503 2258 I K 
+: N 1503 2258 1 1 rp C 
+ L ; N 1503 2293 M 1397 2293 I K 
+: N 1397 2293 1 1 rp C 
+ L ; N 936 2399 M 936 1904 I K 
+: N 936 1904 1 1 rp C 
+ L ; N 1574 2399 M 1574 2258 I K 
+: N 1574 2258 1 1 rp C 
+ L ; N 1574 2399 M 936 2399 I K 
+: N 936 2399 1 1 rp C 
+ L ; N 1715 2399 M 1645 2399 I K 
+: N 1645 2399 1 1 rp C 
+ L ; N 1645 2470 M 1645 2399 I K 
+: N 1645 2399 1 1 rp C 
+ L ; N 1645 2470 M 15 2470 I K 
+: N 15 2470 1 1 rp C 
+ L ; N 1715 2541 M 122 2541 I K 
+: N 122 2541 1 1 rp C 
+ L ; N 122 2683 M 122 2541 I K 
+: N 122 2541 1 1 rp C 
+ L ; N 1715 2683 M 618 2683 I K 
+: N 618 2683 1 1 rp C 
+ L ; N 2636 2683 M 2353 2683 I K 
+: N 2353 2683 1 1 rp C 
+ L ; N 15 2824 M 15 2470 I K 
+: N 15 2470 1 1 rp C 
+ L ; N 122 2824 M 15 2824 I K 
+: N 15 2824 1 1 rp C 
+ L ; N 1715 2824 M 618 2824 I K 
+: N 618 2824 1 1 rp C 
+ L ; N 2636 2824 M 2636 2683 I K 
+: N 2636 2683 1 1 rp C 
+ L ; N 2636 2824 M 2353 2824 I K 
+: N 2353 2824 1 1 rp C 
+ L ; N 3840 2824 M 2636 2824 I K 
+: N 2636 2824 1 1 rp C 
+ L ; N 3132 2966 M 2353 2966 I K 
+: N 2353 2966 1 1 rp C 
+ L ; N 4194 2966 M 3769 2966 I K 
+: N 3769 2966 1 1 rp C 
+ L ; N 1715 3108 M 1007 3108 I K 
+: N 1007 3108 1 1 rp C 
+ L ; N 3132 3108 M 2353 3108 I K 
+: N 2353 3108 1 1 rp C 
+ L ; N 3840 3108 M 3840 2824 I K 
+: N 3840 2824 1 1 rp C 
+ L ; N 3840 3108 M 3769 3108 I K 
+: N 3769 3108 1 1 rp C 
+ L ; N 865 3249 M 865 1974 I K 
+: N 865 1974 1 1 rp C 
+ L ; N 1574 3249 M 865 3249 I K 
+: N 865 3249 1 1 rp C 
+ L ; N 3132 3249 M 2990 3249 I K 
+: N 2990 3249 1 1 rp C 
+ L ; N 3911 3249 M 3911 1904 I K 
+: N 3911 1904 1 1 rp C 
+ L ; N 3911 3249 M 3769 3249 I K 
+: N 3769 3249 1 1 rp C 
+ L ; N 1255 3356 M 1113 3356 I K 
+: N 1113 3356 1 1 rp C 
+ L ; N 1397 3356 M 1255 3356 I K 
+: N 1255 3356 1 1 rp C 
+ L ; N 1503 3356 M 1397 3356 I K 
+: N 1397 3356 1 1 rp C 
+ L ; N 1113 3391 M 1113 3356 I K 
+: N 1113 3356 1 1 rp C 
+ L ; N 1255 3391 M 1255 3356 I K 
+: N 1255 3356 1 1 rp C 
+ L ; N 1397 3391 M 1397 3356 I K 
+: N 1397 3356 1 1 rp C 
+ L ; N 1503 3391 M 1503 3356 I K 
+: N 1503 3356 1 1 rp C 
+ L ; N 1574 3391 M 1574 3249 I K 
+: N 1574 3249 1 1 rp C 
+ L ; N 1574 3391 M 1503 3391 I K 
+: N 1503 3391 1 1 rp C 
+ L ; N 1715 3391 M 1574 3391 I K 
+: N 1574 3391 1 1 rp C 
+ L ; N 2707 3391 M 2353 3391 I K 
+: N 2353 3391 1 1 rp C 
+ L ; N 3132 3391 M 3061 3391 I K 
+: N 3061 3391 1 1 rp C 
+ L ; N 3982 3391 M 3982 1833 I K 
+: N 3982 1833 1 1 rp C 
+ L ; N 3982 3391 M 3769 3391 I K 
+: N 3769 3391 1 1 rp C 
+ L ; N 4442 3497 M 4336 3497 I K 
+: N 4336 3497 1 1 rp C 
+ L ; N 1574 3533 M 1503 3533 I K 
+: N 1503 3533 1 1 rp C 
+ L ; N 1715 3533 M 1574 3533 I K 
+: N 1574 3533 1 1 rp C 
+ L ; N 2778 3533 M 2778 2116 I K 
+: N 2778 2116 1 1 rp C 
+ L ; N 3132 3533 M 2778 3533 I K 
+: N 2778 3533 1 1 rp C 
+ L ; N 4336 3533 M 4336 3497 I K 
+: N 4336 3497 1 1 rp C 
+ L ; N 4336 3533 M 3769 3533 I K 
+: N 3769 3533 1 1 rp C 
+ L ; N 1113 3568 M 1113 3533 I K 
+: N 1113 3533 1 1 rp C 
+ L ; N 1255 3568 M 1255 3533 I K 
+: N 1255 3533 1 1 rp C 
+ L ; N 1255 3568 M 1113 3568 I K 
+: N 1113 3568 1 1 rp C 
+ L ; N 1397 3568 M 1397 3533 I K 
+: N 1397 3533 1 1 rp C 
+ L ; N 1397 3568 M 1255 3568 I K 
+: N 1255 3568 1 1 rp C 
+ L ; N 1503 3568 M 1503 3533 I K 
+: N 1503 3533 1 1 rp C 
+ L ; N 1503 3568 M 1397 3568 I K 
+: N 1397 3568 1 1 rp C 
+ L ; N 936 3674 M 936 2399 I K 
+: N 936 2399 1 1 rp C 
+ L ; N 1574 3674 M 1574 3533 I K 
+: N 1574 3533 1 1 rp C 
+ L ; N 1574 3674 M 936 3674 I K 
+: N 936 3674 1 1 rp C 
+ L ; N 1715 3674 M 1645 3674 I K 
+: N 1645 3674 1 1 rp C 
+ L ; N 2707 3674 M 2707 3391 I K 
+: N 2707 3391 1 1 rp C 
+ L ; N 3132 3674 M 2707 3674 I K 
+: N 2707 3674 1 1 rp C 
+ L ; N 4442 3674 M 3769 3674 I K 
+: N 3769 3674 1 1 rp C 
+ L ; N 1645 3710 M 1645 3674 I K 
+: N 1645 3674 1 1 rp C 
+ L ; N 1645 3710 M 51 3710 I K 
+: N 51 3710 1 1 rp C 
+ L ; N 1645 3745 M 86 3745 I K 
+: N 86 3745 1 1 rp C 
+ L ; N 4442 3780 M 4336 3780 I K 
+: N 4336 3780 1 1 rp C 
+ L ; N 1645 3816 M 1645 3745 I K 
+: N 1645 3745 1 1 rp C 
+ L ; N 1715 3816 M 1645 3816 I K 
+: N 1645 3816 1 1 rp C 
+ L ; N 3132 3816 M 3097 3816 I K 
+: N 3097 3816 1 1 rp C 
+ L ; N 4336 3816 M 4336 3780 I K 
+: N 4336 3780 1 1 rp C 
+ L ; N 4336 3816 M 3769 3816 I K 
+: N 3769 3816 1 1 rp C 
+ L ; N 86 3958 M 86 3745 I K 
+: N 86 3745 1 1 rp C 
+ L ; N 122 3958 M 86 3958 I K 
+: N 86 3958 1 1 rp C 
+ L ; N 1715 3958 M 618 3958 I K 
+: N 618 3958 1 1 rp C 
+ L ; N 2636 3958 M 2353 3958 I K 
+: N 2353 3958 1 1 rp C 
+ L ; N 4442 3958 M 3769 3958 I K 
+: N 3769 3958 1 1 rp C 
+ L ; N 2636 4064 M 2636 3958 I K 
+: N 2636 3958 1 1 rp C 
+ L ; N 2636 4064 M 2353 4064 I K 
+: N 2353 4064 1 1 rp C 
+ L ; N 3840 4064 M 3840 3108 I K 
+: N 3840 3108 1 1 rp C 
+ L ; N 3840 4064 M 2636 4064 I K 
+: N 2636 4064 1 1 rp C 
+ L ; N 51 4099 M 51 3710 I K 
+: N 51 3710 1 1 rp C 
+ L ; N 122 4099 M 51 4099 I K 
+: N 51 4099 1 1 rp C 
+ L ; N 1715 4099 M 618 4099 I K 
+: N 618 4099 1 1 rp C 
+ L ; N 3097 4099 M 3097 3816 I K 
+: N 3097 3816 1 1 rp C 
+ L ; N 4832 4099 M 3097 4099 I K 
+: N 3097 4099 1 1 rp C 
+ L ; N 2990 4241 M 2990 3249 I K 
+: N 2990 3249 1 1 rp C 
+ L ; N 2990 4241 M 2353 4241 I K 
+: N 2353 4241 1 1 rp C 
+ L ; N 4194 4241 M 4194 2966 I K 
+: N 4194 2966 1 1 rp C 
+ L ; N 4442 4241 M 4194 4241 I K 
+: N 4194 4241 1 1 rp C 
+ L ; N 4832 4241 M 4832 4099 I K 
+: N 4832 4099 1 1 rp C 
+ L ; N 4832 4241 M 4655 4241 I K 
+: N 4655 4241 1 1 rp C 
+ L ; N 4442 4276 M 4301 4276 I K 
+: N 4301 4276 1 1 rp C 
+ L ; N 4761 4276 M 4655 4276 I K 
+: N 4655 4276 1 1 rp C 
+ L ; N 1007 4383 M 1007 3108 I K 
+: N 1007 3108 1 1 rp C 
+ L ; N 1715 4383 M 1007 4383 I K 
+: N 1007 4383 1 1 rp C 
+ L ; N 2353 4383 M 2317 4383 I K 
+: N 2317 4383 1 1 rp C 
+ L ; N 3061 4383 M 3061 3391 I K 
+: N 3061 3391 1 1 rp C 
+ L ; N 3061 4383 M 2353 4383 I K 
+: N 2353 4383 1 1 rp C 
+ L ; N 1007 4524 M 1007 4383 I K 
+: N 1007 4383 1 1 rp C 
+ L ; N 4194 4524 M 4194 4241 I K 
+: N 4194 4241 1 1 rp C 
+ L ; N 4194 4524 M 1007 4524 I K 
+: N 1007 4524 1 1 rp C 
+ L ; N 4761 4524 M 4761 4276 I K 
+: N 4761 4276 1 1 rp C 
+ L ; N 4761 4524 M 4194 4524 I K 
+: N 4194 4524 1 1 rp C 
+ L ; N 3840 4630 M 3840 4064 I K 
+: N 3840 4064 1 1 rp C 
+ L ; N 4301 4630 M 4301 4453 I K 
+: N 4301 4453 1 1 rp C 
+ L ; N 4301 4630 M 3840 4630 I K 
+: N 3840 4630 1 1 rp C 
+ L ; N 4832 4630 M 4832 4418 I K 
+: N 4832 4418 1 1 rp C 
+ L ; N 4832 4630 M 4301 4630 I K 
+: N 4301 4630 1 1 rp C 
+ L ; : N 856 1965 19 19 rp C 
+ L ; : N 927 2390 19 19 rp C 
+ L ; : N 998 4374 19 19 rp C 
+ L ; : N 1246 2072 19 19 rp C 
+ L ; : N 1246 2284 19 19 rp C 
+ L ; : N 1246 3347 19 19 rp C 
+ L ; : N 1246 3559 19 19 rp C 
+ L ; : N 1388 2072 19 19 rp C 
+ L ; : N 1388 2284 19 19 rp C 
+ L ; : N 1388 3347 19 19 rp C 
+ L ; : N 1388 3559 19 19 rp C 
+ L ; : N 1565 2107 19 19 rp C 
+ L ; : N 1565 2249 19 19 rp C 
+ L ; : N 1565 3382 19 19 rp C 
+ L ; : N 1565 3524 19 19 rp C 
+ L ; : N 2344 4374 19 19 rp C 
+ L ; : N 2627 2815 19 19 rp C 
+ L ; : N 2627 4055 19 19 rp C 
+ L ; : N 3831 3099 19 19 rp C 
+ L ; : N 3831 4055 19 19 rp C 
+ L ; : N 4185 4232 19 19 rp C 
+ L ; : N 4185 4515 19 19 rp C 
+ L ; : N 4292 4621 19 19 rp C 
+ L ; : N 4823 4232 19 19 rp C 
+ L ; 0 0 0.785 1 scol : 118 6490 4863 110 rc /F0S63YFFFFFF9C F0 [99.809 0 0 -100 0 0 ] mFS
+F0S63YFFFFFF9C Ji 
+118 6583 M ( )S 
+146 6583 M (-)S  179 6583 M (-)S  212 6583 M (-)S  245 6583 M ( )S  273 6583 M ( )S  301 6583 M (C)S  373 6583 M (:)S  407 6583 M (\\)S  435 6583 M (U)S  507 6583 M (s)S  563 6583 M (e)S  619 6583 M (r)S  658 6583 M (s)S  714 6583 M (\\)S  742 6583 M (d)S  803 6583 M (c)S 
+859 6583 M (e)S  915 6583 M (l)S  943 6583 M (i)S  971 6583 M (k)S  1027 6583 M (\\)S  1055 6583 M (D)S  1127 6583 M (o)S  1188 6583 M (c)S  1244 6583 M (u)S  1305 6583 M (m)S  1394 6583 M (e)S  1450 6583 M (n)S  1511 6583 M (t)S  1544 6583 M (s)S  1600 6583 M (\\)S  1628 6583 M (S)S 
+1695 6583 M (o)S  1756 6583 M (p)S  1817 6583 M (h)S  1878 6583 M (m)S  1967 6583 M (o)S  2028 6583 M (r)S  2067 6583 M (e)S  2123 6583 M (S)S  2190 6583 M (e)S  2246 6583 M (m)S  2335 6583 M (1)S  2391 6583 M (\\)S  2419 6583 M (P)S  2486 6583 M (O)S  2564 6583 M (E)S  2631 6583 M (\\)S 
+2659 6583 M (o)S  2720 6583 M (l)S  2748 6583 M (i)S  2776 6583 M (n)S  2837 6583 M (-)S  2870 6583 M (h)S  2931 6583 M (e)S  2987 6583 M (n)S  3048 6583 M (n)S  3109 6583 M (a)S  3165 6583 M (b)S  3226 6583 M (o)S  3287 6583 M (t)S  3320 6583 M (\\)S  3348 6583 M (S)S  3415 6583 M (c)S 
+3471 6583 M (h)S  3532 6583 M (e)S  3588 6583 M (m)S  3677 6583 M (a)S  3733 6583 M (t)S  3766 6583 M (i)S  3794 6583 M (c)S  3850 6583 M (s)S  3906 6583 M (\\)S  3934 6583 M (H)S  4006 6583 M (e)S  4062 6583 M (n)S  4123 6583 M (n)S  4184 6583 M (a)S  4240 6583 M (b)S  4301 6583 M (o)S 
+4362 6583 M (t)S  4395 6583 M (E)S  4462 6583 M (l)S  4490 6583 M (e)S  4546 6583 M (c)S  4602 6583 M (.)S  4630 6583 M (a)S  4686 6583 M (s)S  4742 6583 M (c)S  4798 6583 M ( )S  4826 6583 M ( )S  4854 6583 M (-)S  4887 6583 M (-)S  4920 6583 M (-)S  4953 6583 M ( )S  
+; LH
+(%%[Page: 1]%%) = 
+%%PageTrailer
+
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%DocumentNeededResources: 
+%%+ font Helvetica-Bold
+%%DocumentSuppliedResources: 
+%%+ procset Pscript_WinNT_ErrorHandler 5.0 0
+%%+ procset Pscript_FatalError 5.0 0
+%%+ procset Pscript_Win_Basic 5.0 0
+%%+ procset Pscript_Win_Utils_L1 5.0 0
+%%+ procset Pscript_Win_GdiObject 5.0 0
+%%+ procset Pscript_Win_GdiObject_L1 5.0 0
+%%+ procset Pscript_Text 5.0 0
+%%+ procset Pscript_Encoding256 5.0 0
+Pscript_WinNT_Incr dup /terminate get exec
+VMsave restore
+%%Pages: 1
+(%%[LastPage]%%) = 
+%%EOF
+

@@ -1,6 +1,6 @@
-//#include <Wire.h>
-//#include <Adafruit_MotorShield.h>
-//#include "utility/Adafruit_PWMServoDriver.h"
+#include <Wire.h>
+#include <Adafruit_MotorShield.h>
+#include "utility/Adafruit_PWMServoDriver.h"
 
 #define xStep 6
 #define xDir 7
@@ -10,8 +10,8 @@
 #define yEn 11
 #define zOut 12
 
-//Adafruit_MotorShield AFMS = Adafruit_MotorShield(); 
-//Adafruit_DCMotor *myMotor = AFMS.getMotor(1);
+Adafruit_MotorShield AFMS = Adafruit_MotorShield(); 
+Adafruit_DCMotor *myMotor = AFMS.getMotor(1);
 
 String inString = "";
 int inChar = 0;
@@ -19,10 +19,11 @@ int xstepcompleted = 0;
 int ystepcompleted = 0;
 long xcounter = 0;
 long ycounter = 0;
+int irSensor = 0;
 
 void setup() {
   Serial.begin(9600);
- // AFMS.begin();
+  AFMS.begin();
   Serial.setTimeout(10000);
   pinMode(xStep, OUTPUT);
   pinMode(xDir, OUTPUT);
@@ -31,8 +32,8 @@ void setup() {
   pinMode(xEn, OUTPUT);
   pinMode(yEn, OUTPUT);
   pinMode(zOut,INPUT);
-  //myMotor->setSpeed(50);
-//myMotor->run(RELEASE);
+  myMotor->setSpeed(200);
+  myMotor->run(RELEASE);
 }
 
 
@@ -123,8 +124,20 @@ void selectDir(int i){
   }
 }
 
-void startPrint(boolean b){
-} 
+void startZFind(){
+  irSensor = analogRead(sensorPin);
+  long zcounter = millis();
+  while(sensorValue>950 && sensorValue<800){
+    if(sensorValue>950){
+      myMotor->run(BACKWARD);
+    }
+    else if(sensorValue<800){
+      myMotor->run(FORWARD); 
+    } 
+  }
+  long timedif = millis()-zcounter;
+  myMotor->run(RELEASE)
+}
 
 void loop()
 {
