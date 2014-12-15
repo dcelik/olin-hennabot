@@ -71,20 +71,26 @@ def startComms(coord_list):
 
     def transmit_instructions(img2,instruction_list):
         loc = (1,1)
+        count = 0
+        wt = .5
         direcs = {'0': (0,0), '1': (0,1), '2': (1,1), '3': (1,0), '4': (1,-1), '5': (0,-1), '6': (-1,-1), '7': (-1,0), '8': (-1,1)}
         for i in instruction_list:
             #if i == '080000000000200020' or receive_command() == '!':
             send_command(i[0:18])
-            wt = 2*((float(i[18:22])/1000) + .057)
-            #prin = int(i[0])
-            #xdel = int(i[2:6])
-            #ydel = int(i[6:10])
-            #dur = direcs[i[1]]
-            #loc = ((loc[0]+(dur[0]*xdel)),((loc[1]+(dur[1]*ydel))))
-            #if prin == 1:
-            #    cv2.circle(img2,loc,2,(0,0,255),-1)
-            time.sleep(wt)
-            print(wt)
+            wt += .25*((float(i[18:22])/1000) + .307)
+            if count%3 == 0:
+                print(wt)
+                time.sleep(wt)
+                wt = .5
+                #prin = int(i[0])
+                #xdel = int(i[2:6])
+                #ydel = int(i[6:10])
+                #dur = direcs[i[1]]
+                #loc = ((loc[0]+(dur[0]*xdel)),((loc[1]+(dur[1]*ydel))))
+                #if prin == 1:
+                #    cv2.circle(img2,loc,2,(0,0,255),-1)
+        count+=1
+        
             #    print ('plotted command: ' + i)
         #cv2.imshow('print-preview',img2)
 
@@ -100,14 +106,14 @@ def startComms(coord_list):
 
     def compute_instruction(coord_list):
         instruction_list = []
-        xscale = 1.3
+        xscale = 1.35
         yscale = 2.8
         for i in range(0, len(coord_list)):
             for j in range(0, len(coord_list[i])):
                 if i == 0 and j == 0:
                     printgo = 0
-                    move_x = coord_list[i][j][0]*1.66666
-                    move_y = coord_list[i][j][1]*3.2
+                    move_x = coord_list[i][j][0]*xscale
+                    move_y = coord_list[i][j][1]*yscale
                     instruction_list.append('0400000000000000000000')
                 elif i != 0 and j == 0:
                     move_x = coord_list[i][0][0] - coord_list[i-1][len(coord_list[i-1])-1][0]
@@ -121,16 +127,17 @@ def startComms(coord_list):
                     direc_x = classify_direc(move_x,0)
                     direc_y = classify_direc(0,move_y)
                     printgo = 0
-                    timing = sign_extend(str(abs(20))) #could multiply by move_x
+                    timing = sign_extend(str(abs(20*move_x))) #could multiply by move_x
                     command1 = str(printgo) + str(direc_x) + delta_x + '0000' + delay_x + '0000' + timing
-                    timing2 = sign_extend(str(abs(20))) #could multiply by move_y
+                    timing2 = sign_extend(str(abs(20*move_y))) #could multiply by move_y
                     command2 = str(printgo) + str(direc_y) + '0000' + delta_y + '0000' + delay_y + timing2
-                    #printgo = 1
-                    #timing3 = sign_extend('2000')
-                    #command3 = str(printgo) + '0' + '0000' + '0000' + '0000' + '0000' + '2000'
                     instruction_list.append(command1)
                     instruction_list.append(command2)
-                    #instruction_list.append(command3)
+                    if len(coord_list[i]) == 1:
+                        printgo = 1
+                        #timing3 = sign_extend('2000')
+                        command3 = str(printgo) + '0' + '0000' + '0000' + '0000' + '0000' + '2000'
+                        instruction_list.append(command3)
                 elif len(coord_list[i]) > 1:
                     printgo = 1
                     move_x = int((coord_list[i][j][0] - coord_list[i][j-1][0])*xscale)
@@ -181,9 +188,9 @@ def startComms(coord_list):
                     direc_x = classify_direc(move_x,0)
                     direc_y = classify_direc(0,move_y)
                     printgo = 0
-                    timing = sign_extend(str(abs(20))) #could multiply by move_x
+                    timing = sign_extend(str(abs(20*move_x))) #could multiply by move_x
                     command1 = str(printgo) + str(direc_x) + delta_x + '0000' + delay_x + '0000' + timing
-                    timing2 = sign_extend(str(abs(20))) #could multiply by move_y
+                    timing2 = sign_extend(str(abs(20*move_y))) #could multiply by move_y
                     command2 = str(printgo) + str(direc_y) + '0000' + delta_y + '0000' + delay_y + timing2
                     printgo = 1
                     #timing3 = sign_extend('2000')
