@@ -106,7 +106,7 @@ def startComms(coord_list):
 
     def compute_instruction(coord_list):
         instruction_list = []
-        xscale = 1.35
+        xscale = 1.15
         yscale = 2.8
         for i in range(0, len(coord_list)):
             for j in range(0, len(coord_list[i])):
