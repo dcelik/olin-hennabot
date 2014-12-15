@@ -1,4 +1,6 @@
-//#include <pt.h>   // include protothread library
+#include <Wire.h>
+#include <Adafruit_MotorShield.h>
+#include "utility/Adafruit_PWMServoDriver.h"
 
 #define xStep 6
 #define xDir 7
@@ -6,6 +8,10 @@
 #define yDir 9
 #define xEn 10
 #define yEn 11
+#define zOut 12
+
+Adafruit_MotorShield AFMS = Adafruit_MotorShield(); 
+Adafruit_DCMotor *myMotor = AFMS.getMotor(1);
 
 String inString = "";
 int inChar = 0;
@@ -16,6 +22,7 @@ long ycounter = 0;
 
 void setup() {
   Serial.begin(9600);
+  AFMS.begin();
   Serial.setTimeout(10000);
   pinMode(xStep, OUTPUT);
   pinMode(xDir, OUTPUT);
@@ -23,6 +30,9 @@ void setup() {
   pinMode(yDir, OUTPUT);
   pinMode(xEn, OUTPUT);
   pinMode(yEn, OUTPUT);
+  pinMode(zOut,INPUT);
+  myMotor->setSpeed(50);
+  myMotor->run(RELEASE);
 }
 
 
@@ -58,7 +68,7 @@ void stepyone(int del){
 }
 
 void stepMotors(int xsteps, int ysteps, int xdel, int ydel){
- while(ystepcompleted<ysteps || xstepcompleted<xsteps){
+ while(ystepcompleted<=ysteps || xstepcompleted<=xsteps){
    if(ystepcompleted<ysteps){
      stepyone(ydel);
    }
@@ -114,7 +124,6 @@ void selectDir(int i){
 }
 
 void startPrint(boolean b){
-  return;
 } 
 
 void loop()
@@ -124,7 +133,7 @@ void loop()
       inString += (char)inChar;
   }
   if(inString.length()==18){
-    //Serial.print(inString);
+    Serial.print(inString);
     decode(inString);
     Serial.println("!");
     inString = "";
