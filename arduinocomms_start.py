@@ -77,7 +77,7 @@ def startComms(coord_list):
         for i in instruction_list:
             #if i == '080000000000200020' or receive_command() == '!':
             send_command(i[0:18])
-            wt += .25*((float(i[18:22])/1000) + .307)
+            wt += ((float(i[18:22])/1000) + .307)
             if count%3 == 0:
                 print(wt)
                 time.sleep(wt)
@@ -136,7 +136,7 @@ def startComms(coord_list):
                     if len(coord_list[i]) == 1:
                         printgo = 1
                         #timing3 = sign_extend('2000')
-                        command3 = str(printgo) + '0' + '0000' + '0000' + '0000' + '0000' + '2000'
+                        command3 = str(printgo) + '0' + '0000' + '0000' + '0000' + '0000' + '4000'
                         instruction_list.append(command3)
                 elif len(coord_list[i]) > 1:
                     printgo = 1
@@ -194,7 +194,7 @@ def startComms(coord_list):
                     command2 = str(printgo) + str(direc_y) + '0000' + delta_y + '0000' + delay_y + timing2
                     printgo = 1
                     #timing3 = sign_extend('2000')
-                    command3 = str(printgo) + '0' + '0000' + '0000' + '0000' + '0000' + '2000'
+                    command3 = str(printgo) + '0' + '0000' + '0000' + '0000' + '0000' + '4000'
                     instruction_list.append(command1)
                     instruction_list.append(command2)
                     instruction_list.append(command3)
