@@ -9,9 +9,11 @@
 #define xEn 10
 #define yEn 11
 #define zOut 12
+#define sensorPin A0
 
 Adafruit_MotorShield AFMS = Adafruit_MotorShield(); 
-Adafruit_DCMotor *myMotor = AFMS.getMotor(1);
+Adafruit_DCMotor *myMotor = AFMS.getMotor(3);
+Adafruit_DCMotor *hennaMotor = AFMS.getMotor(4);
 
 String inString = "";
 int inChar = 0;
@@ -32,20 +34,35 @@ void setup() {
   pinMode(xEn, OUTPUT);
   pinMode(yEn, OUTPUT);
   pinMode(zOut,INPUT);
-  myMotor->setSpeed(200);
+  myMotor->setSpeed(255);
+  hennaMotor->setSpeed(255);
+  hennaMotor->run(RELEASE);
   myMotor->run(RELEASE);
 }
 
 
 void decode(String str){
   int prt = str.substring(0,1).toInt();
+  if(prt ==0){
+   hennaMotor->run(RELEASE); 
+  }
   int dir = str.substring(1,2).toInt();
   selectDir(dir);
   int xDist = str.substring(2,6).toInt();
   int yDist = str.substring(6,10).toInt();
   int xDelay = str.substring(10,14).toInt();
   int yDelay = str.substring(14,18).toInt();
-  stepMotors(xDist, yDist, xDelay, yDelay);
+  if(prt==0){
+    stepMotors(xDist, yDist, xDelay, yDelay);
+  }
+  else if(prt==1 && dir==0){
+    startZFind();
+  }
+  else if(prt==1){
+    long timetaken = lowerZ();
+    hennaMotor->run(BACKWARD);
+    stepMotors(xDist, yDist, xDelay, yDelay);
+  }
 }
 
 void stepxone(int del){
@@ -126,17 +143,52 @@ void selectDir(int i){
 
 void startZFind(){
   irSensor = analogRead(sensorPin);
+  Serial.print(irSensor);
   long zcounter = millis();
-  while(sensorValue>950 && sensorValue<800){
-    if(sensorValue>950){
+  while(irSensor>950 || irSensor<800){
+    if(irSensor>950){
       myMotor->run(BACKWARD);
     }
-    else if(sensorValue<800){
+    else if(irSensor<800){
       myMotor->run(FORWARD); 
     } 
+    irSensor = analogRead(sensorPin);
   }
+  myMotor->run(RELEASE);
   long timedif = millis()-zcounter;
-  myMotor->run(RELEASE)
+  henna();
+  long donetime = millis();
+  while(millis()-donetime>timedif){
+    myMotor->run(FORWARD);
+  }
+  myMotor->run(RELEASE);
+}
+
+long lowerZ(){
+  irSensor = analogRead(sensorPin);
+  Serial.print(irSensor);
+  long zcounter = millis();
+  while(irSensor>950 || irSensor<800){
+    if(irSensor>950){
+      myMotor->run(BACKWARD);
+    }
+    else if(irSensor<800){
+      myMotor->run(FORWARD); 
+    } 
+    irSensor = analogRead(sensorPin);
+  }
+  myMotor->run(RELEASE);
+  long timedif = millis()-zcounter;
+  return timedif;
+}
+
+
+
+void henna(){
+  hennaMotor->run(FORWARD);
+  Serial.print("PRINTING");
+  delay(100000);
+  hennaMotor->run(RELEASE);
 }
 
 void loop()
@@ -145,7 +197,6 @@ void loop()
   if (isDigit(inChar)){
       inString += (char)inChar;
       Serial.print((char)inChar);
-      
   }
   if(inString.length()==18){
     //Serial.print(inString);
